@@ -133,6 +133,6 @@
   </Target>
   -->
   <PropertyGroup>
-    <PreBuildEvent>"$(FrameworkDir)\$(FrameworkVersion)\ilasm" $(ProjectDir)\CustomInterop.UIAutomationClient.il /dll /output=$(TargetDir)\Interop.UIAutomationClient.dll</PreBuildEvent>
+    <PreBuildEvent>"$(FrameworkDir)\$(FrameworkVersion)\ilasm" "$(ProjectDir)\CustomInterop.UIAutomationClient.il" /dll /output="$(TargetDir)\Interop.UIAutomationClient.dll"</PreBuildEvent>
   </PropertyGroup>
 </Project>
