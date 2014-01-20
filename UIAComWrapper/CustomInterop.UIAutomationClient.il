@@ -1,5 +1,5 @@
 
-//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.0.30319.17605
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.0.30319.17929
 //  Copyright (c) Microsoft Corporation.  All rights reserved.
 
 
@@ -12,493 +12,395 @@
 }
 .assembly Interop.UIAutomationClient
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibVersionAttribute::.ctor(int32,
-                                                                                                int32) = ( 01 00 01 00 00 00 00 00 00 00 00 00 ) 
-
-  // --- The following custom attribute is added automatically, do not uncomment -------
-  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 03 00 00 00 00 00 ) 
-
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 34 34 44 45 30 38 33 2D 38 46 42 38   // ..$944DE083-8FB8
-                                                                                                  2D 34 35 43 46 2D 42 43 42 37 2D 43 34 37 37 41   // -45CF-BCB7-C477A
-                                                                                                  43 42 32 46 38 39 37 00 00 )                      // CB2F897..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 34 34 64 65 30 38 33 2D 38 66 62 38   // ..$944de083-8fb8
+                                                                                                  2D 34 35 63 66 2D 62 63 62 37 2D 63 34 37 37 61   // -45cf-bcb7-c477a
+                                                                                                  63 62 32 66 38 39 37 00 00 )                      // cb2f897..
   .custom instance void [mscorlib]System.Runtime.InteropServices.ImportedFromTypeLibAttribute::.ctor(string) = ( 01 00 12 55 49 41 75 74 6F 6D 61 74 69 6F 6E 43   // ...UIAutomationC
                                                                                                                  6C 69 65 6E 74 00 00 )                            // lient..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibVersionAttribute::.ctor(int32,
+                                                                                                int32) = ( 01 00 01 00 00 00 00 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Security.SecurityRulesAttribute::.ctor(valuetype [mscorlib]System.Security.SecurityRuleSet) = ( 01 00 02 00 00 ) 
   .hash algorithm 0x00008004
   .ver 1:0:0:0
 }
-.module Interop.UIAutomationClient.dll
-// MVID: {4179ADC4-5CEB-4F40-8E94-3207920D5638}
+.module UIAutomationClient.dll
+// MVID: {B88B2C35-F680-4013-94C5-2D2A1504AA83}
 .imagebase 0x00400000
 .file alignment 0x00000200
 .stackreserve 0x00100000
 .subsystem 0x0003       // WINDOWS_CUI
 .corflags 0x00000001    //  ILONLY
-// Image base: 0x022A0000
+// Image base: 0x01280000
 
 
 // =============== CLASS MEMBERS DECLARATION ===================
 
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomation
+.class public abstract auto ansi UIAutomationClient.UIA_PatternIds
+       extends [mscorlib]System.Object
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 30 43 42 45 35 37 44 2D 44 39 44 30   // ..$30CBE57D-D9D0
-                                                                                                  2D 34 35 32 41 2D 41 42 31 33 2D 37 41 43 35 41   // -452A-AB13-7AC5A
-                                                                                                  43 34 38 32 35 45 45 00 00 )                      // C4825EE..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot abstract virtual 
-          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
-                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CompareElements
+  .field public static literal int32 UIA_InvokePatternId = int32(0x00002710)
+  .field public static literal int32 UIA_SelectionPatternId = int32(0x00002711)
+  .field public static literal int32 UIA_ValuePatternId = int32(0x00002712)
+  .field public static literal int32 UIA_RangeValuePatternId = int32(0x00002713)
+  .field public static literal int32 UIA_ScrollPatternId = int32(0x00002714)
+  .field public static literal int32 UIA_ExpandCollapsePatternId = int32(0x00002715)
+  .field public static literal int32 UIA_GridPatternId = int32(0x00002716)
+  .field public static literal int32 UIA_GridItemPatternId = int32(0x00002717)
+  .field public static literal int32 UIA_MultipleViewPatternId = int32(0x00002718)
+  .field public static literal int32 UIA_WindowPatternId = int32(0x00002719)
+  .field public static literal int32 UIA_SelectionItemPatternId = int32(0x0000271A)
+  .field public static literal int32 UIA_DockPatternId = int32(0x0000271B)
+  .field public static literal int32 UIA_TablePatternId = int32(0x0000271C)
+  .field public static literal int32 UIA_TableItemPatternId = int32(0x0000271D)
+  .field public static literal int32 UIA_TextPatternId = int32(0x0000271E)
+  .field public static literal int32 UIA_TogglePatternId = int32(0x0000271F)
+  .field public static literal int32 UIA_TransformPatternId = int32(0x00002720)
+  .field public static literal int32 UIA_ScrollItemPatternId = int32(0x00002721)
+  .field public static literal int32 UIA_LegacyIAccessiblePatternId = int32(0x00002722)
+  .field public static literal int32 UIA_ItemContainerPatternId = int32(0x00002723)
+  .field public static literal int32 UIA_VirtualizedItemPatternId = int32(0x00002724)
+  .field public static literal int32 UIA_SynchronizedInputPatternId = int32(0x00002725)
+  .field public static literal int32 UIA_ObjectModelPatternId = int32(0x00002726)
+  .field public static literal int32 UIA_AnnotationPatternId = int32(0x00002727)
+  .field public static literal int32 UIA_TextPattern2Id = int32(0x00002728)
+  .field public static literal int32 UIA_StylesPatternId = int32(0x00002729)
+  .field public static literal int32 UIA_SpreadsheetPatternId = int32(0x0000272A)
+  .field public static literal int32 UIA_SpreadsheetItemPatternId = int32(0x0000272B)
+  .field public static literal int32 UIA_TransformPattern2Id = int32(0x0000272C)
+  .field public static literal int32 UIA_TextChildPatternId = int32(0x0000272D)
+  .field public static literal int32 UIA_DragPatternId = int32(0x0000272E)
+  .field public static literal int32 UIA_DropTargetPatternId = int32(0x0000272F)
+  .field public static literal int32 UIA_TextEditPatternId = int32(0x00002730)
+} // end of class UIAutomationClient.UIA_PatternIds
 
-  .method public hidebysig newslot abstract virtual 
-          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
-                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CompareRuntimeIds
+.class public abstract auto ansi UIAutomationClient.UIA_EventIds
+       extends [mscorlib]System.Object
+{
+  .field public static literal int32 UIA_ToolTipOpenedEventId = int32(0x00004E20)
+  .field public static literal int32 UIA_ToolTipClosedEventId = int32(0x00004E21)
+  .field public static literal int32 UIA_StructureChangedEventId = int32(0x00004E22)
+  .field public static literal int32 UIA_MenuOpenedEventId = int32(0x00004E23)
+  .field public static literal int32 UIA_AutomationPropertyChangedEventId = int32(0x00004E24)
+  .field public static literal int32 UIA_AutomationFocusChangedEventId = int32(0x00004E25)
+  .field public static literal int32 UIA_AsyncContentLoadedEventId = int32(0x00004E26)
+  .field public static literal int32 UIA_MenuClosedEventId = int32(0x00004E27)
+  .field public static literal int32 UIA_LayoutInvalidatedEventId = int32(0x00004E28)
+  .field public static literal int32 UIA_Invoke_InvokedEventId = int32(0x00004E29)
+  .field public static literal int32 UIA_SelectionItem_ElementAddedToSelectionEventId = int32(0x00004E2A)
+  .field public static literal int32 UIA_SelectionItem_ElementRemovedFromSelectionEventId = int32(0x00004E2B)
+  .field public static literal int32 UIA_SelectionItem_ElementSelectedEventId = int32(0x00004E2C)
+  .field public static literal int32 UIA_Selection_InvalidatedEventId = int32(0x00004E2D)
+  .field public static literal int32 UIA_Text_TextSelectionChangedEventId = int32(0x00004E2E)
+  .field public static literal int32 UIA_Text_TextChangedEventId = int32(0x00004E2F)
+  .field public static literal int32 UIA_Window_WindowOpenedEventId = int32(0x00004E30)
+  .field public static literal int32 UIA_Window_WindowClosedEventId = int32(0x00004E31)
+  .field public static literal int32 UIA_MenuModeStartEventId = int32(0x00004E32)
+  .field public static literal int32 UIA_MenuModeEndEventId = int32(0x00004E33)
+  .field public static literal int32 UIA_InputReachedTargetEventId = int32(0x00004E34)
+  .field public static literal int32 UIA_InputReachedOtherElementEventId = int32(0x00004E35)
+  .field public static literal int32 UIA_InputDiscardedEventId = int32(0x00004E36)
+  .field public static literal int32 UIA_SystemAlertEventId = int32(0x00004E37)
+  .field public static literal int32 UIA_LiveRegionChangedEventId = int32(0x00004E38)
+  .field public static literal int32 UIA_HostedFragmentRootsInvalidatedEventId = int32(0x00004E39)
+  .field public static literal int32 UIA_Drag_DragStartEventId = int32(0x00004E3A)
+  .field public static literal int32 UIA_Drag_DragCancelEventId = int32(0x00004E3B)
+  .field public static literal int32 UIA_Drag_DragCompleteEventId = int32(0x00004E3C)
+  .field public static literal int32 UIA_DropTarget_DragEnterEventId = int32(0x00004E3D)
+  .field public static literal int32 UIA_DropTarget_DragLeaveEventId = int32(0x00004E3E)
+  .field public static literal int32 UIA_DropTarget_DroppedEventId = int32(0x00004E3F)
+  .field public static literal int32 UIA_TextEdit_TextChangedEventId = int32(0x00004E40)
+  .field public static literal int32 UIA_TextEdit_ConversionTargetChangedEventId = int32(0x00004E41)
+} // end of class UIAutomationClient.UIA_EventIds
 
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElement() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::GetRootElement
+.class public abstract auto ansi UIAutomationClient.UIA_PropertyIds
+       extends [mscorlib]System.Object
+{
+  .field public static literal int32 UIA_RuntimeIdPropertyId = int32(0x00007530)
+  .field public static literal int32 UIA_BoundingRectanglePropertyId = int32(0x00007531)
+  .field public static literal int32 UIA_ProcessIdPropertyId = int32(0x00007532)
+  .field public static literal int32 UIA_ControlTypePropertyId = int32(0x00007533)
+  .field public static literal int32 UIA_LocalizedControlTypePropertyId = int32(0x00007534)
+  .field public static literal int32 UIA_NamePropertyId = int32(0x00007535)
+  .field public static literal int32 UIA_AcceleratorKeyPropertyId = int32(0x00007536)
+  .field public static literal int32 UIA_AccessKeyPropertyId = int32(0x00007537)
+  .field public static literal int32 UIA_HasKeyboardFocusPropertyId = int32(0x00007538)
+  .field public static literal int32 UIA_IsKeyboardFocusablePropertyId = int32(0x00007539)
+  .field public static literal int32 UIA_IsEnabledPropertyId = int32(0x0000753A)
+  .field public static literal int32 UIA_AutomationIdPropertyId = int32(0x0000753B)
+  .field public static literal int32 UIA_ClassNamePropertyId = int32(0x0000753C)
+  .field public static literal int32 UIA_HelpTextPropertyId = int32(0x0000753D)
+  .field public static literal int32 UIA_ClickablePointPropertyId = int32(0x0000753E)
+  .field public static literal int32 UIA_CulturePropertyId = int32(0x0000753F)
+  .field public static literal int32 UIA_IsControlElementPropertyId = int32(0x00007540)
+  .field public static literal int32 UIA_IsContentElementPropertyId = int32(0x00007541)
+  .field public static literal int32 UIA_LabeledByPropertyId = int32(0x00007542)
+  .field public static literal int32 UIA_IsPasswordPropertyId = int32(0x00007543)
+  .field public static literal int32 UIA_NativeWindowHandlePropertyId = int32(0x00007544)
+  .field public static literal int32 UIA_ItemTypePropertyId = int32(0x00007545)
+  .field public static literal int32 UIA_IsOffscreenPropertyId = int32(0x00007546)
+  .field public static literal int32 UIA_OrientationPropertyId = int32(0x00007547)
+  .field public static literal int32 UIA_FrameworkIdPropertyId = int32(0x00007548)
+  .field public static literal int32 UIA_IsRequiredForFormPropertyId = int32(0x00007549)
+  .field public static literal int32 UIA_ItemStatusPropertyId = int32(0x0000754A)
+  .field public static literal int32 UIA_IsDockPatternAvailablePropertyId = int32(0x0000754B)
+  .field public static literal int32 UIA_IsExpandCollapsePatternAvailablePropertyId = int32(0x0000754C)
+  .field public static literal int32 UIA_IsGridItemPatternAvailablePropertyId = int32(0x0000754D)
+  .field public static literal int32 UIA_IsGridPatternAvailablePropertyId = int32(0x0000754E)
+  .field public static literal int32 UIA_IsInvokePatternAvailablePropertyId = int32(0x0000754F)
+  .field public static literal int32 UIA_IsMultipleViewPatternAvailablePropertyId = int32(0x00007550)
+  .field public static literal int32 UIA_IsRangeValuePatternAvailablePropertyId = int32(0x00007551)
+  .field public static literal int32 UIA_IsScrollPatternAvailablePropertyId = int32(0x00007552)
+  .field public static literal int32 UIA_IsScrollItemPatternAvailablePropertyId = int32(0x00007553)
+  .field public static literal int32 UIA_IsSelectionItemPatternAvailablePropertyId = int32(0x00007554)
+  .field public static literal int32 UIA_IsSelectionPatternAvailablePropertyId = int32(0x00007555)
+  .field public static literal int32 UIA_IsTablePatternAvailablePropertyId = int32(0x00007556)
+  .field public static literal int32 UIA_IsTableItemPatternAvailablePropertyId = int32(0x00007557)
+  .field public static literal int32 UIA_IsTextPatternAvailablePropertyId = int32(0x00007558)
+  .field public static literal int32 UIA_IsTogglePatternAvailablePropertyId = int32(0x00007559)
+  .field public static literal int32 UIA_IsTransformPatternAvailablePropertyId = int32(0x0000755A)
+  .field public static literal int32 UIA_IsValuePatternAvailablePropertyId = int32(0x0000755B)
+  .field public static literal int32 UIA_IsWindowPatternAvailablePropertyId = int32(0x0000755C)
+  .field public static literal int32 UIA_ValueValuePropertyId = int32(0x0000755D)
+  .field public static literal int32 UIA_ValueIsReadOnlyPropertyId = int32(0x0000755E)
+  .field public static literal int32 UIA_RangeValueValuePropertyId = int32(0x0000755F)
+  .field public static literal int32 UIA_RangeValueIsReadOnlyPropertyId = int32(0x00007560)
+  .field public static literal int32 UIA_RangeValueMinimumPropertyId = int32(0x00007561)
+  .field public static literal int32 UIA_RangeValueMaximumPropertyId = int32(0x00007562)
+  .field public static literal int32 UIA_RangeValueLargeChangePropertyId = int32(0x00007563)
+  .field public static literal int32 UIA_RangeValueSmallChangePropertyId = int32(0x00007564)
+  .field public static literal int32 UIA_ScrollHorizontalScrollPercentPropertyId = int32(0x00007565)
+  .field public static literal int32 UIA_ScrollHorizontalViewSizePropertyId = int32(0x00007566)
+  .field public static literal int32 UIA_ScrollVerticalScrollPercentPropertyId = int32(0x00007567)
+  .field public static literal int32 UIA_ScrollVerticalViewSizePropertyId = int32(0x00007568)
+  .field public static literal int32 UIA_ScrollHorizontallyScrollablePropertyId = int32(0x00007569)
+  .field public static literal int32 UIA_ScrollVerticallyScrollablePropertyId = int32(0x0000756A)
+  .field public static literal int32 UIA_SelectionSelectionPropertyId = int32(0x0000756B)
+  .field public static literal int32 UIA_SelectionCanSelectMultiplePropertyId = int32(0x0000756C)
+  .field public static literal int32 UIA_SelectionIsSelectionRequiredPropertyId = int32(0x0000756D)
+  .field public static literal int32 UIA_GridRowCountPropertyId = int32(0x0000756E)
+  .field public static literal int32 UIA_GridColumnCountPropertyId = int32(0x0000756F)
+  .field public static literal int32 UIA_GridItemRowPropertyId = int32(0x00007570)
+  .field public static literal int32 UIA_GridItemColumnPropertyId = int32(0x00007571)
+  .field public static literal int32 UIA_GridItemRowSpanPropertyId = int32(0x00007572)
+  .field public static literal int32 UIA_GridItemColumnSpanPropertyId = int32(0x00007573)
+  .field public static literal int32 UIA_GridItemContainingGridPropertyId = int32(0x00007574)
+  .field public static literal int32 UIA_DockDockPositionPropertyId = int32(0x00007575)
+  .field public static literal int32 UIA_ExpandCollapseExpandCollapseStatePropertyId = int32(0x00007576)
+  .field public static literal int32 UIA_MultipleViewCurrentViewPropertyId = int32(0x00007577)
+  .field public static literal int32 UIA_MultipleViewSupportedViewsPropertyId = int32(0x00007578)
+  .field public static literal int32 UIA_WindowCanMaximizePropertyId = int32(0x00007579)
+  .field public static literal int32 UIA_WindowCanMinimizePropertyId = int32(0x0000757A)
+  .field public static literal int32 UIA_WindowWindowVisualStatePropertyId = int32(0x0000757B)
+  .field public static literal int32 UIA_WindowWindowInteractionStatePropertyId = int32(0x0000757C)
+  .field public static literal int32 UIA_WindowIsModalPropertyId = int32(0x0000757D)
+  .field public static literal int32 UIA_WindowIsTopmostPropertyId = int32(0x0000757E)
+  .field public static literal int32 UIA_SelectionItemIsSelectedPropertyId = int32(0x0000757F)
+  .field public static literal int32 UIA_SelectionItemSelectionContainerPropertyId = int32(0x00007580)
+  .field public static literal int32 UIA_TableRowHeadersPropertyId = int32(0x00007581)
+  .field public static literal int32 UIA_TableColumnHeadersPropertyId = int32(0x00007582)
+  .field public static literal int32 UIA_TableRowOrColumnMajorPropertyId = int32(0x00007583)
+  .field public static literal int32 UIA_TableItemRowHeaderItemsPropertyId = int32(0x00007584)
+  .field public static literal int32 UIA_TableItemColumnHeaderItemsPropertyId = int32(0x00007585)
+  .field public static literal int32 UIA_ToggleToggleStatePropertyId = int32(0x00007586)
+  .field public static literal int32 UIA_TransformCanMovePropertyId = int32(0x00007587)
+  .field public static literal int32 UIA_TransformCanResizePropertyId = int32(0x00007588)
+  .field public static literal int32 UIA_TransformCanRotatePropertyId = int32(0x00007589)
+  .field public static literal int32 UIA_IsLegacyIAccessiblePatternAvailablePropertyId = int32(0x0000758A)
+  .field public static literal int32 UIA_LegacyIAccessibleChildIdPropertyId = int32(0x0000758B)
+  .field public static literal int32 UIA_LegacyIAccessibleNamePropertyId = int32(0x0000758C)
+  .field public static literal int32 UIA_LegacyIAccessibleValuePropertyId = int32(0x0000758D)
+  .field public static literal int32 UIA_LegacyIAccessibleDescriptionPropertyId = int32(0x0000758E)
+  .field public static literal int32 UIA_LegacyIAccessibleRolePropertyId = int32(0x0000758F)
+  .field public static literal int32 UIA_LegacyIAccessibleStatePropertyId = int32(0x00007590)
+  .field public static literal int32 UIA_LegacyIAccessibleHelpPropertyId = int32(0x00007591)
+  .field public static literal int32 UIA_LegacyIAccessibleKeyboardShortcutPropertyId = int32(0x00007592)
+  .field public static literal int32 UIA_LegacyIAccessibleSelectionPropertyId = int32(0x00007593)
+  .field public static literal int32 UIA_LegacyIAccessibleDefaultActionPropertyId = int32(0x00007594)
+  .field public static literal int32 UIA_AriaRolePropertyId = int32(0x00007595)
+  .field public static literal int32 UIA_AriaPropertiesPropertyId = int32(0x00007596)
+  .field public static literal int32 UIA_IsDataValidForFormPropertyId = int32(0x00007597)
+  .field public static literal int32 UIA_ControllerForPropertyId = int32(0x00007598)
+  .field public static literal int32 UIA_DescribedByPropertyId = int32(0x00007599)
+  .field public static literal int32 UIA_FlowsToPropertyId = int32(0x0000759A)
+  .field public static literal int32 UIA_ProviderDescriptionPropertyId = int32(0x0000759B)
+  .field public static literal int32 UIA_IsItemContainerPatternAvailablePropertyId = int32(0x0000759C)
+  .field public static literal int32 UIA_IsVirtualizedItemPatternAvailablePropertyId = int32(0x0000759D)
+  .field public static literal int32 UIA_IsSynchronizedInputPatternAvailablePropertyId = int32(0x0000759E)
+  .field public static literal int32 UIA_OptimizeForVisualContentPropertyId = int32(0x0000759F)
+  .field public static literal int32 UIA_IsObjectModelPatternAvailablePropertyId = int32(0x000075A0)
+  .field public static literal int32 UIA_AnnotationAnnotationTypeIdPropertyId = int32(0x000075A1)
+  .field public static literal int32 UIA_AnnotationAnnotationTypeNamePropertyId = int32(0x000075A2)
+  .field public static literal int32 UIA_AnnotationAuthorPropertyId = int32(0x000075A3)
+  .field public static literal int32 UIA_AnnotationDateTimePropertyId = int32(0x000075A4)
+  .field public static literal int32 UIA_AnnotationTargetPropertyId = int32(0x000075A5)
+  .field public static literal int32 UIA_IsAnnotationPatternAvailablePropertyId = int32(0x000075A6)
+  .field public static literal int32 UIA_IsTextPattern2AvailablePropertyId = int32(0x000075A7)
+  .field public static literal int32 UIA_StylesStyleIdPropertyId = int32(0x000075A8)
+  .field public static literal int32 UIA_StylesStyleNamePropertyId = int32(0x000075A9)
+  .field public static literal int32 UIA_StylesFillColorPropertyId = int32(0x000075AA)
+  .field public static literal int32 UIA_StylesFillPatternStylePropertyId = int32(0x000075AB)
+  .field public static literal int32 UIA_StylesShapePropertyId = int32(0x000075AC)
+  .field public static literal int32 UIA_StylesFillPatternColorPropertyId = int32(0x000075AD)
+  .field public static literal int32 UIA_StylesExtendedPropertiesPropertyId = int32(0x000075AE)
+  .field public static literal int32 UIA_IsStylesPatternAvailablePropertyId = int32(0x000075AF)
+  .field public static literal int32 UIA_IsSpreadsheetPatternAvailablePropertyId = int32(0x000075B0)
+  .field public static literal int32 UIA_SpreadsheetItemFormulaPropertyId = int32(0x000075B1)
+  .field public static literal int32 UIA_SpreadsheetItemAnnotationObjectsPropertyId = int32(0x000075B2)
+  .field public static literal int32 UIA_SpreadsheetItemAnnotationTypesPropertyId = int32(0x000075B3)
+  .field public static literal int32 UIA_IsSpreadsheetItemPatternAvailablePropertyId = int32(0x000075B4)
+  .field public static literal int32 UIA_Transform2CanZoomPropertyId = int32(0x000075B5)
+  .field public static literal int32 UIA_IsTransformPattern2AvailablePropertyId = int32(0x000075B6)
+  .field public static literal int32 UIA_LiveSettingPropertyId = int32(0x000075B7)
+  .field public static literal int32 UIA_IsTextChildPatternAvailablePropertyId = int32(0x000075B8)
+  .field public static literal int32 UIA_IsDragPatternAvailablePropertyId = int32(0x000075B9)
+  .field public static literal int32 UIA_DragIsGrabbedPropertyId = int32(0x000075BA)
+  .field public static literal int32 UIA_DragDropEffectPropertyId = int32(0x000075BB)
+  .field public static literal int32 UIA_DragDropEffectsPropertyId = int32(0x000075BC)
+  .field public static literal int32 UIA_IsDropTargetPatternAvailablePropertyId = int32(0x000075BD)
+  .field public static literal int32 UIA_DropTargetDropTargetEffectPropertyId = int32(0x000075BE)
+  .field public static literal int32 UIA_DropTargetDropTargetEffectsPropertyId = int32(0x000075BF)
+  .field public static literal int32 UIA_DragGrabbedItemsPropertyId = int32(0x000075C0)
+  .field public static literal int32 UIA_Transform2ZoomLevelPropertyId = int32(0x000075C1)
+  .field public static literal int32 UIA_Transform2ZoomMinimumPropertyId = int32(0x000075C2)
+  .field public static literal int32 UIA_Transform2ZoomMaximumPropertyId = int32(0x000075C3)
+  .field public static literal int32 UIA_FlowsFromPropertyId = int32(0x000075C4)
+  .field public static literal int32 UIA_IsTextEditPatternAvailablePropertyId = int32(0x000075C5)
+  .field public static literal int32 UIA_IsPeripheralPropertyId = int32(0x000075C6)
+} // end of class UIAutomationClient.UIA_PropertyIds
 
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandle([in] native int hwnd) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::ElementFromHandle
+.class public abstract auto ansi UIAutomationClient.UIA_TextAttributeIds
+       extends [mscorlib]System.Object
+{
+  .field public static literal int32 UIA_AnimationStyleAttributeId = int32(0x00009C40)
+  .field public static literal int32 UIA_BackgroundColorAttributeId = int32(0x00009C41)
+  .field public static literal int32 UIA_BulletStyleAttributeId = int32(0x00009C42)
+  .field public static literal int32 UIA_CapStyleAttributeId = int32(0x00009C43)
+  .field public static literal int32 UIA_CultureAttributeId = int32(0x00009C44)
+  .field public static literal int32 UIA_FontNameAttributeId = int32(0x00009C45)
+  .field public static literal int32 UIA_FontSizeAttributeId = int32(0x00009C46)
+  .field public static literal int32 UIA_FontWeightAttributeId = int32(0x00009C47)
+  .field public static literal int32 UIA_ForegroundColorAttributeId = int32(0x00009C48)
+  .field public static literal int32 UIA_HorizontalTextAlignmentAttributeId = int32(0x00009C49)
+  .field public static literal int32 UIA_IndentationFirstLineAttributeId = int32(0x00009C4A)
+  .field public static literal int32 UIA_IndentationLeadingAttributeId = int32(0x00009C4B)
+  .field public static literal int32 UIA_IndentationTrailingAttributeId = int32(0x00009C4C)
+  .field public static literal int32 UIA_IsHiddenAttributeId = int32(0x00009C4D)
+  .field public static literal int32 UIA_IsItalicAttributeId = int32(0x00009C4E)
+  .field public static literal int32 UIA_IsReadOnlyAttributeId = int32(0x00009C4F)
+  .field public static literal int32 UIA_IsSubscriptAttributeId = int32(0x00009C50)
+  .field public static literal int32 UIA_IsSuperscriptAttributeId = int32(0x00009C51)
+  .field public static literal int32 UIA_MarginBottomAttributeId = int32(0x00009C52)
+  .field public static literal int32 UIA_MarginLeadingAttributeId = int32(0x00009C53)
+  .field public static literal int32 UIA_MarginTopAttributeId = int32(0x00009C54)
+  .field public static literal int32 UIA_MarginTrailingAttributeId = int32(0x00009C55)
+  .field public static literal int32 UIA_OutlineStylesAttributeId = int32(0x00009C56)
+  .field public static literal int32 UIA_OverlineColorAttributeId = int32(0x00009C57)
+  .field public static literal int32 UIA_OverlineStyleAttributeId = int32(0x00009C58)
+  .field public static literal int32 UIA_StrikethroughColorAttributeId = int32(0x00009C59)
+  .field public static literal int32 UIA_StrikethroughStyleAttributeId = int32(0x00009C5A)
+  .field public static literal int32 UIA_TabsAttributeId = int32(0x00009C5B)
+  .field public static literal int32 UIA_TextFlowDirectionsAttributeId = int32(0x00009C5C)
+  .field public static literal int32 UIA_UnderlineColorAttributeId = int32(0x00009C5D)
+  .field public static literal int32 UIA_UnderlineStyleAttributeId = int32(0x00009C5E)
+  .field public static literal int32 UIA_AnnotationTypesAttributeId = int32(0x00009C5F)
+  .field public static literal int32 UIA_AnnotationObjectsAttributeId = int32(0x00009C60)
+  .field public static literal int32 UIA_StyleNameAttributeId = int32(0x00009C61)
+  .field public static literal int32 UIA_StyleIdAttributeId = int32(0x00009C62)
+  .field public static literal int32 UIA_LinkAttributeId = int32(0x00009C63)
+  .field public static literal int32 UIA_IsActiveAttributeId = int32(0x00009C64)
+  .field public static literal int32 UIA_SelectionActiveEndAttributeId = int32(0x00009C65)
+  .field public static literal int32 UIA_CaretPositionAttributeId = int32(0x00009C66)
+  .field public static literal int32 UIA_CaretBidiModeAttributeId = int32(0x00009C67)
+} // end of class UIAutomationClient.UIA_TextAttributeIds
 
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::ElementFromPoint
+.class public abstract auto ansi UIAutomationClient.UIA_ControlTypeIds
+       extends [mscorlib]System.Object
+{
+  .field public static literal int32 UIA_ButtonControlTypeId = int32(0x0000C350)
+  .field public static literal int32 UIA_CalendarControlTypeId = int32(0x0000C351)
+  .field public static literal int32 UIA_CheckBoxControlTypeId = int32(0x0000C352)
+  .field public static literal int32 UIA_ComboBoxControlTypeId = int32(0x0000C353)
+  .field public static literal int32 UIA_EditControlTypeId = int32(0x0000C354)
+  .field public static literal int32 UIA_HyperlinkControlTypeId = int32(0x0000C355)
+  .field public static literal int32 UIA_ImageControlTypeId = int32(0x0000C356)
+  .field public static literal int32 UIA_ListItemControlTypeId = int32(0x0000C357)
+  .field public static literal int32 UIA_ListControlTypeId = int32(0x0000C358)
+  .field public static literal int32 UIA_MenuControlTypeId = int32(0x0000C359)
+  .field public static literal int32 UIA_MenuBarControlTypeId = int32(0x0000C35A)
+  .field public static literal int32 UIA_MenuItemControlTypeId = int32(0x0000C35B)
+  .field public static literal int32 UIA_ProgressBarControlTypeId = int32(0x0000C35C)
+  .field public static literal int32 UIA_RadioButtonControlTypeId = int32(0x0000C35D)
+  .field public static literal int32 UIA_ScrollBarControlTypeId = int32(0x0000C35E)
+  .field public static literal int32 UIA_SliderControlTypeId = int32(0x0000C35F)
+  .field public static literal int32 UIA_SpinnerControlTypeId = int32(0x0000C360)
+  .field public static literal int32 UIA_StatusBarControlTypeId = int32(0x0000C361)
+  .field public static literal int32 UIA_TabControlTypeId = int32(0x0000C362)
+  .field public static literal int32 UIA_TabItemControlTypeId = int32(0x0000C363)
+  .field public static literal int32 UIA_TextControlTypeId = int32(0x0000C364)
+  .field public static literal int32 UIA_ToolBarControlTypeId = int32(0x0000C365)
+  .field public static literal int32 UIA_ToolTipControlTypeId = int32(0x0000C366)
+  .field public static literal int32 UIA_TreeControlTypeId = int32(0x0000C367)
+  .field public static literal int32 UIA_TreeItemControlTypeId = int32(0x0000C368)
+  .field public static literal int32 UIA_CustomControlTypeId = int32(0x0000C369)
+  .field public static literal int32 UIA_GroupControlTypeId = int32(0x0000C36A)
+  .field public static literal int32 UIA_ThumbControlTypeId = int32(0x0000C36B)
+  .field public static literal int32 UIA_DataGridControlTypeId = int32(0x0000C36C)
+  .field public static literal int32 UIA_DataItemControlTypeId = int32(0x0000C36D)
+  .field public static literal int32 UIA_DocumentControlTypeId = int32(0x0000C36E)
+  .field public static literal int32 UIA_SplitButtonControlTypeId = int32(0x0000C36F)
+  .field public static literal int32 UIA_WindowControlTypeId = int32(0x0000C370)
+  .field public static literal int32 UIA_PaneControlTypeId = int32(0x0000C371)
+  .field public static literal int32 UIA_HeaderControlTypeId = int32(0x0000C372)
+  .field public static literal int32 UIA_HeaderItemControlTypeId = int32(0x0000C373)
+  .field public static literal int32 UIA_TableControlTypeId = int32(0x0000C374)
+  .field public static literal int32 UIA_TitleBarControlTypeId = int32(0x0000C375)
+  .field public static literal int32 UIA_SeparatorControlTypeId = int32(0x0000C376)
+  .field public static literal int32 UIA_SemanticZoomControlTypeId = int32(0x0000C377)
+  .field public static literal int32 UIA_AppBarControlTypeId = int32(0x0000C378)
+} // end of class UIAutomationClient.UIA_ControlTypeIds
 
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElement() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::GetFocusedElement
+.class public abstract auto ansi UIAutomationClient.UIA_AnnotationTypes
+       extends [mscorlib]System.Object
+{
+  .field public static literal int32 AnnotationType_Unknown = int32(0x0000EA60)
+  .field public static literal int32 AnnotationType_SpellingError = int32(0x0000EA61)
+  .field public static literal int32 AnnotationType_GrammarError = int32(0x0000EA62)
+  .field public static literal int32 AnnotationType_Comment = int32(0x0000EA63)
+  .field public static literal int32 AnnotationType_FormulaError = int32(0x0000EA64)
+  .field public static literal int32 AnnotationType_TrackChanges = int32(0x0000EA65)
+  .field public static literal int32 AnnotationType_Header = int32(0x0000EA66)
+  .field public static literal int32 AnnotationType_Footer = int32(0x0000EA67)
+  .field public static literal int32 AnnotationType_Highlighted = int32(0x0000EA68)
+} // end of class UIAutomationClient.UIA_AnnotationTypes
 
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::GetRootElementBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandleBuildCache([in] native int hwnd,
-                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::ElementFromHandleBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
-                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::ElementFromPointBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::GetFocusedElementBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateTreeWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ControlViewWalker() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ControlViewWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ContentViewWalker() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ContentViewWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_RawViewWalker() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_RawViewWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_RawViewCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_RawViewCondition
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ControlViewCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ControlViewCondition
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ContentViewCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ContentViewCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCacheRequest 
-          marshal( interface ) 
-          CreateCacheRequest() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateCacheRequest
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateTrueCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateTrueCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateFalseCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateFalseCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyCondition([in] int32 propertyId,
-                                  [in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreatePropertyCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyConditionEx([in] int32 propertyId,
-                                    [in] object  marshal( struct) 'value',
-                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreatePropertyConditionEx
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateAndCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                       "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateAndConditionFromArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                            [in] int32 conditionCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateAndConditionFromNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateOrCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                      "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateOrConditionFromArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                           [in] int32 conditionCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateOrConditionFromNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateNotCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddAutomationEventHandler([in] int32 eventId,
-                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::AddAutomationEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveAutomationEventHandler([in] int32 eventId,
-                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::RemoveAutomationEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                                   [in] int32& propertyArray,
-                                                                   [in] int32 propertyCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::AddPropertyChangedEventHandlerNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                        [in] valuetype UIAutomationClient.TreeScope scope,
-                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::AddPropertyChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::RemovePropertyChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                         [in] valuetype UIAutomationClient.TreeScope scope,
-                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::AddStructureChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::RemoveStructureChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::AddFocusChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::RemoveFocusChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveAllEventHandlers() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::RemoveAllEventHandlers
-
-  .method public hidebysig newslot abstract virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray int) 
-          IntNativeArrayToSafeArray([in] int32& 'array',
-                                    [in] int32 arrayCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::IntNativeArrayToSafeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
-                                                    [out] native int 'array') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::IntSafeArrayToNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance object 
-          marshal( struct) 
-          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::RectToVariant
-
-  .method public hidebysig newslot abstract virtual 
-          instance valuetype UIAutomationClient.tagRECT 
-          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::VariantToRect
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
-                                                     [out] native int rectArray) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::SafeArrayToRectNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
-          marshal( interface ) 
-          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CreateProxyFactoryEntry
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
-          marshal( interface ) 
-          get_ProxyFactoryMapping() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ProxyFactoryMapping
-
-  .method public hidebysig newslot abstract virtual 
-          instance string 
-          marshal( bstr) 
-          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::GetPropertyProgrammaticName
-
-  .method public hidebysig newslot abstract virtual 
-          instance string 
-          marshal( bstr) 
-          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::GetPatternProgrammaticName
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::PollForPotentialSupportedPatterns
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::PollForPotentialSupportedProperties
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-  } // end of method IUIAutomation::CheckNotSupported
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedNotSupportedValue() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ReservedNotSupportedValue
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedMixedAttributeValue() runtime managed internalcall
-  {
-  } // end of method IUIAutomation::get_ReservedMixedAttributeValue
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                 [in] int32 childId) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::ElementFromIAccessible
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                           [in] int32 childId,
-                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation::ElementFromIAccessibleBuildCache
-
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ControlViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation::get_ControlViewWalker()
-  } // end of property IUIAutomation::ControlViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ContentViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation::get_ContentViewWalker()
-  } // end of property IUIAutomation::ContentViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          RawViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation::get_RawViewWalker()
-  } // end of property IUIAutomation::RawViewWalker
-  .property class UIAutomationClient.IUIAutomationCondition
-          RawViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation::get_RawViewCondition()
-  } // end of property IUIAutomation::RawViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ControlViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation::get_ControlViewCondition()
-  } // end of property IUIAutomation::ControlViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ContentViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation::get_ContentViewCondition()
-  } // end of property IUIAutomation::ContentViewCondition
-  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
-          ProxyFactoryMapping()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
-    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.IUIAutomation::get_ProxyFactoryMapping()
-  } // end of property IUIAutomation::ProxyFactoryMapping
-  .property object ReservedNotSupportedValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
-    .get instance object UIAutomationClient.IUIAutomation::get_ReservedNotSupportedValue()
-  } // end of property IUIAutomation::ReservedNotSupportedValue
-  .property object ReservedMixedAttributeValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
-    .get instance object UIAutomationClient.IUIAutomation::get_ReservedMixedAttributeValue()
-  } // end of property IUIAutomation::ReservedMixedAttributeValue
-} // end of class UIAutomationClient.IUIAutomation
+.class public abstract auto ansi UIAutomationClient.UIA_StyleIds
+       extends [mscorlib]System.Object
+{
+  .field public static literal int32 StyleId_Custom = int32(0x00011170)
+  .field public static literal int32 StyleId_Heading1 = int32(0x00011171)
+  .field public static literal int32 StyleId_Heading2 = int32(0x00011172)
+  .field public static literal int32 StyleId_Heading3 = int32(0x00011173)
+  .field public static literal int32 StyleId_Heading4 = int32(0x00011174)
+  .field public static literal int32 StyleId_Heading5 = int32(0x00011175)
+  .field public static literal int32 StyleId_Heading6 = int32(0x00011176)
+  .field public static literal int32 StyleId_Heading7 = int32(0x00011177)
+  .field public static literal int32 StyleId_Heading8 = int32(0x00011178)
+  .field public static literal int32 StyleId_Heading9 = int32(0x00011179)
+  .field public static literal int32 StyleId_Title = int32(0x0001117A)
+  .field public static literal int32 StyleId_Subtitle = int32(0x0001117B)
+  .field public static literal int32 StyleId_Normal = int32(0x0001117C)
+  .field public static literal int32 StyleId_Emphasis = int32(0x0001117D)
+  .field public static literal int32 StyleId_Quote = int32(0x0001117E)
+  .field public static literal int32 StyleId_BulletedList = int32(0x0001117F)
+  .field public static literal int32 StyleId_NumberedList = int32(0x00011180)
+} // end of class UIAutomationClient.UIA_StyleIds
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationElement
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 44 32 32 31 30 38 41 41 2D 38 41 43 35   // ..$D22108AA-8AC5
                                                                                                   2D 34 39 41 35 2D 38 33 37 42 2D 33 37 42 42 42   // -49A5-837B-37BBB
                                                                                                   33 44 37 35 39 31 45 00 00 )                      // 3D7591E..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  SetFocus() runtime managed internalcall
   {
@@ -1353,18 +1255,54 @@
   } // end of property IUIAutomationElement::CachedProviderDescription
 } // end of class UIAutomationClient.IUIAutomationElement
 
-.class public sequential ansi sealed beforefieldinit UIAutomationClient.tagPOINT
-       extends [mscorlib]System.ValueType
+.class public auto ansi sealed UIAutomationClient.TreeScope
+       extends [mscorlib]System.Enum
 {
-  .pack 4
-  .size 0
-  .field public int32 x
-  .field public int32 y
-} // end of class UIAutomationClient.tagPOINT
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Element = int32(0x00000001)
+  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Children = int32(0x00000002)
+  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Descendants = int32(0x00000004)
+  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Parent = int32(0x00000008)
+  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Ancestors = int32(0x00000010)
+  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Subtree = int32(0x00000007)
+} // end of class UIAutomationClient.TreeScope
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationCondition
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 35 32 46 46 42 41 38 2D 30 39 37 33   // ..$352FFBA8-0973
+                                                                                                  2D 34 33 37 43 2D 41 36 31 46 2D 46 36 34 43 41   // -437C-A61F-F64CA
+                                                                                                  46 44 38 31 44 46 39 00 00 )                      // FD81DF9..
+} // end of class UIAutomationClient.IUIAutomationCondition
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationElementArray
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 34 33 31 34 35 39 35 2D 42 34 42 43   // ..$14314595-B4BC
+                                                                                                  2D 34 30 35 35 2D 39 35 46 32 2D 35 38 46 32 45   // -4055-95F2-58F2E
+                                                                                                  34 32 43 39 38 35 35 00 00 )                      // 42C9855..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_Length() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElementArray::get_Length
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetElement([in] int32 index) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElementArray::GetElement
+
+  .property int32 Length()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElementArray::get_Length()
+  } // end of property IUIAutomationElementArray::Length
+} // end of class UIAutomationClient.IUIAutomationElementArray
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationCacheRequest
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 42 33 32 41 39 32 42 35 2D 42 43 32 35   // ..$B32A92B5-BC25
                                                                                                   2D 34 30 37 38 2D 39 43 30 38 2D 44 37 45 45 39   // -4078-9C08-D7EE9
                                                                                                   35 43 34 38 45 30 33 00 00 )                      // 5C48E03..
@@ -1423,8 +1361,8 @@
           TreeScope()
   {
     .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 01 60 00 00 )                         // .....`..
-    .get instance valuetype UIAutomationClient.TreeScope UIAutomationClient.IUIAutomationCacheRequest::get_TreeScope()
     .set instance void UIAutomationClient.IUIAutomationCacheRequest::set_TreeScope(valuetype UIAutomationClient.TreeScope)
+    .get instance valuetype UIAutomationClient.TreeScope UIAutomationClient.IUIAutomationCacheRequest::get_TreeScope()
   } // end of property IUIAutomationCacheRequest::TreeScope
   .property class UIAutomationClient.IUIAutomationCondition
           TreeFilter()
@@ -1437,17 +1375,206 @@
           AutomationElementMode()
   {
     .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 07 00 01 60 00 00 )                         // .....`..
-    .set instance void UIAutomationClient.IUIAutomationCacheRequest::set_AutomationElementMode(valuetype UIAutomationClient.AutomationElementMode)
     .get instance valuetype UIAutomationClient.AutomationElementMode UIAutomationClient.IUIAutomationCacheRequest::get_AutomationElementMode()
+    .set instance void UIAutomationClient.IUIAutomationCacheRequest::set_AutomationElementMode(valuetype UIAutomationClient.AutomationElementMode)
   } // end of property IUIAutomationCacheRequest::AutomationElementMode
 } // end of class UIAutomationClient.IUIAutomationCacheRequest
 
+.class public auto ansi sealed UIAutomationClient.AutomationElementMode
+       extends [mscorlib]System.Enum
+{
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype UIAutomationClient.AutomationElementMode AutomationElementMode_None = int32(0x00000000)
+  .field public static literal valuetype UIAutomationClient.AutomationElementMode AutomationElementMode_Full = int32(0x00000001)
+} // end of class UIAutomationClient.AutomationElementMode
+
+.class public auto ansi sealed UIAutomationClient.OrientationType
+       extends [mscorlib]System.Enum
+{
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype UIAutomationClient.OrientationType OrientationType_None = int32(0x00000000)
+  .field public static literal valuetype UIAutomationClient.OrientationType OrientationType_Horizontal = int32(0x00000001)
+  .field public static literal valuetype UIAutomationClient.OrientationType OrientationType_Vertical = int32(0x00000002)
+} // end of class UIAutomationClient.OrientationType
+
+.class public sequential ansi sealed beforefieldinit UIAutomationClient.tagRECT
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public int32 left
+  .field public int32 top
+  .field public int32 right
+  .field public int32 bottom
+} // end of class UIAutomationClient.tagRECT
+
+.class public sequential ansi sealed beforefieldinit UIAutomationClient.tagPOINT
+       extends [mscorlib]System.ValueType
+{
+  .pack 4
+  .size 0
+  .field public int32 x
+  .field public int32 y
+} // end of class UIAutomationClient.tagPOINT
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationBoolCondition
+       implements UIAutomationClient.IUIAutomationCondition
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 42 34 45 31 46 32 45 2D 37 35 45 42   // ..$1B4E1F2E-75EB
+                                                                                                  2D 34 44 30 42 2D 38 39 35 32 2D 35 41 36 39 39   // -4D0B-8952-5A699
+                                                                                                  38 38 45 32 33 30 37 00 00 )                      // 88E2307..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_BooleanValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomationBoolCondition::get_BooleanValue
+
+  .property int32 BooleanValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationBoolCondition::get_BooleanValue()
+  } // end of property IUIAutomationBoolCondition::BooleanValue
+} // end of class UIAutomationClient.IUIAutomationBoolCondition
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationPropertyCondition
+       implements UIAutomationClient.IUIAutomationCondition
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 39 45 42 46 32 43 42 2D 35 35 37 38   // ..$99EBF2CB-5578
+                                                                                                  2D 34 32 36 37 2D 39 41 44 34 2D 41 46 44 36 45   // -4267-9AD4-AFD6E
+                                                                                                  41 37 37 45 39 34 42 00 00 )                      // A77E94B..
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_propertyId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationPropertyCondition::get_propertyId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( struct) 
+          get_PropertyValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomationPropertyCondition::get_PropertyValue
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.PropertyConditionFlags 
+          get_PropertyConditionFlags() runtime managed internalcall
+  {
+  } // end of method IUIAutomationPropertyCondition::get_PropertyConditionFlags
+
+  .property int32 propertyId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationPropertyCondition::get_propertyId()
+  } // end of property IUIAutomationPropertyCondition::propertyId
+  .property object PropertyValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 02 60 00 00 )                         // .....`..
+    .get instance object UIAutomationClient.IUIAutomationPropertyCondition::get_PropertyValue()
+  } // end of property IUIAutomationPropertyCondition::PropertyValue
+  .property valuetype UIAutomationClient.PropertyConditionFlags
+          PropertyConditionFlags()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
+    .get instance valuetype UIAutomationClient.PropertyConditionFlags UIAutomationClient.IUIAutomationPropertyCondition::get_PropertyConditionFlags()
+  } // end of property IUIAutomationPropertyCondition::PropertyConditionFlags
+} // end of class UIAutomationClient.IUIAutomationPropertyCondition
+
+.class public auto ansi sealed UIAutomationClient.PropertyConditionFlags
+       extends [mscorlib]System.Enum
+{
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype UIAutomationClient.PropertyConditionFlags PropertyConditionFlags_None = int32(0x00000000)
+  .field public static literal valuetype UIAutomationClient.PropertyConditionFlags PropertyConditionFlags_IgnoreCase = int32(0x00000001)
+} // end of class UIAutomationClient.PropertyConditionFlags
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationAndCondition
+       implements UIAutomationClient.IUIAutomationCondition
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 37 44 30 41 46 33 36 2D 42 39 31 32   // ..$A7D0AF36-B912
+                                                                                                  2D 34 35 46 45 2D 39 38 35 35 2D 30 39 31 44 44   // -45FE-9855-091DD
+                                                                                                  43 31 37 34 41 45 43 00 00 )                      // C174AEC..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_ChildCount() runtime managed internalcall
+  {
+  } // end of method IUIAutomationAndCondition::get_ChildCount
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetChildrenAsNativeArray([out] native int childArray,
+                                                  [out] int32& childArrayCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomationAndCondition::GetChildrenAsNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray iunknown, "UIAutomationClient.IUIAutomationCondition") 
+          GetChildren() runtime managed internalcall
+  {
+  } // end of method IUIAutomationAndCondition::GetChildren
+
+  .property int32 ChildCount()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationAndCondition::get_ChildCount()
+  } // end of property IUIAutomationAndCondition::ChildCount
+} // end of class UIAutomationClient.IUIAutomationAndCondition
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationOrCondition
+       implements UIAutomationClient.IUIAutomationCondition
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 37 35 33 46 30 33 32 2D 33 44 42 31   // ..$8753F032-3DB1
+                                                                                                  2D 34 37 42 35 2D 41 31 46 43 2D 36 45 33 34 41   // -47B5-A1FC-6E34A
+                                                                                                  32 36 36 43 37 31 32 00 00 )                      // 266C712..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_ChildCount() runtime managed internalcall
+  {
+  } // end of method IUIAutomationOrCondition::get_ChildCount
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  GetChildrenAsNativeArray([out] native int childArray,
+                                                  [out] int32& childArrayCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomationOrCondition::GetChildrenAsNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray iunknown, "UIAutomationClient.IUIAutomationCondition") 
+          GetChildren() runtime managed internalcall
+  {
+  } // end of method IUIAutomationOrCondition::GetChildren
+
+  .property int32 ChildCount()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationOrCondition::get_ChildCount()
+  } // end of property IUIAutomationOrCondition::ChildCount
+} // end of class UIAutomationClient.IUIAutomationOrCondition
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationNotCondition
+       implements UIAutomationClient.IUIAutomationCondition
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 46 35 32 38 42 36 35 37 2D 38 34 37 42   // ..$F528B657-847B
+                                                                                                  2D 34 39 38 43 2D 38 38 39 36 2D 44 35 32 42 35   // -498C-8896-D52B5
+                                                                                                  36 35 34 30 37 41 31 00 00 )                      // 65407A1..
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          GetChild() runtime managed internalcall
+  {
+  } // end of method IUIAutomationNotCondition::GetChild
+
+} // end of class UIAutomationClient.IUIAutomationNotCondition
+
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTreeWalker
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 34 30 34 32 43 36 32 34 2D 33 38 39 43   // ..$4042C624-389C
                                                                                                   2D 34 41 46 43 2D 41 36 33 30 2D 39 44 46 38 35   // -4AFC-A630-9DF85
                                                                                                   34 41 35 34 31 46 43 00 00 )                      // 4A541FC..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationElement 
           marshal( interface ) 
@@ -1553,41 +1680,13 @@
   } // end of property IUIAutomationTreeWalker::condition
 } // end of class UIAutomationClient.IUIAutomationTreeWalker
 
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationCondition
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 35 32 46 46 42 41 38 2D 30 39 37 33   // ..$352FFBA8-0973
-                                                                                                  2D 34 33 37 43 2D 41 36 31 46 2D 46 36 34 43 41   // -437C-A61F-F64CA
-                                                                                                  46 44 38 31 44 46 39 00 00 )                      // FD81DF9..
-} // end of class UIAutomationClient.IUIAutomationCondition
-
-.class public auto ansi sealed UIAutomationClient.PropertyConditionFlags
-       extends [mscorlib]System.Enum
-{
-  .field public specialname rtspecialname int32 value__
-  .field public static literal valuetype UIAutomationClient.PropertyConditionFlags PropertyConditionFlags_None = int32(0x00000000)
-  .field public static literal valuetype UIAutomationClient.PropertyConditionFlags PropertyConditionFlags_IgnoreCase = int32(0x00000001)
-} // end of class UIAutomationClient.PropertyConditionFlags
-
-.class public auto ansi sealed UIAutomationClient.TreeScope
-       extends [mscorlib]System.Enum
-{
-  .field public specialname rtspecialname int32 value__
-  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Element = int32(0x00000001)
-  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Children = int32(0x00000002)
-  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Descendants = int32(0x00000004)
-  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Parent = int32(0x00000008)
-  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Ancestors = int32(0x00000010)
-  .field public static literal valuetype UIAutomationClient.TreeScope TreeScope_Subtree = int32(0x00000007)
-} // end of class UIAutomationClient.TreeScope
-
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationEventHandler
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 00 01 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 34 36 43 33 43 31 37 2D 46 31 32 45   // ..$146C3C17-F12E
                                                                                                   2D 34 45 32 32 2D 38 43 32 37 2D 46 38 39 34 42   // -4E22-8C27-F894B
                                                                                                   39 42 37 39 43 36 39 00 00 )                      // 9B79C69..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 00 01 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  HandleAutomationEvent([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) sender,
                                                [in] int32 eventId) runtime managed internalcall
@@ -1601,8 +1700,8 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 34 30 43 44 33 37 44 34 2D 43 37 35 36   // ..$40CD37D4-C756
                                                                                                   2D 34 42 30 43 2D 38 43 36 46 2D 42 44 44 46 45   // -4B0C-8C6F-BDDFE
                                                                                                   45 42 31 33 42 35 30 00 00 )                      // EB13B50..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 00 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 00 01 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  HandlePropertyChangedEvent([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) sender,
                                                     [in] int32 propertyId,
@@ -1617,8 +1716,8 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 45 38 31 44 31 42 34 45 2D 31 31 43 35   // ..$E81D1B4E-11C5
                                                                                                   2D 34 32 46 38 2D 39 37 35 34 2D 45 37 30 33 36   // -42F8-9754-E7036
                                                                                                   43 37 39 46 30 35 34 00 00 )                      // C79F054..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 00 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 00 01 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  HandleStructureChangedEvent([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) sender,
                                                      [in] valuetype UIAutomationClient.StructureChangeType changeType,
@@ -1627,2173 +1726,6 @@
   } // end of method IUIAutomationStructureChangedEventHandler::HandleStructureChangedEvent
 
 } // end of class UIAutomationClient.IUIAutomationStructureChangedEventHandler
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationFocusChangedEventHandler
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 43 32 37 30 46 36 42 35 2D 35 43 36 39   // ..$C270F6B5-5C69
-                                                                                                  2D 34 32 39 30 2D 39 37 34 35 2D 37 41 37 46 39   // -4290-9745-7A7F9
-                                                                                                  37 31 36 39 34 36 38 00 00 )                      // 7169468..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 00 01 00 00 00 00 ) 
-  .method public hidebysig newslot abstract virtual 
-          instance void  HandleFocusChangedEvent([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) sender) runtime managed internalcall
-  {
-  } // end of method IUIAutomationFocusChangedEventHandler::HandleFocusChangedEvent
-
-} // end of class UIAutomationClient.IUIAutomationFocusChangedEventHandler
-
-.class public sequential ansi sealed beforefieldinit UIAutomationClient.tagRECT
-       extends [mscorlib]System.ValueType
-{
-  .pack 4
-  .size 0
-  .field public int32 left
-  .field public int32 top
-  .field public int32 right
-  .field public int32 bottom
-} // end of class UIAutomationClient.tagRECT
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationProxyFactoryEntry
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 44 35 30 45 34 37 32 45 2D 42 36 34 42   // ..$D50E472E-B64B
-                                                                                                  2D 34 39 30 43 2D 42 43 41 31 2D 44 33 30 36 39   // -490C-BCA1-D3069
-                                                                                                  36 46 39 46 32 38 39 00 00 )                      // 6F9F289..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactory 
-          marshal( interface ) 
-          get_ProxyFactory() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::get_ProxyFactory
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_ClassName() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::get_ClassName
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_ImageName() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::get_ImageName
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_AllowSubstringMatch() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::get_AllowSubstringMatch
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_CanCheckBaseClass() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::get_CanCheckBaseClass
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_NeedsAdviseEvents() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::get_NeedsAdviseEvents
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_ClassName([in] string  marshal( lpwstr) ClassName) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::set_ClassName
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_ImageName([in] string  marshal( lpwstr) ImageName) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::set_ImageName
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_AllowSubstringMatch([in] int32 AllowSubstringMatch) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::set_AllowSubstringMatch
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_CanCheckBaseClass([in] int32 CanCheckBaseClass) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::set_CanCheckBaseClass
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_NeedsAdviseEvents([in] int32 adviseEvents) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::set_NeedsAdviseEvents
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  SetWinEventsForAutomationEvent([in] int32 eventId,
-                                                        [in] int32 propertyId,
-                                                        [in] class [mscorlib]System.Array  marshal( safearray unsigned int) winEvents) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::SetWinEventsForAutomationEvent
-
-  .method public hidebysig newslot abstract virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray unsigned int) 
-          GetWinEventsForAutomationEvent([in] int32 eventId,
-                                         [in] int32 propertyId) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryEntry::GetWinEventsForAutomationEvent
-
-  .property class UIAutomationClient.IUIAutomationProxyFactory
-          ProxyFactory()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationProxyFactory UIAutomationClient.IUIAutomationProxyFactoryEntry::get_ProxyFactory()
-  } // end of property IUIAutomationProxyFactoryEntry::ProxyFactory
-  .property string ClassName()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 01 60 00 00 )                         // .....`..
-    .get instance string UIAutomationClient.IUIAutomationProxyFactoryEntry::get_ClassName()
-    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_ClassName(string)
-  } // end of property IUIAutomationProxyFactoryEntry::ClassName
-  .property string ImageName()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 01 60 00 00 )                         // .....`..
-    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_ImageName(string)
-    .get instance string UIAutomationClient.IUIAutomationProxyFactoryEntry::get_ImageName()
-  } // end of property IUIAutomationProxyFactoryEntry::ImageName
-  .property int32 AllowSubstringMatch()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 01 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationProxyFactoryEntry::get_AllowSubstringMatch()
-    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_AllowSubstringMatch(int32)
-  } // end of property IUIAutomationProxyFactoryEntry::AllowSubstringMatch
-  .property int32 CanCheckBaseClass()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 01 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationProxyFactoryEntry::get_CanCheckBaseClass()
-    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_CanCheckBaseClass(int32)
-  } // end of property IUIAutomationProxyFactoryEntry::CanCheckBaseClass
-  .property int32 NeedsAdviseEvents()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 05 00 01 60 00 00 )                         // .....`..
-    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_NeedsAdviseEvents(int32)
-    .get instance int32 UIAutomationClient.IUIAutomationProxyFactoryEntry::get_NeedsAdviseEvents()
-  } // end of property IUIAutomationProxyFactoryEntry::NeedsAdviseEvents
-} // end of class UIAutomationClient.IUIAutomationProxyFactoryEntry
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationProxyFactory
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 35 42 39 34 45 43 44 2D 38 34 39 44   // ..$85B94ECD-849D
-                                                                                                  2D 34 32 42 36 2D 42 39 34 44 2D 44 36 44 42 32   // -42B6-B94D-D6DB2
-                                                                                                  33 46 44 46 35 41 34 00 00 )                      // 3FDF5A4..
-  .method public hidebysig newslot abstract virtual 
-          instance class System.Windows.Automation.Providers.IRawElementProviderSimple 
-          marshal( interface ) 
-          CreateProvider([in] native int hwnd,
-                         [in] int32 idObject,
-                         [in] int32 idChild) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactory::CreateProvider
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_ProxyFactoryId() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactory::get_ProxyFactoryId
-
-  .property string ProxyFactoryId()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 01 60 00 00 )                         // .....`..
-    .get instance string UIAutomationClient.IUIAutomationProxyFactory::get_ProxyFactoryId()
-  } // end of property IUIAutomationProxyFactory::ProxyFactoryId
-} // end of class UIAutomationClient.IUIAutomationProxyFactory
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationProxyFactoryMapping
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 39 45 33 31 45 31 38 2D 38 37 32 44   // ..$09E31E18-872D
-                                                                                                  2D 34 38 37 33 2D 39 33 44 31 2D 31 45 35 34 31   // -4873-93D1-1E541
-                                                                                                  45 43 31 33 33 46 44 00 00 )                      // EC133FD..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance uint32  get_count() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::get_count
-
-  .method public hidebysig newslot abstract virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray iunknown, "UIAutomationClient.IUIAutomationProxyFactoryEntry, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") 
-          GetTable() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::GetTable
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
-          marshal( interface ) 
-          GetEntry([in] uint32 index) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::GetEntry
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  SetTable([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                   "UIAutomationClient.IUIAutomationProxyFactoryEntry, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") factoryList) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::SetTable
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  InsertEntries([in] uint32 before,
-                                       [in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                        "UIAutomationClient.IUIAutomationProxyFactoryEntry, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") factoryList) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::InsertEntries
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  InsertEntry([in] uint32 before,
-                                     [in] class UIAutomationClient.IUIAutomationProxyFactoryEntry  marshal( interface ) factory) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::InsertEntry
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveEntry([in] uint32 index) runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::RemoveEntry
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  ClearTable() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::ClearTable
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RestoreDefaultTable() runtime managed internalcall
-  {
-  } // end of method IUIAutomationProxyFactoryMapping::RestoreDefaultTable
-
-  .property uint32 count()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
-    .get instance uint32 UIAutomationClient.IUIAutomationProxyFactoryMapping::get_count()
-  } // end of property IUIAutomationProxyFactoryMapping::count
-} // end of class UIAutomationClient.IUIAutomationProxyFactoryMapping
-
-.class interface public abstract auto ansi import UIAutomationClient.IAccessible
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 50 10 00 00 00 00 )                         // ..P.....
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 31 38 37 33 36 45 30 2D 33 43 33 44   // ..$618736E0-3C3D
-                                                                                                  2D 31 31 43 46 2D 38 31 30 43 2D 30 30 41 41 30   // -11CF-810C-00AA0
-                                                                                                  30 33 38 39 42 37 31 00 00 )                      // 0389B71..
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( idispatch ) 
-          get_accParent() runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 78 EC FF FF 00 00 )                         // ..x.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accParent
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_accChildCount() runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 77 EC FF FF 00 00 )                         // ..w.....
-  } // end of method IAccessible::get_accChildCount
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( idispatch ) 
-          get_accChild([in] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 76 EC FF FF 00 00 )                         // ..v.....
-  } // end of method IAccessible::get_accChild
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_accName([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 75 EC FF FF 00 00 )                         // ..u.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accName
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_accValue([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 74 EC FF FF 00 00 )                         // ..t.....
-  } // end of method IAccessible::get_accValue
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_accDescription([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 73 EC FF FF 00 00 )                         // ..s.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accDescription
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( struct) 
-          get_accRole([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 72 EC FF FF 00 00 )                         // ..r.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accRole
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( struct) 
-          get_accState([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 71 EC FF FF 00 00 )                         // ..q.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accState
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_accHelp([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 70 EC FF FF 00 00 )                         // ..p.....
-  } // end of method IAccessible::get_accHelp
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_accHelpTopic([out] string&  marshal( bstr) pszHelpFile,
-                                           [in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6F EC FF FF 00 00 )                         // ..o.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accHelpTopic
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_accKeyboardShortcut([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6E EC FF FF 00 00 )                         // ..n.....
-  } // end of method IAccessible::get_accKeyboardShortcut
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( struct) 
-          get_accFocus() runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6D EC FF FF 00 00 )                         // ..m.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accFocus
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( struct) 
-          get_accSelection() runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6C EC FF FF 00 00 )                         // ..l.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::get_accSelection
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance string 
-          marshal( bstr) 
-          get_accDefaultAction([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6B EC FF FF 00 00 )                         // ..k.....
-  } // end of method IAccessible::get_accDefaultAction
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  accSelect([in] int32 flagsSelect,
-                                   [in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6A EC FF FF 00 00 )                         // ..j.....
-  } // end of method IAccessible::accSelect
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  accLocation([out] int32& pxLeft,
-                                     [out] int32& pyTop,
-                                     [out] int32& pcxWidth,
-                                     [out] int32& pcyHeight,
-                                     [in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 69 EC FF FF 00 00 )                         // ..i.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::accLocation
-
-  .method public hidebysig newslot abstract virtual 
-          instance object 
-          marshal( struct) 
-          accNavigate([in] int32 navDir,
-                      [in][opt] object  marshal( struct) varStart) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 68 EC FF FF 00 00 )                         // ..h.....
-  } // end of method IAccessible::accNavigate
-
-  .method public hidebysig newslot abstract virtual 
-          instance object 
-          marshal( struct) 
-          accHitTest([in] int32 xLeft,
-                     [in] int32 yTop) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 67 EC FF FF 00 00 )                         // ..g.....
-  } // end of method IAccessible::accHitTest
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  accDoDefaultAction([in][opt] object  marshal( struct) varChild) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 66 EC FF FF 00 00 )                         // ..f.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::accDoDefaultAction
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_accName([in][opt] object  marshal( struct) varChild,
-                                     [in] string  marshal( bstr) pszName) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 75 EC FF FF 00 00 )                         // ..u.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::set_accName
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_accValue([in][opt] object  marshal( struct) varChild,
-                                      [in] string  marshal( bstr) pszValue) runtime managed internalcall
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 74 EC FF FF 00 00 )                         // ..t.....
-    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibFuncFlags) = ( 01 00 40 00 00 00 00 00 )                         // ..@.....
-  } // end of method IAccessible::set_accValue
-
-  .property object accParent()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 78 EC FF FF 00 00 )                         // ..x.....
-    .get instance object UIAutomationClient.IAccessible::get_accParent()
-  } // end of property IAccessible::accParent
-  .property int32 accChildCount()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 77 EC FF FF 00 00 )                         // ..w.....
-    .get instance int32 UIAutomationClient.IAccessible::get_accChildCount()
-  } // end of property IAccessible::accChildCount
-  .property object accChild(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 76 EC FF FF 00 00 )                         // ..v.....
-    .get instance object UIAutomationClient.IAccessible::get_accChild(object)
-  } // end of property IAccessible::accChild
-  .property string accName(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 75 EC FF FF 00 00 )                         // ..u.....
-    .get instance string UIAutomationClient.IAccessible::get_accName(object)
-    .set instance void UIAutomationClient.IAccessible::set_accName(object,
-                                                                   string)
-  } // end of property IAccessible::accName
-  .property string accValue(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 74 EC FF FF 00 00 )                         // ..t.....
-    .get instance string UIAutomationClient.IAccessible::get_accValue(object)
-    .set instance void UIAutomationClient.IAccessible::set_accValue(object,
-                                                                    string)
-  } // end of property IAccessible::accValue
-  .property string accDescription(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 73 EC FF FF 00 00 )                         // ..s.....
-    .get instance string UIAutomationClient.IAccessible::get_accDescription(object)
-  } // end of property IAccessible::accDescription
-  .property object accRole(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 72 EC FF FF 00 00 )                         // ..r.....
-    .get instance object UIAutomationClient.IAccessible::get_accRole(object)
-  } // end of property IAccessible::accRole
-  .property object accState(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 71 EC FF FF 00 00 )                         // ..q.....
-    .get instance object UIAutomationClient.IAccessible::get_accState(object)
-  } // end of property IAccessible::accState
-  .property string accHelp(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 70 EC FF FF 00 00 )                         // ..p.....
-    .get instance string UIAutomationClient.IAccessible::get_accHelp(object)
-  } // end of property IAccessible::accHelp
-  .property int32 accHelpTopic(string&,
-                               object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6F EC FF FF 00 00 )                         // ..o.....
-    .get instance int32 UIAutomationClient.IAccessible::get_accHelpTopic(string&,
-                                                                         object)
-  } // end of property IAccessible::accHelpTopic
-  .property string accKeyboardShortcut(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6E EC FF FF 00 00 )                         // ..n.....
-    .get instance string UIAutomationClient.IAccessible::get_accKeyboardShortcut(object)
-  } // end of property IAccessible::accKeyboardShortcut
-  .property object accFocus()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6D EC FF FF 00 00 )                         // ..m.....
-    .get instance object UIAutomationClient.IAccessible::get_accFocus()
-  } // end of property IAccessible::accFocus
-  .property object accSelection()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6C EC FF FF 00 00 )                         // ..l.....
-    .get instance object UIAutomationClient.IAccessible::get_accSelection()
-  } // end of property IAccessible::accSelection
-  .property string accDefaultAction(object)
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6B EC FF FF 00 00 )                         // ..k.....
-    .get instance string UIAutomationClient.IAccessible::get_accDefaultAction(object)
-  } // end of property IAccessible::accDefaultAction
-} // end of class UIAutomationClient.IAccessible
-
-.class interface public abstract auto ansi import UIAutomationClient.CUIAutomation
-       implements UIAutomationClient.IUIAutomation
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.CoClassAttribute::.ctor(class [mscorlib]System.Type) = ( 01 00 25 55 49 41 75 74 6F 6D 61 74 69 6F 6E 43   // ..%UIAutomationC
-                                                                                                                          6C 69 65 6E 74 2E 43 55 49 41 75 74 6F 6D 61 74   // lient.CUIAutomat
-                                                                                                                          69 6F 6E 43 6C 61 73 73 00 00 )                   // ionClass..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 30 43 42 45 35 37 44 2D 44 39 44 30   // ..$30CBE57D-D9D0
-                                                                                                  2D 34 35 32 41 2D 41 42 31 33 2D 37 41 43 35 41   // -452A-AB13-7AC5A
-                                                                                                  43 34 38 32 35 45 45 00 00 )                      // C4825EE..
-} // end of class UIAutomationClient.CUIAutomation
-
-.class public auto ansi import UIAutomationClient.CUIAutomationClass
-       extends [mscorlib]System.Object
-       implements UIAutomationClient.IUIAutomation,
-                  UIAutomationClient.CUIAutomation
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ClassInterfaceAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ClassInterfaceType) = ( 01 00 00 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 46 46 34 38 44 42 41 34 2D 36 30 45 46   // ..$FF48DBA4-60EF
-                                                                                                  2D 34 32 30 31 2D 41 41 38 37 2D 35 34 31 30 33   // -4201-AA87-54103
-                                                                                                  45 45 46 35 39 34 45 00 00 )                      // EEF594E..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 02 00 00 00 00 00 ) 
-  .method public specialname rtspecialname 
-          instance void  .ctor() runtime managed internalcall
-  {
-  } // end of method CUIAutomationClass::.ctor
-
-  .method public hidebysig newslot virtual 
-          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
-                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CompareElements
-  } // end of method CUIAutomationClass::CompareElements
-
-  .method public hidebysig newslot virtual 
-          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
-                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CompareRuntimeIds
-  } // end of method CUIAutomationClass::CompareRuntimeIds
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElement() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::GetRootElement
-  } // end of method CUIAutomationClass::GetRootElement
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandle([in] native int hwnd) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::ElementFromHandle
-  } // end of method CUIAutomationClass::ElementFromHandle
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::ElementFromPoint
-  } // end of method CUIAutomationClass::ElementFromPoint
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElement() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::GetFocusedElement
-  } // end of method CUIAutomationClass::GetFocusedElement
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::GetRootElementBuildCache
-  } // end of method CUIAutomationClass::GetRootElementBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandleBuildCache([in] native int hwnd,
-                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::ElementFromHandleBuildCache
-  } // end of method CUIAutomationClass::ElementFromHandleBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
-                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::ElementFromPointBuildCache
-  } // end of method CUIAutomationClass::ElementFromPointBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::GetFocusedElementBuildCache
-  } // end of method CUIAutomationClass::GetFocusedElementBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateTreeWalker
-  } // end of method CUIAutomationClass::CreateTreeWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ControlViewWalker() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ControlViewWalker
-  } // end of method CUIAutomationClass::get_ControlViewWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ContentViewWalker() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ContentViewWalker
-  } // end of method CUIAutomationClass::get_ContentViewWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_RawViewWalker() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_RawViewWalker
-  } // end of method CUIAutomationClass::get_RawViewWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_RawViewCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_RawViewCondition
-  } // end of method CUIAutomationClass::get_RawViewCondition
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ControlViewCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ControlViewCondition
-  } // end of method CUIAutomationClass::get_ControlViewCondition
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ContentViewCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ContentViewCondition
-  } // end of method CUIAutomationClass::get_ContentViewCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCacheRequest 
-          marshal( interface ) 
-          CreateCacheRequest() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateCacheRequest
-  } // end of method CUIAutomationClass::CreateCacheRequest
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateTrueCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateTrueCondition
-  } // end of method CUIAutomationClass::CreateTrueCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateFalseCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateFalseCondition
-  } // end of method CUIAutomationClass::CreateFalseCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyCondition([in] int32 propertyId,
-                                  [in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreatePropertyCondition
-  } // end of method CUIAutomationClass::CreatePropertyCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyConditionEx([in] int32 propertyId,
-                                    [in] object  marshal( struct) 'value',
-                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreatePropertyConditionEx
-  } // end of method CUIAutomationClass::CreatePropertyConditionEx
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateAndCondition
-  } // end of method CUIAutomationClass::CreateAndCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                       "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateAndConditionFromArray
-  } // end of method CUIAutomationClass::CreateAndConditionFromArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                            [in] int32 conditionCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateAndConditionFromNativeArray
-  } // end of method CUIAutomationClass::CreateAndConditionFromNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateOrCondition
-  } // end of method CUIAutomationClass::CreateOrCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                      "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateOrConditionFromArray
-  } // end of method CUIAutomationClass::CreateOrConditionFromArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                           [in] int32 conditionCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateOrConditionFromNativeArray
-  } // end of method CUIAutomationClass::CreateOrConditionFromNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateNotCondition
-  } // end of method CUIAutomationClass::CreateNotCondition
-
-  .method public hidebysig newslot virtual 
-          instance void  AddAutomationEventHandler([in] int32 eventId,
-                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::AddAutomationEventHandler
-  } // end of method CUIAutomationClass::AddAutomationEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveAutomationEventHandler([in] int32 eventId,
-                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::RemoveAutomationEventHandler
-  } // end of method CUIAutomationClass::RemoveAutomationEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                                   [in] int32& propertyArray,
-                                                                   [in] int32 propertyCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::AddPropertyChangedEventHandlerNativeArray
-  } // end of method CUIAutomationClass::AddPropertyChangedEventHandlerNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                        [in] valuetype UIAutomationClient.TreeScope scope,
-                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::AddPropertyChangedEventHandler
-  } // end of method CUIAutomationClass::AddPropertyChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::RemovePropertyChangedEventHandler
-  } // end of method CUIAutomationClass::RemovePropertyChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                         [in] valuetype UIAutomationClient.TreeScope scope,
-                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::AddStructureChangedEventHandler
-  } // end of method CUIAutomationClass::AddStructureChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::RemoveStructureChangedEventHandler
-  } // end of method CUIAutomationClass::RemoveStructureChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::AddFocusChangedEventHandler
-  } // end of method CUIAutomationClass::AddFocusChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::RemoveFocusChangedEventHandler
-  } // end of method CUIAutomationClass::RemoveFocusChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveAllEventHandlers() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::RemoveAllEventHandlers
-  } // end of method CUIAutomationClass::RemoveAllEventHandlers
-
-  .method public hidebysig newslot virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray int) 
-          IntNativeArrayToSafeArray([in] int32& 'array',
-                                    [in] int32 arrayCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::IntNativeArrayToSafeArray
-  } // end of method CUIAutomationClass::IntNativeArrayToSafeArray
-
-  .method public hidebysig newslot virtual 
-          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
-                                                    [out] native int 'array') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::IntSafeArrayToNativeArray
-  } // end of method CUIAutomationClass::IntSafeArrayToNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance object 
-          marshal( struct) 
-          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::RectToVariant
-  } // end of method CUIAutomationClass::RectToVariant
-
-  .method public hidebysig newslot virtual 
-          instance valuetype UIAutomationClient.tagRECT 
-          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::VariantToRect
-  } // end of method CUIAutomationClass::VariantToRect
-
-  .method public hidebysig newslot virtual 
-          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
-                                                     [out] native int rectArray) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::SafeArrayToRectNativeArray
-  } // end of method CUIAutomationClass::SafeArrayToRectNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
-          marshal( interface ) 
-          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CreateProxyFactoryEntry
-  } // end of method CUIAutomationClass::CreateProxyFactoryEntry
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
-          marshal( interface ) 
-          get_ProxyFactoryMapping() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ProxyFactoryMapping
-  } // end of method CUIAutomationClass::get_ProxyFactoryMapping
-
-  .method public hidebysig newslot virtual 
-          instance string 
-          marshal( bstr) 
-          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::GetPropertyProgrammaticName
-  } // end of method CUIAutomationClass::GetPropertyProgrammaticName
-
-  .method public hidebysig newslot virtual 
-          instance string 
-          marshal( bstr) 
-          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::GetPatternProgrammaticName
-  } // end of method CUIAutomationClass::GetPatternProgrammaticName
-
-  .method public hidebysig newslot virtual 
-          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::PollForPotentialSupportedPatterns
-  } // end of method CUIAutomationClass::PollForPotentialSupportedPatterns
-
-  .method public hidebysig newslot virtual 
-          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::PollForPotentialSupportedProperties
-  } // end of method CUIAutomationClass::PollForPotentialSupportedProperties
-
-  .method public hidebysig newslot virtual 
-          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::CheckNotSupported
-  } // end of method CUIAutomationClass::CheckNotSupported
-
-  .method public hidebysig newslot specialname virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedNotSupportedValue() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ReservedNotSupportedValue
-  } // end of method CUIAutomationClass::get_ReservedNotSupportedValue
-
-  .method public hidebysig newslot specialname virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedMixedAttributeValue() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::get_ReservedMixedAttributeValue
-  } // end of method CUIAutomationClass::get_ReservedMixedAttributeValue
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                 [in] int32 childId) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::ElementFromIAccessible
-  } // end of method CUIAutomationClass::ElementFromIAccessible
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                           [in] int32 childId,
-                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation::ElementFromIAccessibleBuildCache
-  } // end of method CUIAutomationClass::ElementFromIAccessibleBuildCache
-
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ControlViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomationClass::get_ControlViewWalker()
-  } // end of property CUIAutomationClass::ControlViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ContentViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomationClass::get_ContentViewWalker()
-  } // end of property CUIAutomationClass::ContentViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          RawViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomationClass::get_RawViewWalker()
-  } // end of property CUIAutomationClass::RawViewWalker
-  .property class UIAutomationClient.IUIAutomationCondition
-          RawViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomationClass::get_RawViewCondition()
-  } // end of property CUIAutomationClass::RawViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ControlViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomationClass::get_ControlViewCondition()
-  } // end of property CUIAutomationClass::ControlViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ContentViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomationClass::get_ContentViewCondition()
-  } // end of property CUIAutomationClass::ContentViewCondition
-  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
-          ProxyFactoryMapping()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
-    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.CUIAutomationClass::get_ProxyFactoryMapping()
-  } // end of property CUIAutomationClass::ProxyFactoryMapping
-  .property object ReservedNotSupportedValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
-    .get instance object UIAutomationClient.CUIAutomationClass::get_ReservedNotSupportedValue()
-  } // end of property CUIAutomationClass::ReservedNotSupportedValue
-  .property object ReservedMixedAttributeValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
-    .get instance object UIAutomationClient.CUIAutomationClass::get_ReservedMixedAttributeValue()
-  } // end of property CUIAutomationClass::ReservedMixedAttributeValue
-} // end of class UIAutomationClient.CUIAutomationClass
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomation2
-       implements UIAutomationClient.IUIAutomation
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 34 37 32 33 41 46 46 2D 30 43 39 44   // ..$34723AFF-0C9D
-                                                                                                  2D 34 39 44 30 2D 39 38 39 36 2D 37 41 42 35 32   // -49D0-9896-7AB52
-                                                                                                  44 46 38 43 44 38 41 00 00 )                      // DF8CD8A..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot abstract virtual 
-          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
-                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CompareElements
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
-                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CompareRuntimeIds
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElement() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::GetRootElement
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandle([in] native int hwnd) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::ElementFromHandle
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::ElementFromPoint
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElement() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::GetFocusedElement
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::GetRootElementBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandleBuildCache([in] native int hwnd,
-                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::ElementFromHandleBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
-                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::ElementFromPointBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::GetFocusedElementBuildCache
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateTreeWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ControlViewWalker() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ControlViewWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ContentViewWalker() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ContentViewWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_RawViewWalker() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_RawViewWalker
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_RawViewCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_RawViewCondition
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ControlViewCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ControlViewCondition
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ContentViewCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ContentViewCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCacheRequest 
-          marshal( interface ) 
-          CreateCacheRequest() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateCacheRequest
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateTrueCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateTrueCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateFalseCondition() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateFalseCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyCondition([in] int32 propertyId,
-                                  [in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreatePropertyCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyConditionEx([in] int32 propertyId,
-                                    [in] object  marshal( struct) 'value',
-                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreatePropertyConditionEx
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateAndCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                       "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateAndConditionFromArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                            [in] int32 conditionCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateAndConditionFromNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateOrCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                      "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateOrConditionFromArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                           [in] int32 conditionCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateOrConditionFromNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateNotCondition
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddAutomationEventHandler([in] int32 eventId,
-                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::AddAutomationEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveAutomationEventHandler([in] int32 eventId,
-                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::RemoveAutomationEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                                   [in] int32& propertyArray,
-                                                                   [in] int32 propertyCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::AddPropertyChangedEventHandlerNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                        [in] valuetype UIAutomationClient.TreeScope scope,
-                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::AddPropertyChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::RemovePropertyChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                         [in] valuetype UIAutomationClient.TreeScope scope,
-                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::AddStructureChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::RemoveStructureChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::AddFocusChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::RemoveFocusChangedEventHandler
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  RemoveAllEventHandlers() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::RemoveAllEventHandlers
-
-  .method public hidebysig newslot abstract virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray int) 
-          IntNativeArrayToSafeArray([in] int32& 'array',
-                                    [in] int32 arrayCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::IntNativeArrayToSafeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
-                                                    [out] native int 'array') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::IntSafeArrayToNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance object 
-          marshal( struct) 
-          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::RectToVariant
-
-  .method public hidebysig newslot abstract virtual 
-          instance valuetype UIAutomationClient.tagRECT 
-          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::VariantToRect
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
-                                                     [out] native int rectArray) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::SafeArrayToRectNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
-          marshal( interface ) 
-          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CreateProxyFactoryEntry
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
-          marshal( interface ) 
-          get_ProxyFactoryMapping() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ProxyFactoryMapping
-
-  .method public hidebysig newslot abstract virtual 
-          instance string 
-          marshal( bstr) 
-          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::GetPropertyProgrammaticName
-
-  .method public hidebysig newslot abstract virtual 
-          instance string 
-          marshal( bstr) 
-          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::GetPatternProgrammaticName
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::PollForPotentialSupportedPatterns
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::PollForPotentialSupportedProperties
-
-  .method public hidebysig newslot abstract virtual 
-          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::CheckNotSupported
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedNotSupportedValue() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ReservedNotSupportedValue
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedMixedAttributeValue() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ReservedMixedAttributeValue
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                 [in] int32 childId) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::ElementFromIAccessible
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                           [in] int32 childId,
-                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::ElementFromIAccessibleBuildCache
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_AutoSetFocus() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_AutoSetFocus
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_AutoSetFocus([in] int32 AutoSetFocus) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::set_AutoSetFocus
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance uint32  get_ConnectionTimeout() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_ConnectionTimeout
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_ConnectionTimeout([in] uint32 timeout) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::set_ConnectionTimeout
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance uint32  get_TransactionTimeout() runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::get_TransactionTimeout
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance void  set_TransactionTimeout([in] uint32 timeout) runtime managed internalcall
-  {
-  } // end of method IUIAutomation2::set_TransactionTimeout
-
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ControlViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation2::get_ControlViewWalker()
-  } // end of property IUIAutomation2::ControlViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ContentViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation2::get_ContentViewWalker()
-  } // end of property IUIAutomation2::ContentViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          RawViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation2::get_RawViewWalker()
-  } // end of property IUIAutomation2::RawViewWalker
-  .property class UIAutomationClient.IUIAutomationCondition
-          RawViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation2::get_RawViewCondition()
-  } // end of property IUIAutomation2::RawViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ControlViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation2::get_ControlViewCondition()
-  } // end of property IUIAutomation2::ControlViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ContentViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation2::get_ContentViewCondition()
-  } // end of property IUIAutomation2::ContentViewCondition
-  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
-          ProxyFactoryMapping()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
-    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.IUIAutomation2::get_ProxyFactoryMapping()
-  } // end of property IUIAutomation2::ProxyFactoryMapping
-  .property object ReservedNotSupportedValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
-    .get instance object UIAutomationClient.IUIAutomation2::get_ReservedNotSupportedValue()
-  } // end of property IUIAutomation2::ReservedNotSupportedValue
-  .property object ReservedMixedAttributeValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
-    .get instance object UIAutomationClient.IUIAutomation2::get_ReservedMixedAttributeValue()
-  } // end of property IUIAutomation2::ReservedMixedAttributeValue
-  .property int32 AutoSetFocus()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
-    .set instance void UIAutomationClient.IUIAutomation2::set_AutoSetFocus(int32)
-    .get instance int32 UIAutomationClient.IUIAutomation2::get_AutoSetFocus()
-  } // end of property IUIAutomation2::AutoSetFocus
-  .property uint32 ConnectionTimeout()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
-    .set instance void UIAutomationClient.IUIAutomation2::set_ConnectionTimeout(uint32)
-    .get instance uint32 UIAutomationClient.IUIAutomation2::get_ConnectionTimeout()
-  } // end of property IUIAutomation2::ConnectionTimeout
-  .property uint32 TransactionTimeout()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
-    .get instance uint32 UIAutomationClient.IUIAutomation2::get_TransactionTimeout()
-    .set instance void UIAutomationClient.IUIAutomation2::set_TransactionTimeout(uint32)
-  } // end of property IUIAutomation2::TransactionTimeout
-} // end of class UIAutomationClient.IUIAutomation2
-
-.class interface public abstract auto ansi import UIAutomationClient.CUIAutomation8
-       implements UIAutomationClient.IUIAutomation2
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.CoClassAttribute::.ctor(class [mscorlib]System.Type) = ( 01 00 26 55 49 41 75 74 6F 6D 61 74 69 6F 6E 43   // ..&UIAutomationC
-                                                                                                                          6C 69 65 6E 74 2E 43 55 49 41 75 74 6F 6D 61 74   // lient.CUIAutomat
-                                                                                                                          69 6F 6E 38 43 6C 61 73 73 00 00 )                // ion8Class..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 34 37 32 33 41 46 46 2D 30 43 39 44   // ..$34723AFF-0C9D
-                                                                                                  2D 34 39 44 30 2D 39 38 39 36 2D 37 41 42 35 32   // -49D0-9896-7AB52
-                                                                                                  44 46 38 43 44 38 41 00 00 )                      // DF8CD8A..
-} // end of class UIAutomationClient.CUIAutomation8
-
-.class public auto ansi import UIAutomationClient.CUIAutomation8Class
-       extends [mscorlib]System.Object
-       implements UIAutomationClient.IUIAutomation2,
-                  UIAutomationClient.CUIAutomation8
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 45 32 32 41 44 33 33 33 2D 42 32 35 46   // ..$E22AD333-B25F
-                                                                                                  2D 34 36 30 43 2D 38 33 44 30 2D 30 35 38 31 31   // -460C-83D0-05811
-                                                                                                  30 37 33 39 35 43 39 00 00 )                      // 07395C9..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ClassInterfaceAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ClassInterfaceType) = ( 01 00 00 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.TypeLibTypeFlags) = ( 01 00 02 00 00 00 00 00 ) 
-  .method public specialname rtspecialname 
-          instance void  .ctor() runtime managed internalcall
-  {
-  } // end of method CUIAutomation8Class::.ctor
-
-  .method public hidebysig newslot virtual 
-          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
-                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CompareElements
-  } // end of method CUIAutomation8Class::CompareElements
-
-  .method public hidebysig newslot virtual 
-          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
-                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CompareRuntimeIds
-  } // end of method CUIAutomation8Class::CompareRuntimeIds
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElement() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::GetRootElement
-  } // end of method CUIAutomation8Class::GetRootElement
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandle([in] native int hwnd) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::ElementFromHandle
-  } // end of method CUIAutomation8Class::ElementFromHandle
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::ElementFromPoint
-  } // end of method CUIAutomation8Class::ElementFromPoint
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElement() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::GetFocusedElement
-  } // end of method CUIAutomation8Class::GetFocusedElement
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::GetRootElementBuildCache
-  } // end of method CUIAutomation8Class::GetRootElementBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromHandleBuildCache([in] native int hwnd,
-                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::ElementFromHandleBuildCache
-  } // end of method CUIAutomation8Class::ElementFromHandleBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
-                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::ElementFromPointBuildCache
-  } // end of method CUIAutomation8Class::ElementFromPointBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::GetFocusedElementBuildCache
-  } // end of method CUIAutomation8Class::GetFocusedElementBuildCache
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateTreeWalker
-  } // end of method CUIAutomation8Class::CreateTreeWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ControlViewWalker() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ControlViewWalker
-  } // end of method CUIAutomation8Class::get_ControlViewWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_ContentViewWalker() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ContentViewWalker
-  } // end of method CUIAutomation8Class::get_ContentViewWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationTreeWalker 
-          marshal( interface ) 
-          get_RawViewWalker() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_RawViewWalker
-  } // end of method CUIAutomation8Class::get_RawViewWalker
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_RawViewCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_RawViewCondition
-  } // end of method CUIAutomation8Class::get_RawViewCondition
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ControlViewCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ControlViewCondition
-  } // end of method CUIAutomation8Class::get_ControlViewCondition
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          get_ContentViewCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ContentViewCondition
-  } // end of method CUIAutomation8Class::get_ContentViewCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCacheRequest 
-          marshal( interface ) 
-          CreateCacheRequest() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateCacheRequest
-  } // end of method CUIAutomation8Class::CreateCacheRequest
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateTrueCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateTrueCondition
-  } // end of method CUIAutomation8Class::CreateTrueCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateFalseCondition() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateFalseCondition
-  } // end of method CUIAutomation8Class::CreateFalseCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyCondition([in] int32 propertyId,
-                                  [in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreatePropertyCondition
-  } // end of method CUIAutomation8Class::CreatePropertyCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreatePropertyConditionEx([in] int32 propertyId,
-                                    [in] object  marshal( struct) 'value',
-                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreatePropertyConditionEx
-  } // end of method CUIAutomation8Class::CreatePropertyConditionEx
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateAndCondition
-  } // end of method CUIAutomation8Class::CreateAndCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                       "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateAndConditionFromArray
-  } // end of method CUIAutomation8Class::CreateAndConditionFromArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                            [in] int32 conditionCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateAndConditionFromNativeArray
-  } // end of method CUIAutomation8Class::CreateAndConditionFromNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
-                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateOrCondition
-  } // end of method CUIAutomation8Class::CreateOrCondition
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
-                                      "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") conditions) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateOrConditionFromArray
-  } // end of method CUIAutomation8Class::CreateOrConditionFromArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
-                                           [in] int32 conditionCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateOrConditionFromNativeArray
-  } // end of method CUIAutomation8Class::CreateOrConditionFromNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateNotCondition
-  } // end of method CUIAutomation8Class::CreateNotCondition
-
-  .method public hidebysig newslot virtual 
-          instance void  AddAutomationEventHandler([in] int32 eventId,
-                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::AddAutomationEventHandler
-  } // end of method CUIAutomation8Class::AddAutomationEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveAutomationEventHandler([in] int32 eventId,
-                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::RemoveAutomationEventHandler
-  } // end of method CUIAutomation8Class::RemoveAutomationEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
-                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                                   [in] int32& propertyArray,
-                                                                   [in] int32 propertyCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::AddPropertyChangedEventHandlerNativeArray
-  } // end of method CUIAutomation8Class::AddPropertyChangedEventHandlerNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                        [in] valuetype UIAutomationClient.TreeScope scope,
-                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
-                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::AddPropertyChangedEventHandler
-  } // end of method CUIAutomation8Class::AddPropertyChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::RemovePropertyChangedEventHandler
-  } // end of method CUIAutomation8Class::RemovePropertyChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                         [in] valuetype UIAutomationClient.TreeScope scope,
-                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::AddStructureChangedEventHandler
-  } // end of method CUIAutomation8Class::AddStructureChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
-                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::RemoveStructureChangedEventHandler
-  } // end of method CUIAutomation8Class::RemoveStructureChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
-                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::AddFocusChangedEventHandler
-  } // end of method CUIAutomation8Class::AddFocusChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::RemoveFocusChangedEventHandler
-  } // end of method CUIAutomation8Class::RemoveFocusChangedEventHandler
-
-  .method public hidebysig newslot virtual 
-          instance void  RemoveAllEventHandlers() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::RemoveAllEventHandlers
-  } // end of method CUIAutomation8Class::RemoveAllEventHandlers
-
-  .method public hidebysig newslot virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray int) 
-          IntNativeArrayToSafeArray([in] int32& 'array',
-                                    [in] int32 arrayCount) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::IntNativeArrayToSafeArray
-  } // end of method CUIAutomation8Class::IntNativeArrayToSafeArray
-
-  .method public hidebysig newslot virtual 
-          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
-                                                    [out] native int 'array') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::IntSafeArrayToNativeArray
-  } // end of method CUIAutomation8Class::IntSafeArrayToNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance object 
-          marshal( struct) 
-          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::RectToVariant
-  } // end of method CUIAutomation8Class::RectToVariant
-
-  .method public hidebysig newslot virtual 
-          instance valuetype UIAutomationClient.tagRECT 
-          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::VariantToRect
-  } // end of method CUIAutomation8Class::VariantToRect
-
-  .method public hidebysig newslot virtual 
-          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
-                                                     [out] native int rectArray) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::SafeArrayToRectNativeArray
-  } // end of method CUIAutomation8Class::SafeArrayToRectNativeArray
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
-          marshal( interface ) 
-          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CreateProxyFactoryEntry
-  } // end of method CUIAutomation8Class::CreateProxyFactoryEntry
-
-  .method public hidebysig newslot specialname virtual 
-          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
-          marshal( interface ) 
-          get_ProxyFactoryMapping() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ProxyFactoryMapping
-  } // end of method CUIAutomation8Class::get_ProxyFactoryMapping
-
-  .method public hidebysig newslot virtual 
-          instance string 
-          marshal( bstr) 
-          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::GetPropertyProgrammaticName
-  } // end of method CUIAutomation8Class::GetPropertyProgrammaticName
-
-  .method public hidebysig newslot virtual 
-          instance string 
-          marshal( bstr) 
-          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::GetPatternProgrammaticName
-  } // end of method CUIAutomation8Class::GetPatternProgrammaticName
-
-  .method public hidebysig newslot virtual 
-          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
-                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::PollForPotentialSupportedPatterns
-  } // end of method CUIAutomation8Class::PollForPotentialSupportedPatterns
-
-  .method public hidebysig newslot virtual 
-          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
-                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::PollForPotentialSupportedProperties
-  } // end of method CUIAutomation8Class::PollForPotentialSupportedProperties
-
-  .method public hidebysig newslot virtual 
-          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::CheckNotSupported
-  } // end of method CUIAutomation8Class::CheckNotSupported
-
-  .method public hidebysig newslot specialname virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedNotSupportedValue() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ReservedNotSupportedValue
-  } // end of method CUIAutomation8Class::get_ReservedNotSupportedValue
-
-  .method public hidebysig newslot specialname virtual 
-          instance object 
-          marshal( iunknown ) 
-          get_ReservedMixedAttributeValue() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ReservedMixedAttributeValue
-  } // end of method CUIAutomation8Class::get_ReservedMixedAttributeValue
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                 [in] int32 childId) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::ElementFromIAccessible
-  } // end of method CUIAutomation8Class::ElementFromIAccessible
-
-  .method public hidebysig newslot virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
-                                           [in] int32 childId,
-                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::ElementFromIAccessibleBuildCache
-  } // end of method CUIAutomation8Class::ElementFromIAccessibleBuildCache
-
-  .method public hidebysig newslot specialname virtual 
-          instance int32  get_AutoSetFocus() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_AutoSetFocus
-  } // end of method CUIAutomation8Class::get_AutoSetFocus
-
-  .method public hidebysig newslot specialname virtual 
-          instance void  set_AutoSetFocus([in] int32 AutoSetFocus) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::set_AutoSetFocus
-  } // end of method CUIAutomation8Class::set_AutoSetFocus
-
-  .method public hidebysig newslot specialname virtual 
-          instance uint32  get_ConnectionTimeout() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_ConnectionTimeout
-  } // end of method CUIAutomation8Class::get_ConnectionTimeout
-
-  .method public hidebysig newslot specialname virtual 
-          instance void  set_ConnectionTimeout([in] uint32 timeout) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::set_ConnectionTimeout
-  } // end of method CUIAutomation8Class::set_ConnectionTimeout
-
-  .method public hidebysig newslot specialname virtual 
-          instance uint32  get_TransactionTimeout() runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::get_TransactionTimeout
-  } // end of method CUIAutomation8Class::get_TransactionTimeout
-
-  .method public hidebysig newslot specialname virtual 
-          instance void  set_TransactionTimeout([in] uint32 timeout) runtime managed internalcall
-  {
-    .override UIAutomationClient.IUIAutomation2::set_TransactionTimeout
-  } // end of method CUIAutomation8Class::set_TransactionTimeout
-
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ControlViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::get_ControlViewWalker()
-  } // end of property CUIAutomation8Class::ControlViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          ContentViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::get_ContentViewWalker()
-  } // end of property CUIAutomation8Class::ContentViewWalker
-  .property class UIAutomationClient.IUIAutomationTreeWalker
-          RawViewWalker()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::get_RawViewWalker()
-  } // end of property CUIAutomation8Class::RawViewWalker
-  .property class UIAutomationClient.IUIAutomationCondition
-          RawViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::get_RawViewCondition()
-  } // end of property CUIAutomation8Class::RawViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ControlViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::get_ControlViewCondition()
-  } // end of property CUIAutomation8Class::ControlViewCondition
-  .property class UIAutomationClient.IUIAutomationCondition
-          ContentViewCondition()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
-    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::get_ContentViewCondition()
-  } // end of property CUIAutomation8Class::ContentViewCondition
-  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
-          ProxyFactoryMapping()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
-    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.CUIAutomation8Class::get_ProxyFactoryMapping()
-  } // end of property CUIAutomation8Class::ProxyFactoryMapping
-  .property object ReservedNotSupportedValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
-    .get instance object UIAutomationClient.CUIAutomation8Class::get_ReservedNotSupportedValue()
-  } // end of property CUIAutomation8Class::ReservedNotSupportedValue
-  .property object ReservedMixedAttributeValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
-    .get instance object UIAutomationClient.CUIAutomation8Class::get_ReservedMixedAttributeValue()
-  } // end of property CUIAutomation8Class::ReservedMixedAttributeValue
-  .property int32 AutoSetFocus()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
-    .set instance void UIAutomationClient.CUIAutomation8Class::set_AutoSetFocus(int32)
-    .get instance int32 UIAutomationClient.CUIAutomation8Class::get_AutoSetFocus()
-  } // end of property CUIAutomation8Class::AutoSetFocus
-  .property uint32 ConnectionTimeout()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
-    .get instance uint32 UIAutomationClient.CUIAutomation8Class::get_ConnectionTimeout()
-    .set instance void UIAutomationClient.CUIAutomation8Class::set_ConnectionTimeout(uint32)
-  } // end of property CUIAutomation8Class::ConnectionTimeout
-  .property uint32 TransactionTimeout()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
-    .get instance uint32 UIAutomationClient.CUIAutomation8Class::get_TransactionTimeout()
-    .set instance void UIAutomationClient.CUIAutomation8Class::set_TransactionTimeout(uint32)
-  } // end of property CUIAutomation8Class::TransactionTimeout
-} // end of class UIAutomationClient.CUIAutomation8Class
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationElementArray
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 34 33 31 34 35 39 35 2D 42 34 42 43   // ..$14314595-B4BC
-                                                                                                  2D 34 30 35 35 2D 39 35 46 32 2D 35 38 46 32 45   // -4055-95F2-58F2E
-                                                                                                  34 32 43 39 38 35 35 00 00 )                      // 42C9855..
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_Length() runtime managed internalcall
-  {
-  } // end of method IUIAutomationElementArray::get_Length
-
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationElement 
-          marshal( interface ) 
-          GetElement([in] int32 index) runtime managed internalcall
-  {
-  } // end of method IUIAutomationElementArray::GetElement
-
-  .property int32 Length()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationElementArray::get_Length()
-  } // end of property IUIAutomationElementArray::Length
-} // end of class UIAutomationClient.IUIAutomationElementArray
-
-.class public auto ansi sealed UIAutomationClient.OrientationType
-       extends [mscorlib]System.Enum
-{
-  .field public specialname rtspecialname int32 value__
-  .field public static literal valuetype UIAutomationClient.OrientationType OrientationType_None = int32(0x00000000)
-  .field public static literal valuetype UIAutomationClient.OrientationType OrientationType_Horizontal = int32(0x00000001)
-  .field public static literal valuetype UIAutomationClient.OrientationType OrientationType_Vertical = int32(0x00000002)
-} // end of class UIAutomationClient.OrientationType
-
-.class public auto ansi sealed UIAutomationClient.AutomationElementMode
-       extends [mscorlib]System.Enum
-{
-  .field public specialname rtspecialname int32 value__
-  .field public static literal valuetype UIAutomationClient.AutomationElementMode AutomationElementMode_None = int32(0x00000000)
-  .field public static literal valuetype UIAutomationClient.AutomationElementMode AutomationElementMode_Full = int32(0x00000001)
-} // end of class UIAutomationClient.AutomationElementMode
 
 .class public auto ansi sealed UIAutomationClient.StructureChangeType
        extends [mscorlib]System.Enum
@@ -3807,554 +1739,52 @@
   .field public static literal valuetype UIAutomationClient.StructureChangeType StructureChangeType_ChildrenReordered = int32(0x00000005)
 } // end of class UIAutomationClient.StructureChangeType
 
-.class interface public abstract auto ansi import System.Windows.Automation.Providers.IRawElementProviderSimple
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationFocusChangedEventHandler
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 44 36 44 44 36 38 44 31 2D 38 36 46 44   // ..$D6DD68D1-86FD
-                                                                                                  2D 34 33 33 32 2D 38 36 36 36 2D 39 41 42 45 44   // -4332-8666-9ABED
-                                                                                                  45 41 32 44 32 34 43 00 00 )                      // EA2D24C..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance valuetype UIAutomationClient.ProviderOptions 
-          get_ProviderOptions() runtime managed internalcall
-  {
-  } // end of method IRawElementProviderSimple::get_ProviderOptions
-
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 43 32 37 30 46 36 42 35 2D 35 43 36 39   // ..$C270F6B5-5C69
+                                                                                                  2D 34 32 39 30 2D 39 37 34 35 2D 37 41 37 46 39   // -4290-9745-7A7F9
+                                                                                                  37 31 36 39 34 36 38 00 00 )                      // 7169468..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 00 01 00 00 ) 
   .method public hidebysig newslot abstract virtual 
-          instance object 
-          marshal( iunknown ) 
-          GetPatternProvider([in] int32 patternId) runtime managed internalcall
+          instance void  HandleFocusChangedEvent([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) sender) runtime managed internalcall
   {
-  } // end of method IRawElementProviderSimple::GetPatternProvider
+  } // end of method IUIAutomationFocusChangedEventHandler::HandleFocusChangedEvent
 
+} // end of class UIAutomationClient.IUIAutomationFocusChangedEventHandler
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 00 01 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 32 46 41 41 36 38 30 2D 45 37 30 34   // ..$92FAA680-E704
+                                                                                                  2D 34 31 35 36 2D 39 33 31 41 2D 45 33 32 44 35   // -4156-931A-E32D5
+                                                                                                  42 42 33 38 46 33 46 00 00 )                      // BB38F3F..
   .method public hidebysig newslot abstract virtual 
-          instance object 
-          marshal( struct) 
-          GetPropertyValue([in] int32 propertyId) runtime managed internalcall
+          instance void  HandleTextEditTextChangedEvent([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) sender,
+                                                        [in] valuetype UIAutomationClient.TextEditChangeType TextEditChangeType,
+                                                        [in] class [mscorlib]System.Array  marshal( safearray bstr) eventStrings) runtime managed internalcall
   {
-  } // end of method IRawElementProviderSimple::GetPropertyValue
+  } // end of method IUIAutomationTextEditTextChangedEventHandler::HandleTextEditTextChangedEvent
 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance class System.Windows.Automation.Providers.IRawElementProviderSimple 
-          marshal( interface ) 
-          get_HostRawElementProvider() runtime managed internalcall
-  {
-  } // end of method IRawElementProviderSimple::get_HostRawElementProvider
+} // end of class UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler
 
-  .property valuetype UIAutomationClient.ProviderOptions
-          ProviderOptions()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
-    .get instance valuetype UIAutomationClient.ProviderOptions System.Windows.Automation.Providers.IRawElementProviderSimple::get_ProviderOptions()
-  } // end of property IRawElementProviderSimple::ProviderOptions
-  .property class System.Windows.Automation.Providers.IRawElementProviderSimple
-          HostRawElementProvider()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 01 60 00 00 )                         // .....`..
-    .get instance class System.Windows.Automation.Providers.IRawElementProviderSimple System.Windows.Automation.Providers.IRawElementProviderSimple::get_HostRawElementProvider()
-  } // end of property IRawElementProviderSimple::HostRawElementProvider
-} // end of class System.Windows.Automation.Providers.IRawElementProviderSimple
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_PatternIds
-       extends [mscorlib]System.Object
+.class public auto ansi sealed UIAutomationClient.TextEditChangeType
+       extends [mscorlib]System.Enum
 {
-  .field public static literal int32 UIA_InvokePatternId = int32(0x00002710)
-  .field public static literal int32 UIA_SelectionPatternId = int32(0x00002711)
-  .field public static literal int32 UIA_ValuePatternId = int32(0x00002712)
-  .field public static literal int32 UIA_RangeValuePatternId = int32(0x00002713)
-  .field public static literal int32 UIA_ScrollPatternId = int32(0x00002714)
-  .field public static literal int32 UIA_ExpandCollapsePatternId = int32(0x00002715)
-  .field public static literal int32 UIA_GridPatternId = int32(0x00002716)
-  .field public static literal int32 UIA_GridItemPatternId = int32(0x00002717)
-  .field public static literal int32 UIA_MultipleViewPatternId = int32(0x00002718)
-  .field public static literal int32 UIA_WindowPatternId = int32(0x00002719)
-  .field public static literal int32 UIA_SelectionItemPatternId = int32(0x0000271A)
-  .field public static literal int32 UIA_DockPatternId = int32(0x0000271B)
-  .field public static literal int32 UIA_TablePatternId = int32(0x0000271C)
-  .field public static literal int32 UIA_TableItemPatternId = int32(0x0000271D)
-  .field public static literal int32 UIA_TextPatternId = int32(0x0000271E)
-  .field public static literal int32 UIA_TogglePatternId = int32(0x0000271F)
-  .field public static literal int32 UIA_TransformPatternId = int32(0x00002720)
-  .field public static literal int32 UIA_ScrollItemPatternId = int32(0x00002721)
-  .field public static literal int32 UIA_LegacyIAccessiblePatternId = int32(0x00002722)
-  .field public static literal int32 UIA_ItemContainerPatternId = int32(0x00002723)
-  .field public static literal int32 UIA_VirtualizedItemPatternId = int32(0x00002724)
-  .field public static literal int32 UIA_SynchronizedInputPatternId = int32(0x00002725)
-  .field public static literal int32 UIA_ObjectModelPatternId = int32(0x00002726)
-  .field public static literal int32 UIA_AnnotationPatternId = int32(0x00002727)
-  .field public static literal int32 UIA_TextPattern2Id = int32(0x00002728)
-  .field public static literal int32 UIA_StylesPatternId = int32(0x00002729)
-  .field public static literal int32 UIA_SpreadsheetPatternId = int32(0x0000272A)
-  .field public static literal int32 UIA_SpreadsheetItemPatternId = int32(0x0000272B)
-  .field public static literal int32 UIA_TransformPattern2Id = int32(0x0000272C)
-  .field public static literal int32 UIA_TextChildPatternId = int32(0x0000272D)
-  .field public static literal int32 UIA_DragPatternId = int32(0x0000272E)
-  .field public static literal int32 UIA_DropTargetPatternId = int32(0x0000272F)
-} // end of class UIAutomationClient.UIA_PatternIds
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_EventIds
-       extends [mscorlib]System.Object
-{
-  .field public static literal int32 UIA_ToolTipOpenedEventId = int32(0x00004E20)
-  .field public static literal int32 UIA_ToolTipClosedEventId = int32(0x00004E21)
-  .field public static literal int32 UIA_StructureChangedEventId = int32(0x00004E22)
-  .field public static literal int32 UIA_MenuOpenedEventId = int32(0x00004E23)
-  .field public static literal int32 UIA_AutomationPropertyChangedEventId = int32(0x00004E24)
-  .field public static literal int32 UIA_AutomationFocusChangedEventId = int32(0x00004E25)
-  .field public static literal int32 UIA_AsyncContentLoadedEventId = int32(0x00004E26)
-  .field public static literal int32 UIA_MenuClosedEventId = int32(0x00004E27)
-  .field public static literal int32 UIA_LayoutInvalidatedEventId = int32(0x00004E28)
-  .field public static literal int32 UIA_Invoke_InvokedEventId = int32(0x00004E29)
-  .field public static literal int32 UIA_SelectionItem_ElementAddedToSelectionEventId = int32(0x00004E2A)
-  .field public static literal int32 UIA_SelectionItem_ElementRemovedFromSelectionEventId = int32(0x00004E2B)
-  .field public static literal int32 UIA_SelectionItem_ElementSelectedEventId = int32(0x00004E2C)
-  .field public static literal int32 UIA_Selection_InvalidatedEventId = int32(0x00004E2D)
-  .field public static literal int32 UIA_Text_TextSelectionChangedEventId = int32(0x00004E2E)
-  .field public static literal int32 UIA_Text_TextChangedEventId = int32(0x00004E2F)
-  .field public static literal int32 UIA_Window_WindowOpenedEventId = int32(0x00004E30)
-  .field public static literal int32 UIA_Window_WindowClosedEventId = int32(0x00004E31)
-  .field public static literal int32 UIA_MenuModeStartEventId = int32(0x00004E32)
-  .field public static literal int32 UIA_MenuModeEndEventId = int32(0x00004E33)
-  .field public static literal int32 UIA_InputReachedTargetEventId = int32(0x00004E34)
-  .field public static literal int32 UIA_InputReachedOtherElementEventId = int32(0x00004E35)
-  .field public static literal int32 UIA_InputDiscardedEventId = int32(0x00004E36)
-  .field public static literal int32 UIA_SystemAlertEventId = int32(0x00004E37)
-  .field public static literal int32 UIA_LiveRegionChangedEventId = int32(0x00004E38)
-  .field public static literal int32 UIA_HostedFragmentRootsInvalidatedEventId = int32(0x00004E39)
-  .field public static literal int32 UIA_Drag_DragStartEventId = int32(0x00004E3A)
-  .field public static literal int32 UIA_Drag_DragCancelEventId = int32(0x00004E3B)
-  .field public static literal int32 UIA_Drag_DragCompleteEventId = int32(0x00004E3C)
-  .field public static literal int32 UIA_DropTarget_DragEnterEventId = int32(0x00004E3D)
-  .field public static literal int32 UIA_DropTarget_DragLeaveEventId = int32(0x00004E3E)
-  .field public static literal int32 UIA_DropTarget_DroppedEventId = int32(0x00004E3F)
-} // end of class UIAutomationClient.UIA_EventIds
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_PropertyIds
-       extends [mscorlib]System.Object
-{
-  .field public static literal int32 UIA_RuntimeIdPropertyId = int32(0x00007530)
-  .field public static literal int32 UIA_BoundingRectanglePropertyId = int32(0x00007531)
-  .field public static literal int32 UIA_ProcessIdPropertyId = int32(0x00007532)
-  .field public static literal int32 UIA_ControlTypePropertyId = int32(0x00007533)
-  .field public static literal int32 UIA_LocalizedControlTypePropertyId = int32(0x00007534)
-  .field public static literal int32 UIA_NamePropertyId = int32(0x00007535)
-  .field public static literal int32 UIA_AcceleratorKeyPropertyId = int32(0x00007536)
-  .field public static literal int32 UIA_AccessKeyPropertyId = int32(0x00007537)
-  .field public static literal int32 UIA_HasKeyboardFocusPropertyId = int32(0x00007538)
-  .field public static literal int32 UIA_IsKeyboardFocusablePropertyId = int32(0x00007539)
-  .field public static literal int32 UIA_IsEnabledPropertyId = int32(0x0000753A)
-  .field public static literal int32 UIA_AutomationIdPropertyId = int32(0x0000753B)
-  .field public static literal int32 UIA_ClassNamePropertyId = int32(0x0000753C)
-  .field public static literal int32 UIA_HelpTextPropertyId = int32(0x0000753D)
-  .field public static literal int32 UIA_ClickablePointPropertyId = int32(0x0000753E)
-  .field public static literal int32 UIA_CulturePropertyId = int32(0x0000753F)
-  .field public static literal int32 UIA_IsControlElementPropertyId = int32(0x00007540)
-  .field public static literal int32 UIA_IsContentElementPropertyId = int32(0x00007541)
-  .field public static literal int32 UIA_LabeledByPropertyId = int32(0x00007542)
-  .field public static literal int32 UIA_IsPasswordPropertyId = int32(0x00007543)
-  .field public static literal int32 UIA_NativeWindowHandlePropertyId = int32(0x00007544)
-  .field public static literal int32 UIA_ItemTypePropertyId = int32(0x00007545)
-  .field public static literal int32 UIA_IsOffscreenPropertyId = int32(0x00007546)
-  .field public static literal int32 UIA_OrientationPropertyId = int32(0x00007547)
-  .field public static literal int32 UIA_FrameworkIdPropertyId = int32(0x00007548)
-  .field public static literal int32 UIA_IsRequiredForFormPropertyId = int32(0x00007549)
-  .field public static literal int32 UIA_ItemStatusPropertyId = int32(0x0000754A)
-  .field public static literal int32 UIA_IsDockPatternAvailablePropertyId = int32(0x0000754B)
-  .field public static literal int32 UIA_IsExpandCollapsePatternAvailablePropertyId = int32(0x0000754C)
-  .field public static literal int32 UIA_IsGridItemPatternAvailablePropertyId = int32(0x0000754D)
-  .field public static literal int32 UIA_IsGridPatternAvailablePropertyId = int32(0x0000754E)
-  .field public static literal int32 UIA_IsInvokePatternAvailablePropertyId = int32(0x0000754F)
-  .field public static literal int32 UIA_IsMultipleViewPatternAvailablePropertyId = int32(0x00007550)
-  .field public static literal int32 UIA_IsRangeValuePatternAvailablePropertyId = int32(0x00007551)
-  .field public static literal int32 UIA_IsScrollPatternAvailablePropertyId = int32(0x00007552)
-  .field public static literal int32 UIA_IsScrollItemPatternAvailablePropertyId = int32(0x00007553)
-  .field public static literal int32 UIA_IsSelectionItemPatternAvailablePropertyId = int32(0x00007554)
-  .field public static literal int32 UIA_IsSelectionPatternAvailablePropertyId = int32(0x00007555)
-  .field public static literal int32 UIA_IsTablePatternAvailablePropertyId = int32(0x00007556)
-  .field public static literal int32 UIA_IsTableItemPatternAvailablePropertyId = int32(0x00007557)
-  .field public static literal int32 UIA_IsTextPatternAvailablePropertyId = int32(0x00007558)
-  .field public static literal int32 UIA_IsTogglePatternAvailablePropertyId = int32(0x00007559)
-  .field public static literal int32 UIA_IsTransformPatternAvailablePropertyId = int32(0x0000755A)
-  .field public static literal int32 UIA_IsValuePatternAvailablePropertyId = int32(0x0000755B)
-  .field public static literal int32 UIA_IsWindowPatternAvailablePropertyId = int32(0x0000755C)
-  .field public static literal int32 UIA_ValueValuePropertyId = int32(0x0000755D)
-  .field public static literal int32 UIA_ValueIsReadOnlyPropertyId = int32(0x0000755E)
-  .field public static literal int32 UIA_RangeValueValuePropertyId = int32(0x0000755F)
-  .field public static literal int32 UIA_RangeValueIsReadOnlyPropertyId = int32(0x00007560)
-  .field public static literal int32 UIA_RangeValueMinimumPropertyId = int32(0x00007561)
-  .field public static literal int32 UIA_RangeValueMaximumPropertyId = int32(0x00007562)
-  .field public static literal int32 UIA_RangeValueLargeChangePropertyId = int32(0x00007563)
-  .field public static literal int32 UIA_RangeValueSmallChangePropertyId = int32(0x00007564)
-  .field public static literal int32 UIA_ScrollHorizontalScrollPercentPropertyId = int32(0x00007565)
-  .field public static literal int32 UIA_ScrollHorizontalViewSizePropertyId = int32(0x00007566)
-  .field public static literal int32 UIA_ScrollVerticalScrollPercentPropertyId = int32(0x00007567)
-  .field public static literal int32 UIA_ScrollVerticalViewSizePropertyId = int32(0x00007568)
-  .field public static literal int32 UIA_ScrollHorizontallyScrollablePropertyId = int32(0x00007569)
-  .field public static literal int32 UIA_ScrollVerticallyScrollablePropertyId = int32(0x0000756A)
-  .field public static literal int32 UIA_SelectionSelectionPropertyId = int32(0x0000756B)
-  .field public static literal int32 UIA_SelectionCanSelectMultiplePropertyId = int32(0x0000756C)
-  .field public static literal int32 UIA_SelectionIsSelectionRequiredPropertyId = int32(0x0000756D)
-  .field public static literal int32 UIA_GridRowCountPropertyId = int32(0x0000756E)
-  .field public static literal int32 UIA_GridColumnCountPropertyId = int32(0x0000756F)
-  .field public static literal int32 UIA_GridItemRowPropertyId = int32(0x00007570)
-  .field public static literal int32 UIA_GridItemColumnPropertyId = int32(0x00007571)
-  .field public static literal int32 UIA_GridItemRowSpanPropertyId = int32(0x00007572)
-  .field public static literal int32 UIA_GridItemColumnSpanPropertyId = int32(0x00007573)
-  .field public static literal int32 UIA_GridItemContainingGridPropertyId = int32(0x00007574)
-  .field public static literal int32 UIA_DockDockPositionPropertyId = int32(0x00007575)
-  .field public static literal int32 UIA_ExpandCollapseExpandCollapseStatePropertyId = int32(0x00007576)
-  .field public static literal int32 UIA_MultipleViewCurrentViewPropertyId = int32(0x00007577)
-  .field public static literal int32 UIA_MultipleViewSupportedViewsPropertyId = int32(0x00007578)
-  .field public static literal int32 UIA_WindowCanMaximizePropertyId = int32(0x00007579)
-  .field public static literal int32 UIA_WindowCanMinimizePropertyId = int32(0x0000757A)
-  .field public static literal int32 UIA_WindowWindowVisualStatePropertyId = int32(0x0000757B)
-  .field public static literal int32 UIA_WindowWindowInteractionStatePropertyId = int32(0x0000757C)
-  .field public static literal int32 UIA_WindowIsModalPropertyId = int32(0x0000757D)
-  .field public static literal int32 UIA_WindowIsTopmostPropertyId = int32(0x0000757E)
-  .field public static literal int32 UIA_SelectionItemIsSelectedPropertyId = int32(0x0000757F)
-  .field public static literal int32 UIA_SelectionItemSelectionContainerPropertyId = int32(0x00007580)
-  .field public static literal int32 UIA_TableRowHeadersPropertyId = int32(0x00007581)
-  .field public static literal int32 UIA_TableColumnHeadersPropertyId = int32(0x00007582)
-  .field public static literal int32 UIA_TableRowOrColumnMajorPropertyId = int32(0x00007583)
-  .field public static literal int32 UIA_TableItemRowHeaderItemsPropertyId = int32(0x00007584)
-  .field public static literal int32 UIA_TableItemColumnHeaderItemsPropertyId = int32(0x00007585)
-  .field public static literal int32 UIA_ToggleToggleStatePropertyId = int32(0x00007586)
-  .field public static literal int32 UIA_TransformCanMovePropertyId = int32(0x00007587)
-  .field public static literal int32 UIA_TransformCanResizePropertyId = int32(0x00007588)
-  .field public static literal int32 UIA_TransformCanRotatePropertyId = int32(0x00007589)
-  .field public static literal int32 UIA_IsLegacyIAccessiblePatternAvailablePropertyId = int32(0x0000758A)
-  .field public static literal int32 UIA_LegacyIAccessibleChildIdPropertyId = int32(0x0000758B)
-  .field public static literal int32 UIA_LegacyIAccessibleNamePropertyId = int32(0x0000758C)
-  .field public static literal int32 UIA_LegacyIAccessibleValuePropertyId = int32(0x0000758D)
-  .field public static literal int32 UIA_LegacyIAccessibleDescriptionPropertyId = int32(0x0000758E)
-  .field public static literal int32 UIA_LegacyIAccessibleRolePropertyId = int32(0x0000758F)
-  .field public static literal int32 UIA_LegacyIAccessibleStatePropertyId = int32(0x00007590)
-  .field public static literal int32 UIA_LegacyIAccessibleHelpPropertyId = int32(0x00007591)
-  .field public static literal int32 UIA_LegacyIAccessibleKeyboardShortcutPropertyId = int32(0x00007592)
-  .field public static literal int32 UIA_LegacyIAccessibleSelectionPropertyId = int32(0x00007593)
-  .field public static literal int32 UIA_LegacyIAccessibleDefaultActionPropertyId = int32(0x00007594)
-  .field public static literal int32 UIA_AriaRolePropertyId = int32(0x00007595)
-  .field public static literal int32 UIA_AriaPropertiesPropertyId = int32(0x00007596)
-  .field public static literal int32 UIA_IsDataValidForFormPropertyId = int32(0x00007597)
-  .field public static literal int32 UIA_ControllerForPropertyId = int32(0x00007598)
-  .field public static literal int32 UIA_DescribedByPropertyId = int32(0x00007599)
-  .field public static literal int32 UIA_FlowsToPropertyId = int32(0x0000759A)
-  .field public static literal int32 UIA_ProviderDescriptionPropertyId = int32(0x0000759B)
-  .field public static literal int32 UIA_IsItemContainerPatternAvailablePropertyId = int32(0x0000759C)
-  .field public static literal int32 UIA_IsVirtualizedItemPatternAvailablePropertyId = int32(0x0000759D)
-  .field public static literal int32 UIA_IsSynchronizedInputPatternAvailablePropertyId = int32(0x0000759E)
-  .field public static literal int32 UIA_OptimizeForVisualContentPropertyId = int32(0x0000759F)
-  .field public static literal int32 UIA_IsObjectModelPatternAvailablePropertyId = int32(0x000075A0)
-  .field public static literal int32 UIA_AnnotationAnnotationTypeIdPropertyId = int32(0x000075A1)
-  .field public static literal int32 UIA_AnnotationAnnotationTypeNamePropertyId = int32(0x000075A2)
-  .field public static literal int32 UIA_AnnotationAuthorPropertyId = int32(0x000075A3)
-  .field public static literal int32 UIA_AnnotationDateTimePropertyId = int32(0x000075A4)
-  .field public static literal int32 UIA_AnnotationTargetPropertyId = int32(0x000075A5)
-  .field public static literal int32 UIA_IsAnnotationPatternAvailablePropertyId = int32(0x000075A6)
-  .field public static literal int32 UIA_IsTextPattern2AvailablePropertyId = int32(0x000075A7)
-  .field public static literal int32 UIA_StylesStyleIdPropertyId = int32(0x000075A8)
-  .field public static literal int32 UIA_StylesStyleNamePropertyId = int32(0x000075A9)
-  .field public static literal int32 UIA_StylesFillColorPropertyId = int32(0x000075AA)
-  .field public static literal int32 UIA_StylesFillPatternStylePropertyId = int32(0x000075AB)
-  .field public static literal int32 UIA_StylesShapePropertyId = int32(0x000075AC)
-  .field public static literal int32 UIA_StylesFillPatternColorPropertyId = int32(0x000075AD)
-  .field public static literal int32 UIA_StylesExtendedPropertiesPropertyId = int32(0x000075AE)
-  .field public static literal int32 UIA_IsStylesPatternAvailablePropertyId = int32(0x000075AF)
-  .field public static literal int32 UIA_IsSpreadsheetPatternAvailablePropertyId = int32(0x000075B0)
-  .field public static literal int32 UIA_SpreadsheetItemFormulaPropertyId = int32(0x000075B1)
-  .field public static literal int32 UIA_SpreadsheetItemAnnotationObjectsPropertyId = int32(0x000075B2)
-  .field public static literal int32 UIA_SpreadsheetItemAnnotationTypesPropertyId = int32(0x000075B3)
-  .field public static literal int32 UIA_IsSpreadsheetItemPatternAvailablePropertyId = int32(0x000075B4)
-  .field public static literal int32 UIA_Transform2CanZoomPropertyId = int32(0x000075B5)
-  .field public static literal int32 UIA_IsTransformPattern2AvailablePropertyId = int32(0x000075B6)
-  .field public static literal int32 UIA_LiveSettingPropertyId = int32(0x000075B7)
-  .field public static literal int32 UIA_IsTextChildPatternAvailablePropertyId = int32(0x000075B8)
-  .field public static literal int32 UIA_IsDragPatternAvailablePropertyId = int32(0x000075B9)
-  .field public static literal int32 UIA_DragIsGrabbedPropertyId = int32(0x000075BA)
-  .field public static literal int32 UIA_DragDropEffectPropertyId = int32(0x000075BB)
-  .field public static literal int32 UIA_DragDropEffectsPropertyId = int32(0x000075BC)
-  .field public static literal int32 UIA_IsDropTargetPatternAvailablePropertyId = int32(0x000075BD)
-  .field public static literal int32 UIA_DropTargetDropTargetEffectPropertyId = int32(0x000075BE)
-  .field public static literal int32 UIA_DropTargetDropTargetEffectsPropertyId = int32(0x000075BF)
-  .field public static literal int32 UIA_DragGrabbedItemsPropertyId = int32(0x000075C0)
-  .field public static literal int32 UIA_Transform2ZoomLevelPropertyId = int32(0x000075C1)
-  .field public static literal int32 UIA_Transform2ZoomMinimumPropertyId = int32(0x000075C2)
-  .field public static literal int32 UIA_Transform2ZoomMaximumPropertyId = int32(0x000075C3)
-} // end of class UIAutomationClient.UIA_PropertyIds
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_TextAttributeIds
-       extends [mscorlib]System.Object
-{
-  .field public static literal int32 UIA_AnimationStyleAttributeId = int32(0x00009C40)
-  .field public static literal int32 UIA_BackgroundColorAttributeId = int32(0x00009C41)
-  .field public static literal int32 UIA_BulletStyleAttributeId = int32(0x00009C42)
-  .field public static literal int32 UIA_CapStyleAttributeId = int32(0x00009C43)
-  .field public static literal int32 UIA_CultureAttributeId = int32(0x00009C44)
-  .field public static literal int32 UIA_FontNameAttributeId = int32(0x00009C45)
-  .field public static literal int32 UIA_FontSizeAttributeId = int32(0x00009C46)
-  .field public static literal int32 UIA_FontWeightAttributeId = int32(0x00009C47)
-  .field public static literal int32 UIA_ForegroundColorAttributeId = int32(0x00009C48)
-  .field public static literal int32 UIA_HorizontalTextAlignmentAttributeId = int32(0x00009C49)
-  .field public static literal int32 UIA_IndentationFirstLineAttributeId = int32(0x00009C4A)
-  .field public static literal int32 UIA_IndentationLeadingAttributeId = int32(0x00009C4B)
-  .field public static literal int32 UIA_IndentationTrailingAttributeId = int32(0x00009C4C)
-  .field public static literal int32 UIA_IsHiddenAttributeId = int32(0x00009C4D)
-  .field public static literal int32 UIA_IsItalicAttributeId = int32(0x00009C4E)
-  .field public static literal int32 UIA_IsReadOnlyAttributeId = int32(0x00009C4F)
-  .field public static literal int32 UIA_IsSubscriptAttributeId = int32(0x00009C50)
-  .field public static literal int32 UIA_IsSuperscriptAttributeId = int32(0x00009C51)
-  .field public static literal int32 UIA_MarginBottomAttributeId = int32(0x00009C52)
-  .field public static literal int32 UIA_MarginLeadingAttributeId = int32(0x00009C53)
-  .field public static literal int32 UIA_MarginTopAttributeId = int32(0x00009C54)
-  .field public static literal int32 UIA_MarginTrailingAttributeId = int32(0x00009C55)
-  .field public static literal int32 UIA_OutlineStylesAttributeId = int32(0x00009C56)
-  .field public static literal int32 UIA_OverlineColorAttributeId = int32(0x00009C57)
-  .field public static literal int32 UIA_OverlineStyleAttributeId = int32(0x00009C58)
-  .field public static literal int32 UIA_StrikethroughColorAttributeId = int32(0x00009C59)
-  .field public static literal int32 UIA_StrikethroughStyleAttributeId = int32(0x00009C5A)
-  .field public static literal int32 UIA_TabsAttributeId = int32(0x00009C5B)
-  .field public static literal int32 UIA_TextFlowDirectionsAttributeId = int32(0x00009C5C)
-  .field public static literal int32 UIA_UnderlineColorAttributeId = int32(0x00009C5D)
-  .field public static literal int32 UIA_UnderlineStyleAttributeId = int32(0x00009C5E)
-  .field public static literal int32 UIA_AnnotationTypesAttributeId = int32(0x00009C5F)
-  .field public static literal int32 UIA_AnnotationObjectsAttributeId = int32(0x00009C60)
-  .field public static literal int32 UIA_StyleNameAttributeId = int32(0x00009C61)
-  .field public static literal int32 UIA_StyleIdAttributeId = int32(0x00009C62)
-  .field public static literal int32 UIA_LinkAttributeId = int32(0x00009C63)
-  .field public static literal int32 UIA_IsActiveAttributeId = int32(0x00009C64)
-  .field public static literal int32 UIA_SelectionActiveEndAttributeId = int32(0x00009C65)
-  .field public static literal int32 UIA_CaretPositionAttributeId = int32(0x00009C66)
-  .field public static literal int32 UIA_CaretBidiModeAttributeId = int32(0x00009C67)
-} // end of class UIAutomationClient.UIA_TextAttributeIds
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_ControlTypeIds
-       extends [mscorlib]System.Object
-{
-  .field public static literal int32 UIA_ButtonControlTypeId = int32(0x0000C350)
-  .field public static literal int32 UIA_CalendarControlTypeId = int32(0x0000C351)
-  .field public static literal int32 UIA_CheckBoxControlTypeId = int32(0x0000C352)
-  .field public static literal int32 UIA_ComboBoxControlTypeId = int32(0x0000C353)
-  .field public static literal int32 UIA_EditControlTypeId = int32(0x0000C354)
-  .field public static literal int32 UIA_HyperlinkControlTypeId = int32(0x0000C355)
-  .field public static literal int32 UIA_ImageControlTypeId = int32(0x0000C356)
-  .field public static literal int32 UIA_ListItemControlTypeId = int32(0x0000C357)
-  .field public static literal int32 UIA_ListControlTypeId = int32(0x0000C358)
-  .field public static literal int32 UIA_MenuControlTypeId = int32(0x0000C359)
-  .field public static literal int32 UIA_MenuBarControlTypeId = int32(0x0000C35A)
-  .field public static literal int32 UIA_MenuItemControlTypeId = int32(0x0000C35B)
-  .field public static literal int32 UIA_ProgressBarControlTypeId = int32(0x0000C35C)
-  .field public static literal int32 UIA_RadioButtonControlTypeId = int32(0x0000C35D)
-  .field public static literal int32 UIA_ScrollBarControlTypeId = int32(0x0000C35E)
-  .field public static literal int32 UIA_SliderControlTypeId = int32(0x0000C35F)
-  .field public static literal int32 UIA_SpinnerControlTypeId = int32(0x0000C360)
-  .field public static literal int32 UIA_StatusBarControlTypeId = int32(0x0000C361)
-  .field public static literal int32 UIA_TabControlTypeId = int32(0x0000C362)
-  .field public static literal int32 UIA_TabItemControlTypeId = int32(0x0000C363)
-  .field public static literal int32 UIA_TextControlTypeId = int32(0x0000C364)
-  .field public static literal int32 UIA_ToolBarControlTypeId = int32(0x0000C365)
-  .field public static literal int32 UIA_ToolTipControlTypeId = int32(0x0000C366)
-  .field public static literal int32 UIA_TreeControlTypeId = int32(0x0000C367)
-  .field public static literal int32 UIA_TreeItemControlTypeId = int32(0x0000C368)
-  .field public static literal int32 UIA_CustomControlTypeId = int32(0x0000C369)
-  .field public static literal int32 UIA_GroupControlTypeId = int32(0x0000C36A)
-  .field public static literal int32 UIA_ThumbControlTypeId = int32(0x0000C36B)
-  .field public static literal int32 UIA_DataGridControlTypeId = int32(0x0000C36C)
-  .field public static literal int32 UIA_DataItemControlTypeId = int32(0x0000C36D)
-  .field public static literal int32 UIA_DocumentControlTypeId = int32(0x0000C36E)
-  .field public static literal int32 UIA_SplitButtonControlTypeId = int32(0x0000C36F)
-  .field public static literal int32 UIA_WindowControlTypeId = int32(0x0000C370)
-  .field public static literal int32 UIA_PaneControlTypeId = int32(0x0000C371)
-  .field public static literal int32 UIA_HeaderControlTypeId = int32(0x0000C372)
-  .field public static literal int32 UIA_HeaderItemControlTypeId = int32(0x0000C373)
-  .field public static literal int32 UIA_TableControlTypeId = int32(0x0000C374)
-  .field public static literal int32 UIA_TitleBarControlTypeId = int32(0x0000C375)
-  .field public static literal int32 UIA_SeparatorControlTypeId = int32(0x0000C376)
-  .field public static literal int32 UIA_SemanticZoomControlTypeId = int32(0x0000C377)
-} // end of class UIAutomationClient.UIA_ControlTypeIds
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_AnnotationTypes
-       extends [mscorlib]System.Object
-{
-  .field public static literal int32 AnnotationType_Unknown = int32(0x0000EA60)
-  .field public static literal int32 AnnotationType_SpellingError = int32(0x0000EA61)
-  .field public static literal int32 AnnotationType_GrammarError = int32(0x0000EA62)
-  .field public static literal int32 AnnotationType_Comment = int32(0x0000EA63)
-  .field public static literal int32 AnnotationType_FormulaError = int32(0x0000EA64)
-  .field public static literal int32 AnnotationType_TrackChanges = int32(0x0000EA65)
-  .field public static literal int32 AnnotationType_Header = int32(0x0000EA66)
-  .field public static literal int32 AnnotationType_Footer = int32(0x0000EA67)
-  .field public static literal int32 AnnotationType_Highlighted = int32(0x0000EA68)
-} // end of class UIAutomationClient.UIA_AnnotationTypes
-
-.class public abstract auto ansi sealed UIAutomationClient.UIA_StyleIds
-       extends [mscorlib]System.Object
-{
-  .field public static literal int32 StyleId_Custom = int32(0x00011170)
-  .field public static literal int32 StyleId_Heading1 = int32(0x00011171)
-  .field public static literal int32 StyleId_Heading2 = int32(0x00011172)
-  .field public static literal int32 StyleId_Heading3 = int32(0x00011173)
-  .field public static literal int32 StyleId_Heading4 = int32(0x00011174)
-  .field public static literal int32 StyleId_Heading5 = int32(0x00011175)
-  .field public static literal int32 StyleId_Heading6 = int32(0x00011176)
-  .field public static literal int32 StyleId_Heading7 = int32(0x00011177)
-  .field public static literal int32 StyleId_Heading8 = int32(0x00011178)
-  .field public static literal int32 StyleId_Heading9 = int32(0x00011179)
-  .field public static literal int32 StyleId_Title = int32(0x0001117A)
-  .field public static literal int32 StyleId_Subtitle = int32(0x0001117B)
-  .field public static literal int32 StyleId_Normal = int32(0x0001117C)
-  .field public static literal int32 StyleId_Emphasis = int32(0x0001117D)
-  .field public static literal int32 StyleId_Quote = int32(0x0001117E)
-} // end of class UIAutomationClient.UIA_StyleIds
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationBoolCondition
-       implements UIAutomationClient.IUIAutomationCondition
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 42 34 45 31 46 32 45 2D 37 35 45 42   // ..$1B4E1F2E-75EB
-                                                                                                  2D 34 44 30 42 2D 38 39 35 32 2D 35 41 36 39 39   // -4D0B-8952-5A699
-                                                                                                  38 38 45 32 33 30 37 00 00 )                      // 88E2307..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_BooleanValue() runtime managed internalcall
-  {
-  } // end of method IUIAutomationBoolCondition::get_BooleanValue
-
-  .property int32 BooleanValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationBoolCondition::get_BooleanValue()
-  } // end of property IUIAutomationBoolCondition::BooleanValue
-} // end of class UIAutomationClient.IUIAutomationBoolCondition
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationPropertyCondition
-       implements UIAutomationClient.IUIAutomationCondition
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 39 45 42 46 32 43 42 2D 35 35 37 38   // ..$99EBF2CB-5578
-                                                                                                  2D 34 32 36 37 2D 39 41 44 34 2D 41 46 44 36 45   // -4267-9AD4-AFD6E
-                                                                                                  41 37 37 45 39 34 42 00 00 )                      // A77E94B..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_propertyId() runtime managed internalcall
-  {
-  } // end of method IUIAutomationPropertyCondition::get_propertyId
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance object 
-          marshal( struct) 
-          get_PropertyValue() runtime managed internalcall
-  {
-  } // end of method IUIAutomationPropertyCondition::get_PropertyValue
-
-  .method public hidebysig newslot specialname abstract virtual 
-          instance valuetype UIAutomationClient.PropertyConditionFlags 
-          get_PropertyConditionFlags() runtime managed internalcall
-  {
-  } // end of method IUIAutomationPropertyCondition::get_PropertyConditionFlags
-
-  .property int32 propertyId()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationPropertyCondition::get_propertyId()
-  } // end of property IUIAutomationPropertyCondition::propertyId
-  .property object PropertyValue()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 02 60 00 00 )                         // .....`..
-    .get instance object UIAutomationClient.IUIAutomationPropertyCondition::get_PropertyValue()
-  } // end of property IUIAutomationPropertyCondition::PropertyValue
-  .property valuetype UIAutomationClient.PropertyConditionFlags
-          PropertyConditionFlags()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
-    .get instance valuetype UIAutomationClient.PropertyConditionFlags UIAutomationClient.IUIAutomationPropertyCondition::get_PropertyConditionFlags()
-  } // end of property IUIAutomationPropertyCondition::PropertyConditionFlags
-} // end of class UIAutomationClient.IUIAutomationPropertyCondition
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationAndCondition
-       implements UIAutomationClient.IUIAutomationCondition
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 37 44 30 41 46 33 36 2D 42 39 31 32   // ..$A7D0AF36-B912
-                                                                                                  2D 34 35 46 45 2D 39 38 35 35 2D 30 39 31 44 44   // -45FE-9855-091DD
-                                                                                                  43 31 37 34 41 45 43 00 00 )                      // C174AEC..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_ChildCount() runtime managed internalcall
-  {
-  } // end of method IUIAutomationAndCondition::get_ChildCount
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  GetChildrenAsNativeArray([out] native int childArray,
-                                                  [out] int32& childArrayCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomationAndCondition::GetChildrenAsNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray iunknown, "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") 
-          GetChildren() runtime managed internalcall
-  {
-  } // end of method IUIAutomationAndCondition::GetChildren
-
-  .property int32 ChildCount()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationAndCondition::get_ChildCount()
-  } // end of property IUIAutomationAndCondition::ChildCount
-} // end of class UIAutomationClient.IUIAutomationAndCondition
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationOrCondition
-       implements UIAutomationClient.IUIAutomationCondition
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 37 35 33 46 30 33 32 2D 33 44 42 31   // ..$8753F032-3DB1
-                                                                                                  2D 34 37 42 35 2D 41 31 46 43 2D 36 45 33 34 41   // -47B5-A1FC-6E34A
-                                                                                                  32 36 36 43 37 31 32 00 00 )                      // 266C712..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .method public hidebysig newslot specialname abstract virtual 
-          instance int32  get_ChildCount() runtime managed internalcall
-  {
-  } // end of method IUIAutomationOrCondition::get_ChildCount
-
-  .method public hidebysig newslot abstract virtual 
-          instance void  GetChildrenAsNativeArray([out] native int childArray,
-                                                  [out] int32& childArrayCount) runtime managed internalcall
-  {
-  } // end of method IUIAutomationOrCondition::GetChildrenAsNativeArray
-
-  .method public hidebysig newslot abstract virtual 
-          instance class [mscorlib]System.Array 
-          marshal( safearray iunknown, "UIAutomationClient.IUIAutomationCondition, Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") 
-          GetChildren() runtime managed internalcall
-  {
-  } // end of method IUIAutomationOrCondition::GetChildren
-
-  .property int32 ChildCount()
-  {
-    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
-    .get instance int32 UIAutomationClient.IUIAutomationOrCondition::get_ChildCount()
-  } // end of property IUIAutomationOrCondition::ChildCount
-} // end of class UIAutomationClient.IUIAutomationOrCondition
-
-.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationNotCondition
-       implements UIAutomationClient.IUIAutomationCondition
-{
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 46 35 32 38 42 36 35 37 2D 38 34 37 42   // ..$F528B657-847B
-                                                                                                  2D 34 39 38 43 2D 38 38 39 36 2D 44 35 32 42 35   // -498C-8896-D52B5
-                                                                                                  36 35 34 30 37 41 31 00 00 )                      // 65407A1..
-  .method public hidebysig newslot abstract virtual 
-          instance class UIAutomationClient.IUIAutomationCondition 
-          marshal( interface ) 
-          GetChild() runtime managed internalcall
-  {
-  } // end of method IUIAutomationNotCondition::GetChild
-
-} // end of class UIAutomationClient.IUIAutomationNotCondition
+  .field public specialname rtspecialname int32 value__
+  .field public static literal valuetype UIAutomationClient.TextEditChangeType TextEditChangeType_None = int32(0x00000000)
+  .field public static literal valuetype UIAutomationClient.TextEditChangeType TextEditChangeType_AutoCorrect = int32(0x00000001)
+  .field public static literal valuetype UIAutomationClient.TextEditChangeType TextEditChangeType_Composition = int32(0x00000002)
+  .field public static literal valuetype UIAutomationClient.TextEditChangeType TextEditChangeType_CompositionFinalized = int32(0x00000003)
+} // end of class UIAutomationClient.TextEditChangeType
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationInvokePattern
 {
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 46 42 33 37 37 46 42 45 2D 38 45 41 36   // ..$FB377FBE-8EA6
                                                                                                   2D 34 36 44 35 2D 39 43 37 33 2D 36 34 39 39 36   // -46D5-9C73-64996
                                                                                                   34 32 44 33 30 35 39 00 00 )                      // 42D3059..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Invoke() runtime managed internalcall
   {
@@ -4364,7 +1794,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationDockPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 46 44 45 35 45 46 39 37 2D 31 34 36 34   // ..$FDE5EF97-1464
                                                                                                   2D 34 38 46 36 2D 39 30 42 46 2D 34 33 44 30 39   // -48F6-90BF-43D09
                                                                                                   34 38 45 38 36 45 43 00 00 )                      // 48E86EC..
@@ -4413,7 +1843,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationExpandCollapsePattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 31 39 42 45 30 38 36 2D 31 46 34 45   // ..$619BE086-1F4E
                                                                                                   2D 34 45 45 34 2D 42 41 46 41 2D 32 31 30 31 32   // -4EE4-BAFA-21012
                                                                                                   38 37 33 38 37 33 30 00 00 )                      // 8738730..
@@ -4465,10 +1895,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationGridPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 34 31 34 43 33 43 44 43 2D 38 35 36 42   // ..$414C3CDC-856B
                                                                                                   2D 34 46 35 42 2D 38 35 33 38 2D 33 31 33 31 43   // -4F5B-8538-3131C
                                                                                                   36 33 30 32 35 35 30 00 00 )                      // 6302550..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationElement 
           marshal( interface ) 
@@ -4521,10 +1951,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationGridItemPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 37 38 46 38 45 46 35 37 2D 36 36 43 33   // ..$78F8EF57-66C3
                                                                                                   2D 34 45 30 39 2D 42 44 37 43 2D 45 37 39 42 32   // -4E09-BD7C-E79B2
                                                                                                   30 30 34 38 39 34 44 00 00 )                      // 004894D..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance class UIAutomationClient.IUIAutomationElement 
           marshal( interface ) 
@@ -4635,10 +2065,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationMultipleViewPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 44 32 35 33 43 39 31 2D 31 44 43 35   // ..$8D253C91-1DC5
                                                                                                   2D 34 42 42 35 2D 42 31 38 46 2D 41 44 45 31 36   // -4BB5-B18F-ADE16
                                                                                                   46 41 34 39 35 45 38 00 00 )                      // FA495E8..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance string 
           marshal( bstr) 
@@ -4689,10 +2119,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationObjectModelPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 37 31 43 32 38 34 42 33 2D 43 31 34 44   // ..$71C284B3-C14D
                                                                                                   2D 34 44 31 34 2D 39 38 31 45 2D 31 39 37 35 31   // -4D14-981E-19751
                                                                                                   42 30 44 37 35 36 44 00 00 )                      // B0D756D..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance object 
           marshal( iunknown ) 
@@ -4704,7 +2134,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationRangeValuePattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 39 32 31 33 46 34 46 2D 37 33 34 36   // ..$59213F4F-7346
                                                                                                   2D 34 39 45 35 2D 42 31 32 30 2D 38 30 35 35 35   // -49E5-B120-80555
                                                                                                   39 38 37 41 31 34 38 00 00 )                      // 987A148..
@@ -4840,7 +2270,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 38 46 34 44 34 32 41 2D 45 38 38 31   // ..$88F4D42A-E881
                                                                                                   2D 34 35 39 44 2D 41 37 37 43 2D 37 33 42 42 42   // -459D-A77C-73BBB
                                                                                                   42 37 45 30 32 44 43 00 00 )                      // B7E02DC..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Scroll([in] valuetype UIAutomationClient.ScrollAmount horizontalAmount,
                                 [in] valuetype UIAutomationClient.ScrollAmount verticalAmount) runtime managed internalcall
@@ -4988,7 +2418,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationScrollItemPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 42 34 38 38 33 30 30 46 2D 44 30 31 35   // ..$B488300F-D015
                                                                                                   2D 34 46 31 39 2D 39 43 32 39 2D 42 42 35 39 35   // -4F19-9C29-BB595
                                                                                                   45 33 36 34 35 45 46 00 00 )                      // E3645EF..
@@ -5004,7 +2434,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 45 44 35 32 30 32 45 2D 42 32 41 43   // ..$5ED5202E-B2AC
                                                                                                   2D 34 37 41 36 2D 42 36 33 38 2D 34 42 30 42 46   // -47A6-B638-4B0BF
                                                                                                   31 34 30 44 37 38 45 00 00 )                      // 140D78E..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationElementArray 
           marshal( interface ) 
@@ -5063,10 +2493,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationSelectionItemPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 38 45 46 41 36 36 41 2D 30 46 44 41   // ..$A8EFA66A-0FDA
                                                                                                   2D 34 32 31 41 2D 39 31 39 34 2D 33 38 30 32 31   // -421A-9194-38021
                                                                                                   46 33 35 37 38 45 41 00 00 )                      // F3578EA..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Select() runtime managed internalcall
   {
@@ -5132,10 +2562,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationSynchronizedInputPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 32 32 33 33 42 45 30 42 2D 41 46 42 37   // ..$2233BE0B-AFB7
                                                                                                   2D 34 34 38 42 2D 39 46 44 41 2D 33 42 33 37 38   // -448B-9FDA-3B378
                                                                                                   41 41 35 45 41 45 31 00 00 )                      // AA5EAE1..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  StartListening([in] valuetype UIAutomationClient.SynchronizedInputType inputType) runtime managed internalcall
   {
@@ -5162,10 +2592,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTablePattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 32 30 45 36 39 31 43 2D 45 41 39 36   // ..$620E691C-EA96
                                                                                                   2D 34 37 31 30 2D 41 38 35 30 2D 37 35 34 42 32   // -4710-A850-754B2
                                                                                                   34 43 45 32 34 31 37 00 00 )                      // 4CE2417..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationElementArray 
           marshal( interface ) 
@@ -5231,7 +2661,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTableItemPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 42 39 36 34 45 42 33 2D 45 46 32 45   // ..$0B964EB3-EF2E
                                                                                                   2D 34 34 36 34 2D 39 43 37 39 2D 36 31 44 36 31   // -4464-9C79-61D61
                                                                                                   37 33 37 41 32 37 45 00 00 )                      // 737A27E..
@@ -5270,7 +2700,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 34 43 46 38 30 35 38 2D 39 42 38 44   // ..$94CF8058-9B8D
                                                                                                   2D 34 41 42 39 2D 38 42 46 44 2D 34 43 44 30 41   // -4AB9-8BFD-4CD0A
                                                                                                   33 33 43 38 43 37 30 00 00 )                      // 33C8C70..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Toggle() runtime managed internalcall
   {
@@ -5313,10 +2743,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTransformPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 39 42 35 35 38 34 34 2D 41 35 35 44   // ..$A9B55844-A55D
                                                                                                   2D 34 45 46 30 2D 39 32 36 44 2D 35 36 39 43 31   // -4EF0-926D-569C1
                                                                                                   36 46 46 38 39 42 42 00 00 )                      // 6FF89BB..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Move([in] float64 x,
                               [in] float64 y) runtime managed internalcall
@@ -5401,7 +2831,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 39 34 43 44 38 42 31 2D 30 38 34 34   // ..$A94CD8B1-0844
                                                                                                   2D 34 43 44 36 2D 39 44 32 44 2D 36 34 30 35 33   // -4CD6-9D2D-64053
                                                                                                   37 41 42 33 39 45 39 00 00 )                      // 7AB39E9..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  SetValue([in] string  marshal( bstr) val) runtime managed internalcall
   {
@@ -5455,10 +2885,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationWindowPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 46 41 45 46 34 35 33 2D 39 32 30 38   // ..$0FAEF453-9208
                                                                                                   2D 34 33 45 46 2D 42 42 42 32 2D 33 42 34 38 35   // -43EF-BBB2-3B485
                                                                                                   31 37 37 38 36 34 46 00 00 )                      // 177864F..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Close() runtime managed internalcall
   {
@@ -5626,7 +3056,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTextRange
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 41 35 34 33 43 43 36 41 2D 46 34 41 45   // ..$A543CC6A-F4AE
                                                                                                   2D 34 39 34 42 2D 38 32 33 39 2D 43 38 31 34 34   // -494B-8239-C8144
                                                                                                   38 31 31 38 37 41 38 00 00 )                      // 81187A8..
@@ -5770,12 +3200,143 @@
   .field public static literal valuetype UIAutomationClient.TextUnit TextUnit_Document = int32(0x00000006)
 } // end of class UIAutomationClient.TextUnit
 
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTextRange2
+       implements UIAutomationClient.IUIAutomationTextRange
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 42 42 39 42 34 30 45 30 2D 35 45 30 34   // ..$BB9B40E0-5E04
+                                                                                                  2D 34 36 42 44 2D 39 42 45 30 2D 34 42 36 30 31   // -46BD-9BE0-4B601
+                                                                                                  42 39 41 46 41 44 34 00 00 )                      // B9AFAD4..
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          Clone() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::Clone
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  Compare([in] class UIAutomationClient.IUIAutomationTextRange  marshal( interface ) range) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::Compare
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareEndpoints([in] valuetype UIAutomationClient.TextPatternRangeEndpoint srcEndPoint,
+                                           [in] class UIAutomationClient.IUIAutomationTextRange  marshal( interface ) range,
+                                           [in] valuetype UIAutomationClient.TextPatternRangeEndpoint targetEndPoint) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::CompareEndpoints
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ExpandToEnclosingUnit([in] valuetype UIAutomationClient.TextUnit TextUnit) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::ExpandToEnclosingUnit
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          FindAttribute([in] int32 attr,
+                        [in] object  marshal( struct) val,
+                        [in] int32 backward) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::FindAttribute
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          FindText([in] string  marshal( bstr) text,
+                   [in] int32 backward,
+                   [in] int32 ignoreCase) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::FindText
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          GetAttributeValue([in] int32 attr) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::GetAttributeValue
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray float64) 
+          GetBoundingRectangles() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::GetBoundingRectangles
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetEnclosingElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::GetEnclosingElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetText([in] int32 maxLength) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::GetText
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  Move([in] valuetype UIAutomationClient.TextUnit unit,
+                               [in] int32 count) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::Move
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  MoveEndpointByUnit([in] valuetype UIAutomationClient.TextPatternRangeEndpoint endpoint,
+                                             [in] valuetype UIAutomationClient.TextUnit unit,
+                                             [in] int32 count) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::MoveEndpointByUnit
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  MoveEndpointByRange([in] valuetype UIAutomationClient.TextPatternRangeEndpoint srcEndPoint,
+                                             [in] class UIAutomationClient.IUIAutomationTextRange  marshal( interface ) range,
+                                             [in] valuetype UIAutomationClient.TextPatternRangeEndpoint targetEndPoint) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::MoveEndpointByRange
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  Select() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::Select
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddToSelection() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::AddToSelection
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveFromSelection() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::RemoveFromSelection
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ScrollIntoView([in] int32 alignToTop) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::ScrollIntoView
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          GetChildren() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::GetChildren
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ShowContextMenu() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextRange2::ShowContextMenu
+
+} // end of class UIAutomationClient.IUIAutomationTextRange2
+
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTextRangeArray
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 43 45 34 41 45 37 36 41 2D 45 37 31 37   // ..$CE4AE76A-E717
                                                                                                   2D 34 43 39 38 2D 38 31 45 41 2D 34 37 33 37 31   // -4C98-81EA-47371
                                                                                                   44 30 32 38 45 42 36 00 00 )                      // D028EB6..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance int32  get_Length() runtime managed internalcall
   {
@@ -5797,10 +3358,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTextPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 32 45 42 41 32 38 39 2D 33 35 38 33   // ..$32EBA289-3583
                                                                                                   2D 34 32 43 39 2D 39 43 35 39 2D 33 42 36 44 39   // -42C9-9C59-3B6D9
                                                                                                   41 31 45 39 42 36 41 00 00 )                      // A1E9B6A..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationTextRange 
           marshal( interface ) 
@@ -5871,7 +3432,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 35 30 36 41 39 32 31 41 2D 46 43 43 39   // ..$506A921A-FCC9
                                                                                                   2D 34 30 39 46 2D 42 32 33 42 2D 33 37 45 42 37   // -409F-B23B-37EB7
                                                                                                   34 31 30 36 38 37 32 00 00 )                      // 4106872..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationTextRange 
           marshal( interface ) 
@@ -5941,12 +3502,88 @@
   } // end of property IUIAutomationTextPattern2::SupportedTextSelection
 } // end of class UIAutomationClient.IUIAutomationTextPattern2
 
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTextEditPattern
+       implements UIAutomationClient.IUIAutomationTextPattern
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 37 45 32 31 35 37 36 2D 39 39 36 43   // ..$17E21576-996C
+                                                                                                  2D 34 38 37 30 2D 39 39 44 39 2D 42 46 46 33 32   // -4870-99D9-BFF32
+                                                                                                  33 33 38 30 43 30 36 00 00 )                      // 3380C06..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          RangeFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::RangeFromPoint
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          RangeFromChild([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) child) runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::RangeFromChild
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRangeArray 
+          marshal( interface ) 
+          GetSelection() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::GetSelection
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRangeArray 
+          marshal( interface ) 
+          GetVisibleRanges() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::GetVisibleRanges
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          get_DocumentRange() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::get_DocumentRange
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.SupportedTextSelection 
+          get_SupportedTextSelection() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::get_SupportedTextSelection
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          GetActiveComposition() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::GetActiveComposition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTextRange 
+          marshal( interface ) 
+          GetConversionTarget() runtime managed internalcall
+  {
+  } // end of method IUIAutomationTextEditPattern::GetConversionTarget
+
+  .property class UIAutomationClient.IUIAutomationTextRange
+          DocumentRange()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTextRange UIAutomationClient.IUIAutomationTextEditPattern::get_DocumentRange()
+  } // end of property IUIAutomationTextEditPattern::DocumentRange
+  .property valuetype UIAutomationClient.SupportedTextSelection
+          SupportedTextSelection()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 05 00 01 60 00 00 )                         // .....`..
+    .get instance valuetype UIAutomationClient.SupportedTextSelection UIAutomationClient.IUIAutomationTextEditPattern::get_SupportedTextSelection()
+  } // end of property IUIAutomationTextEditPattern::SupportedTextSelection
+} // end of class UIAutomationClient.IUIAutomationTextEditPattern
+
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationLegacyIAccessiblePattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 32 38 30 35 35 41 44 2D 33 35 35 42   // ..$828055AD-355B
                                                                                                   2D 34 34 33 35 2D 38 36 44 35 2D 33 42 35 31 43   // -4435-86D5-3B51C
                                                                                                   31 34 41 39 42 31 42 00 00 )                      // 14A9B1B..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Select(int32 flagsSelect) runtime managed internalcall
   {
@@ -6189,9 +3826,278 @@
   } // end of property IUIAutomationLegacyIAccessiblePattern::CachedDefaultAction
 } // end of class UIAutomationClient.IUIAutomationLegacyIAccessiblePattern
 
+.class interface public abstract auto ansi import UIAutomationClient.IAccessible
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 31 38 37 33 36 45 30 2D 33 43 33 44   // ..$618736E0-3C3D
+                                                                                                  2D 31 31 43 46 2D 38 31 30 43 2D 30 30 41 41 30   // -11CF-810C-00AA0
+                                                                                                  30 33 38 39 42 37 31 00 00 )                      // 0389B71..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 50 10 00 00 )                               // ..P...
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( idispatch ) 
+          get_accParent() runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 78 EC FF FF 00 00 )                         // ..x.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accParent
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_accChildCount() runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 77 EC FF FF 00 00 )                         // ..w.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accChildCount
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( idispatch ) 
+          get_accChild([in] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 76 EC FF FF 00 00 )                         // ..v.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accChild
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_accName([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 75 EC FF FF 00 00 )                         // ..u.....
+  } // end of method IAccessible::get_accName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_accValue([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 74 EC FF FF 00 00 )                         // ..t.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accValue
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_accDescription([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 73 EC FF FF 00 00 )                         // ..s.....
+  } // end of method IAccessible::get_accDescription
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( struct) 
+          get_accRole([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 72 EC FF FF 00 00 )                         // ..r.....
+  } // end of method IAccessible::get_accRole
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( struct) 
+          get_accState([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 71 EC FF FF 00 00 )                         // ..q.....
+  } // end of method IAccessible::get_accState
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_accHelp([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 70 EC FF FF 00 00 )                         // ..p.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accHelp
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_accHelpTopic([out] string&  marshal( bstr) pszHelpFile,
+                                           [in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6F EC FF FF 00 00 )                         // ..o.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accHelpTopic
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_accKeyboardShortcut([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6E EC FF FF 00 00 )                         // ..n.....
+  } // end of method IAccessible::get_accKeyboardShortcut
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( struct) 
+          get_accFocus() runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6D EC FF FF 00 00 )                         // ..m.....
+  } // end of method IAccessible::get_accFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( struct) 
+          get_accSelection() runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6C EC FF FF 00 00 )                         // ..l.....
+  } // end of method IAccessible::get_accSelection
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_accDefaultAction([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6B EC FF FF 00 00 )                         // ..k.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::get_accDefaultAction
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  accSelect([in] int32 flagsSelect,
+                                   [in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6A EC FF FF 00 00 )                         // ..j.....
+  } // end of method IAccessible::accSelect
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  accLocation([out] int32& pxLeft,
+                                     [out] int32& pyTop,
+                                     [out] int32& pcxWidth,
+                                     [out] int32& pcyHeight,
+                                     [in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 69 EC FF FF 00 00 )                         // ..i.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::accLocation
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          accNavigate([in] int32 navDir,
+                      [in][opt] object  marshal( struct) varStart) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 68 EC FF FF 00 00 )                         // ..h.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::accNavigate
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          accHitTest([in] int32 xLeft,
+                     [in] int32 yTop) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 67 EC FF FF 00 00 )                         // ..g.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::accHitTest
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  accDoDefaultAction([in][opt] object  marshal( struct) varChild) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 66 EC FF FF 00 00 )                         // ..f.....
+  } // end of method IAccessible::accDoDefaultAction
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_accName([in][opt] object  marshal( struct) varChild,
+                                     [in] string  marshal( bstr) pszName) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 75 EC FF FF 00 00 )                         // ..u.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::set_accName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_accValue([in][opt] object  marshal( struct) varChild,
+                                      [in] string  marshal( bstr) pszValue) runtime managed internalcall
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 74 EC FF FF 00 00 )                         // ..t.....
+    .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibFuncAttribute::.ctor(int16) = ( 01 00 40 00 00 00 )                               // ..@...
+  } // end of method IAccessible::set_accValue
+
+  .property object accParent()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 78 EC FF FF 00 00 )                         // ..x.....
+    .get instance object UIAutomationClient.IAccessible::get_accParent()
+  } // end of property IAccessible::accParent
+  .property int32 accChildCount()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 77 EC FF FF 00 00 )                         // ..w.....
+    .get instance int32 UIAutomationClient.IAccessible::get_accChildCount()
+  } // end of property IAccessible::accChildCount
+  .property object accChild(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 76 EC FF FF 00 00 )                         // ..v.....
+    .get instance object UIAutomationClient.IAccessible::get_accChild(object)
+  } // end of property IAccessible::accChild
+  .property string accName(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 75 EC FF FF 00 00 )                         // ..u.....
+    .get instance string UIAutomationClient.IAccessible::get_accName(object)
+    .set instance void UIAutomationClient.IAccessible::set_accName(object,
+                                                                   string)
+  } // end of property IAccessible::accName
+  .property string accValue(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 74 EC FF FF 00 00 )                         // ..t.....
+    .set instance void UIAutomationClient.IAccessible::set_accValue(object,
+                                                                    string)
+    .get instance string UIAutomationClient.IAccessible::get_accValue(object)
+  } // end of property IAccessible::accValue
+  .property string accDescription(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 73 EC FF FF 00 00 )                         // ..s.....
+    .get instance string UIAutomationClient.IAccessible::get_accDescription(object)
+  } // end of property IAccessible::accDescription
+  .property object accRole(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 72 EC FF FF 00 00 )                         // ..r.....
+    .get instance object UIAutomationClient.IAccessible::get_accRole(object)
+  } // end of property IAccessible::accRole
+  .property object accState(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 71 EC FF FF 00 00 )                         // ..q.....
+    .get instance object UIAutomationClient.IAccessible::get_accState(object)
+  } // end of property IAccessible::accState
+  .property string accHelp(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 70 EC FF FF 00 00 )                         // ..p.....
+    .get instance string UIAutomationClient.IAccessible::get_accHelp(object)
+  } // end of property IAccessible::accHelp
+  .property int32 accHelpTopic(string&,
+                               object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6F EC FF FF 00 00 )                         // ..o.....
+    .get instance int32 UIAutomationClient.IAccessible::get_accHelpTopic(string&,
+                                                                         object)
+  } // end of property IAccessible::accHelpTopic
+  .property string accKeyboardShortcut(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6E EC FF FF 00 00 )                         // ..n.....
+    .get instance string UIAutomationClient.IAccessible::get_accKeyboardShortcut(object)
+  } // end of property IAccessible::accKeyboardShortcut
+  .property object accFocus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6D EC FF FF 00 00 )                         // ..m.....
+    .get instance object UIAutomationClient.IAccessible::get_accFocus()
+  } // end of property IAccessible::accFocus
+  .property object accSelection()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6C EC FF FF 00 00 )                         // ..l.....
+    .get instance object UIAutomationClient.IAccessible::get_accSelection()
+  } // end of property IAccessible::accSelection
+  .property string accDefaultAction(object)
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 6B EC FF FF 00 00 )                         // ..k.....
+    .get instance string UIAutomationClient.IAccessible::get_accDefaultAction(object)
+  } // end of property IAccessible::accDefaultAction
+} // end of class UIAutomationClient.IAccessible
+
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationItemContainerPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 43 36 39 30 46 44 42 32 2D 32 37 41 38   // ..$C690FDB2-27A8
                                                                                                   2D 34 32 33 43 2D 38 31 32 44 2D 34 32 39 37 37   // -423C-812D-42977
                                                                                                   33 43 39 30 38 34 45 00 00 )                      // 3C9084E..
@@ -6208,10 +4114,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationVirtualizedItemPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 42 41 33 44 37 41 36 2D 30 34 43 46   // ..$6BA3D7A6-04CF
                                                                                                   2D 34 46 31 31 2D 38 37 39 33 2D 41 38 44 31 43   // -4F11-8793-A8D1C
                                                                                                   44 45 39 39 36 39 46 00 00 )                      // DE9969F..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Realize() runtime managed internalcall
   {
@@ -6221,7 +4127,7 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationAnnotationPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 39 41 31 37 35 42 32 31 2D 33 33 39 45   // ..$9A175B21-339E
                                                                                                   2D 34 31 42 31 2D 38 45 38 42 2D 36 32 33 46 36   // -41B1-8E8B-623F6
                                                                                                   42 36 38 31 30 39 38 00 00 )                      // B681098..
@@ -6347,11 +4253,11 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationStylesPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
-  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 35 42 35 46 30 41 32 2D 42 44 37 39   // ..$85B5F0A2-BD79
                                                                                                   2D 34 38 34 41 2D 41 44 32 42 2D 33 38 38 43 39   // -484A-AD2B-388C9
                                                                                                   38 33 38 44 35 46 42 00 00 )                      // 838D5FB..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance int32  get_CurrentStyleId() runtime managed internalcall
   {
@@ -6533,10 +4439,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationSpreadsheetPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 37 35 31 37 41 37 43 38 2D 46 41 41 45   // ..$7517A7C8-FAAE
                                                                                                   2D 34 44 45 39 2D 39 46 30 38 2D 32 39 42 39 31   // -4DE9-9F08-29B91
                                                                                                   45 38 35 39 35 43 31 00 00 )                      // E8595C1..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance class UIAutomationClient.IUIAutomationElement 
           marshal( interface ) 
@@ -6548,10 +4454,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationSpreadsheetItemPattern
 {
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 37 44 34 46 42 38 36 43 2D 38 44 33 34   // ..$7D4FB86C-8D34
                                                                                                   2D 34 30 45 31 2D 38 45 38 33 2D 36 32 43 31 35   // -40E1-8E83-62C15
                                                                                                   32 30 34 45 33 33 35 00 00 )                      // 204E335..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance string 
           marshal( bstr) 
@@ -6609,10 +4515,10 @@
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationTransformPattern2
        implements UIAutomationClient.IUIAutomationTransformPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 44 37 34 44 30 31 37 2D 36 45 43 42   // ..$6D74D017-6ECB
                                                                                                   2D 34 33 38 31 2D 42 33 38 42 2D 33 43 31 37 41   // -4381-B38B-3C17A
                                                                                                   34 38 46 46 31 43 32 00 00 )                      // 48FF1C2..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  Move([in] float64 x,
                               [in] float64 y) runtime managed internalcall
@@ -6798,7 +4704,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 35 35 32 42 30 33 38 2D 41 45 30 35   // ..$6552B038-AE05
                                                                                                   2D 34 30 43 38 2D 41 42 46 44 2D 41 41 30 38 33   // -40C8-ABFD-AA083
                                                                                                   35 32 41 41 42 38 36 00 00 )                      // 52AAB86..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance class UIAutomationClient.IUIAutomationElement 
           marshal( interface ) 
@@ -6832,7 +4738,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 31 44 43 37 42 35 37 30 2D 31 46 35 34   // ..$1DC7B570-1F54
                                                                                                   2D 34 42 41 44 2D 42 43 44 41 2D 44 33 36 41 37   // -4BAD-BCDA-D36A7
                                                                                                   32 32 46 42 37 42 44 00 00 )                      // 22FB7BD..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance int32  get_CurrentIsGrabbed() runtime managed internalcall
   {
@@ -6919,10 +4825,10 @@
 
 .class interface public abstract auto ansi import UIAutomationClient.IUIAutomationDropTargetPattern
 {
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 39 41 30 39 35 46 37 2D 45 45 45 34   // ..$69A095F7-EEE4
                                                                                                   2D 34 33 30 45 2D 41 34 36 42 2D 46 42 37 33 42   // -430E-A46B-FB73B
                                                                                                   31 41 45 33 39 41 35 00 00 )                      // 1AE39A5..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot specialname abstract virtual 
           instance string 
           marshal( bstr) 
@@ -6979,7 +4885,7 @@
   .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 37 34 39 43 36 38 33 2D 46 37 30 44   // ..$6749C683-F70D
                                                                                                   2D 34 34 38 37 2D 41 36 39 38 2D 35 46 37 39 44   // -4487-A698-5F79D
                                                                                                   35 35 32 39 30 44 36 00 00 )                      // 55290D6..
-  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(valuetype [mscorlib]System.Runtime.InteropServices.ComInterfaceType) = ( 01 00 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
   .method public hidebysig newslot abstract virtual 
           instance void  SetFocus() runtime managed internalcall
   {
@@ -7522,6 +5428,20 @@
   {
   } // end of method IUIAutomationElement2::get_CachedLiveSetting
 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CurrentFlowsFrom() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement2::get_CurrentFlowsFrom
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CachedFlowsFrom() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement2::get_CachedFlowsFrom
+
   .property int32 CurrentProcessId()
   {
     .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 11 00 01 60 00 00 )                         // .....`..
@@ -7876,6 +5796,18 @@
     .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 02 60 00 00 )                         // .....`..
     .get instance valuetype UIAutomationClient.LiveSetting UIAutomationClient.IUIAutomationElement2::get_CachedLiveSetting()
   } // end of property IUIAutomationElement2::CachedLiveSetting
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CurrentFlowsFrom()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement2::get_CurrentFlowsFrom()
+  } // end of property IUIAutomationElement2::CurrentFlowsFrom
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CachedFlowsFrom()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 05 00 02 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement2::get_CachedFlowsFrom()
+  } // end of property IUIAutomationElement2::CachedFlowsFrom
 } // end of class UIAutomationClient.IUIAutomationElement2
 
 .class public auto ansi sealed UIAutomationClient.LiveSetting
@@ -7886,6 +5818,1038 @@
   .field public static literal valuetype UIAutomationClient.LiveSetting Polite = int32(0x00000001)
   .field public static literal valuetype UIAutomationClient.LiveSetting Assertive = int32(0x00000002)
 } // end of class UIAutomationClient.LiveSetting
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationElement3
+       implements UIAutomationClient.IUIAutomationElement2
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 34 37 31 44 46 33 34 2D 41 45 45 30   // ..$8471DF34-AEE0
+                                                                                                  2D 34 41 30 31 2D 41 37 44 45 2D 37 44 42 39 41   // -4A01-A7DE-7DB9A
+                                                                                                  46 31 32 43 32 39 36 00 00 )                      // F12C296..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetFocus() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::SetFocus
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          GetRuntimeId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetRuntimeId
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          FindFirst([in] valuetype UIAutomationClient.TreeScope scope,
+                    [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::FindFirst
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          FindAll([in] valuetype UIAutomationClient.TreeScope scope,
+                  [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::FindAll
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          FindFirstBuildCache([in] valuetype UIAutomationClient.TreeScope scope,
+                              [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition,
+                              [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::FindFirstBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          FindAllBuildCache([in] valuetype UIAutomationClient.TreeScope scope,
+                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition,
+                            [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::FindAllBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          BuildUpdatedCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::BuildUpdatedCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          GetCurrentPropertyValue([in] int32 propertyId) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCurrentPropertyValue
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          GetCurrentPropertyValueEx([in] int32 propertyId,
+                                    [in] int32 ignoreDefaultValue) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCurrentPropertyValueEx
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          GetCachedPropertyValue([in] int32 propertyId) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCachedPropertyValue
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          GetCachedPropertyValueEx([in] int32 propertyId,
+                                   [in] int32 ignoreDefaultValue) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCachedPropertyValueEx
+
+  .method public hidebysig newslot abstract virtual 
+          instance native int  GetCurrentPatternAs([in] int32 patternId,
+                                                   [in] valuetype [mscorlib]System.Guid& riid) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCurrentPatternAs
+
+  .method public hidebysig newslot abstract virtual 
+          instance native int  GetCachedPatternAs([in] int32 patternId,
+                                                  [in] valuetype [mscorlib]System.Guid& riid) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCachedPatternAs
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          GetCurrentPattern([in] int32 patternId) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCurrentPattern
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          GetCachedPattern([in] int32 patternId) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCachedPattern
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetCachedParent() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCachedParent
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          GetCachedChildren() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetCachedChildren
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentProcessId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentProcessId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentControlType() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentControlType
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentLocalizedControlType() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentLocalizedControlType
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentName() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentAcceleratorKey() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentAcceleratorKey
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentAccessKey() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentAccessKey
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentHasKeyboardFocus() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentHasKeyboardFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsKeyboardFocusable() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsKeyboardFocusable
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsEnabled() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsEnabled
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentAutomationId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentAutomationId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentClassName() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentClassName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentHelpText() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentHelpText
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentCulture() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentCulture
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsControlElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsControlElement
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsContentElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsContentElement
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsPassword() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsPassword
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance native int  get_CurrentNativeWindowHandle() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentNativeWindowHandle
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentItemType() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentItemType
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsOffscreen() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsOffscreen
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.OrientationType 
+          get_CurrentOrientation() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentOrientation
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentFrameworkId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentFrameworkId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsRequiredForForm() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsRequiredForForm
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentItemStatus() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentItemStatus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          get_CurrentBoundingRectangle() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentBoundingRectangle
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          get_CurrentLabeledBy() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentLabeledBy
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentAriaRole() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentAriaRole
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentAriaProperties() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentAriaProperties
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsDataValidForForm() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsDataValidForForm
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CurrentControllerFor() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentControllerFor
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CurrentDescribedBy() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentDescribedBy
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CurrentFlowsTo() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentFlowsTo
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CurrentProviderDescription() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentProviderDescription
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedProcessId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedProcessId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedControlType() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedControlType
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedLocalizedControlType() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedLocalizedControlType
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedName() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedAcceleratorKey() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedAcceleratorKey
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedAccessKey() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedAccessKey
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedHasKeyboardFocus() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedHasKeyboardFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsKeyboardFocusable() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsKeyboardFocusable
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsEnabled() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsEnabled
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedAutomationId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedAutomationId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedClassName() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedClassName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedHelpText() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedHelpText
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedCulture() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedCulture
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsControlElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsControlElement
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsContentElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsContentElement
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsPassword() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsPassword
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance native int  get_CachedNativeWindowHandle() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedNativeWindowHandle
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedItemType() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedItemType
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsOffscreen() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsOffscreen
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.OrientationType 
+          get_CachedOrientation() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedOrientation
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedFrameworkId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedFrameworkId
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsRequiredForForm() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsRequiredForForm
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedItemStatus() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedItemStatus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          get_CachedBoundingRectangle() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedBoundingRectangle
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          get_CachedLabeledBy() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedLabeledBy
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedAriaRole() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedAriaRole
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedAriaProperties() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedAriaProperties
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsDataValidForForm() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsDataValidForForm
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CachedControllerFor() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedControllerFor
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CachedDescribedBy() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedDescribedBy
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CachedFlowsTo() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedFlowsTo
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_CachedProviderDescription() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedProviderDescription
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  GetClickablePoint([out] valuetype UIAutomationClient.tagPOINT& clickable) runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::GetClickablePoint
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentOptimizeForVisualContent() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentOptimizeForVisualContent
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedOptimizeForVisualContent() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedOptimizeForVisualContent
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.LiveSetting 
+          get_CurrentLiveSetting() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentLiveSetting
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.LiveSetting 
+          get_CachedLiveSetting() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedLiveSetting
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CurrentFlowsFrom() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentFlowsFrom
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElementArray 
+          marshal( interface ) 
+          get_CachedFlowsFrom() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedFlowsFrom
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ShowContextMenu() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::ShowContextMenu
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CurrentIsPeripheral() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CurrentIsPeripheral
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CachedIsPeripheral() runtime managed internalcall
+  {
+  } // end of method IUIAutomationElement3::get_CachedIsPeripheral
+
+  .property int32 CurrentProcessId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 11 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentProcessId()
+  } // end of property IUIAutomationElement3::CurrentProcessId
+  .property int32 CurrentControlType()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 12 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentControlType()
+  } // end of property IUIAutomationElement3::CurrentControlType
+  .property string CurrentLocalizedControlType()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 13 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentLocalizedControlType()
+  } // end of property IUIAutomationElement3::CurrentLocalizedControlType
+  .property string CurrentName()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 14 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentName()
+  } // end of property IUIAutomationElement3::CurrentName
+  .property string CurrentAcceleratorKey()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 15 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentAcceleratorKey()
+  } // end of property IUIAutomationElement3::CurrentAcceleratorKey
+  .property string CurrentAccessKey()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 16 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentAccessKey()
+  } // end of property IUIAutomationElement3::CurrentAccessKey
+  .property int32 CurrentHasKeyboardFocus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 17 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentHasKeyboardFocus()
+  } // end of property IUIAutomationElement3::CurrentHasKeyboardFocus
+  .property int32 CurrentIsKeyboardFocusable()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 18 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsKeyboardFocusable()
+  } // end of property IUIAutomationElement3::CurrentIsKeyboardFocusable
+  .property int32 CurrentIsEnabled()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 19 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsEnabled()
+  } // end of property IUIAutomationElement3::CurrentIsEnabled
+  .property string CurrentAutomationId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 1A 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentAutomationId()
+  } // end of property IUIAutomationElement3::CurrentAutomationId
+  .property string CurrentClassName()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 1B 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentClassName()
+  } // end of property IUIAutomationElement3::CurrentClassName
+  .property string CurrentHelpText()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 1C 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentHelpText()
+  } // end of property IUIAutomationElement3::CurrentHelpText
+  .property int32 CurrentCulture()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 1D 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentCulture()
+  } // end of property IUIAutomationElement3::CurrentCulture
+  .property int32 CurrentIsControlElement()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 1E 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsControlElement()
+  } // end of property IUIAutomationElement3::CurrentIsControlElement
+  .property int32 CurrentIsContentElement()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 1F 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsContentElement()
+  } // end of property IUIAutomationElement3::CurrentIsContentElement
+  .property int32 CurrentIsPassword()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 20 00 01 60 00 00 )                         // .. ..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsPassword()
+  } // end of property IUIAutomationElement3::CurrentIsPassword
+  .property native int CurrentNativeWindowHandle()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 21 00 01 60 00 00 )                         // ..!..`..
+    .get instance native int UIAutomationClient.IUIAutomationElement3::get_CurrentNativeWindowHandle()
+  } // end of property IUIAutomationElement3::CurrentNativeWindowHandle
+  .property string CurrentItemType()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 22 00 01 60 00 00 )                         // .."..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentItemType()
+  } // end of property IUIAutomationElement3::CurrentItemType
+  .property int32 CurrentIsOffscreen()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 23 00 01 60 00 00 )                         // ..#..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsOffscreen()
+  } // end of property IUIAutomationElement3::CurrentIsOffscreen
+  .property valuetype UIAutomationClient.OrientationType
+          CurrentOrientation()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 24 00 01 60 00 00 )                         // ..$..`..
+    .get instance valuetype UIAutomationClient.OrientationType UIAutomationClient.IUIAutomationElement3::get_CurrentOrientation()
+  } // end of property IUIAutomationElement3::CurrentOrientation
+  .property string CurrentFrameworkId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 25 00 01 60 00 00 )                         // ..%..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentFrameworkId()
+  } // end of property IUIAutomationElement3::CurrentFrameworkId
+  .property int32 CurrentIsRequiredForForm()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 26 00 01 60 00 00 )                         // ..&..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsRequiredForForm()
+  } // end of property IUIAutomationElement3::CurrentIsRequiredForForm
+  .property string CurrentItemStatus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 27 00 01 60 00 00 )                         // ..'..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentItemStatus()
+  } // end of property IUIAutomationElement3::CurrentItemStatus
+  .property valuetype UIAutomationClient.tagRECT
+          CurrentBoundingRectangle()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 28 00 01 60 00 00 )                         // ..(..`..
+    .get instance valuetype UIAutomationClient.tagRECT UIAutomationClient.IUIAutomationElement3::get_CurrentBoundingRectangle()
+  } // end of property IUIAutomationElement3::CurrentBoundingRectangle
+  .property class UIAutomationClient.IUIAutomationElement
+          CurrentLabeledBy()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 29 00 01 60 00 00 )                         // ..)..`..
+    .get instance class UIAutomationClient.IUIAutomationElement UIAutomationClient.IUIAutomationElement3::get_CurrentLabeledBy()
+  } // end of property IUIAutomationElement3::CurrentLabeledBy
+  .property string CurrentAriaRole()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2A 00 01 60 00 00 )                         // ..*..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentAriaRole()
+  } // end of property IUIAutomationElement3::CurrentAriaRole
+  .property string CurrentAriaProperties()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2B 00 01 60 00 00 )                         // ..+..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentAriaProperties()
+  } // end of property IUIAutomationElement3::CurrentAriaProperties
+  .property int32 CurrentIsDataValidForForm()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2C 00 01 60 00 00 )                         // ..,..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsDataValidForForm()
+  } // end of property IUIAutomationElement3::CurrentIsDataValidForForm
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CurrentControllerFor()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CurrentControllerFor()
+  } // end of property IUIAutomationElement3::CurrentControllerFor
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CurrentDescribedBy()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2E 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CurrentDescribedBy()
+  } // end of property IUIAutomationElement3::CurrentDescribedBy
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CurrentFlowsTo()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2F 00 01 60 00 00 )                         // ../..`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CurrentFlowsTo()
+  } // end of property IUIAutomationElement3::CurrentFlowsTo
+  .property string CurrentProviderDescription()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 30 00 01 60 00 00 )                         // ..0..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CurrentProviderDescription()
+  } // end of property IUIAutomationElement3::CurrentProviderDescription
+  .property int32 CachedProcessId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 31 00 01 60 00 00 )                         // ..1..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedProcessId()
+  } // end of property IUIAutomationElement3::CachedProcessId
+  .property int32 CachedControlType()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 32 00 01 60 00 00 )                         // ..2..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedControlType()
+  } // end of property IUIAutomationElement3::CachedControlType
+  .property string CachedLocalizedControlType()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedLocalizedControlType()
+  } // end of property IUIAutomationElement3::CachedLocalizedControlType
+  .property string CachedName()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedName()
+  } // end of property IUIAutomationElement3::CachedName
+  .property string CachedAcceleratorKey()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 35 00 01 60 00 00 )                         // ..5..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedAcceleratorKey()
+  } // end of property IUIAutomationElement3::CachedAcceleratorKey
+  .property string CachedAccessKey()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 36 00 01 60 00 00 )                         // ..6..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedAccessKey()
+  } // end of property IUIAutomationElement3::CachedAccessKey
+  .property int32 CachedHasKeyboardFocus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 37 00 01 60 00 00 )                         // ..7..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedHasKeyboardFocus()
+  } // end of property IUIAutomationElement3::CachedHasKeyboardFocus
+  .property int32 CachedIsKeyboardFocusable()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 38 00 01 60 00 00 )                         // ..8..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsKeyboardFocusable()
+  } // end of property IUIAutomationElement3::CachedIsKeyboardFocusable
+  .property int32 CachedIsEnabled()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 39 00 01 60 00 00 )                         // ..9..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsEnabled()
+  } // end of property IUIAutomationElement3::CachedIsEnabled
+  .property string CachedAutomationId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 3A 00 01 60 00 00 )                         // ..:..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedAutomationId()
+  } // end of property IUIAutomationElement3::CachedAutomationId
+  .property string CachedClassName()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 3B 00 01 60 00 00 )                         // ..;..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedClassName()
+  } // end of property IUIAutomationElement3::CachedClassName
+  .property string CachedHelpText()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 3C 00 01 60 00 00 )                         // ..<..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedHelpText()
+  } // end of property IUIAutomationElement3::CachedHelpText
+  .property int32 CachedCulture()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 3D 00 01 60 00 00 )                         // ..=..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedCulture()
+  } // end of property IUIAutomationElement3::CachedCulture
+  .property int32 CachedIsControlElement()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 3E 00 01 60 00 00 )                         // ..>..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsControlElement()
+  } // end of property IUIAutomationElement3::CachedIsControlElement
+  .property int32 CachedIsContentElement()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 3F 00 01 60 00 00 )                         // ..?..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsContentElement()
+  } // end of property IUIAutomationElement3::CachedIsContentElement
+  .property int32 CachedIsPassword()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 40 00 01 60 00 00 )                         // ..@..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsPassword()
+  } // end of property IUIAutomationElement3::CachedIsPassword
+  .property native int CachedNativeWindowHandle()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 41 00 01 60 00 00 )                         // ..A..`..
+    .get instance native int UIAutomationClient.IUIAutomationElement3::get_CachedNativeWindowHandle()
+  } // end of property IUIAutomationElement3::CachedNativeWindowHandle
+  .property string CachedItemType()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 42 00 01 60 00 00 )                         // ..B..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedItemType()
+  } // end of property IUIAutomationElement3::CachedItemType
+  .property int32 CachedIsOffscreen()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 43 00 01 60 00 00 )                         // ..C..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsOffscreen()
+  } // end of property IUIAutomationElement3::CachedIsOffscreen
+  .property valuetype UIAutomationClient.OrientationType
+          CachedOrientation()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 44 00 01 60 00 00 )                         // ..D..`..
+    .get instance valuetype UIAutomationClient.OrientationType UIAutomationClient.IUIAutomationElement3::get_CachedOrientation()
+  } // end of property IUIAutomationElement3::CachedOrientation
+  .property string CachedFrameworkId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 45 00 01 60 00 00 )                         // ..E..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedFrameworkId()
+  } // end of property IUIAutomationElement3::CachedFrameworkId
+  .property int32 CachedIsRequiredForForm()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 46 00 01 60 00 00 )                         // ..F..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsRequiredForForm()
+  } // end of property IUIAutomationElement3::CachedIsRequiredForForm
+  .property string CachedItemStatus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 47 00 01 60 00 00 )                         // ..G..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedItemStatus()
+  } // end of property IUIAutomationElement3::CachedItemStatus
+  .property valuetype UIAutomationClient.tagRECT
+          CachedBoundingRectangle()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 48 00 01 60 00 00 )                         // ..H..`..
+    .get instance valuetype UIAutomationClient.tagRECT UIAutomationClient.IUIAutomationElement3::get_CachedBoundingRectangle()
+  } // end of property IUIAutomationElement3::CachedBoundingRectangle
+  .property class UIAutomationClient.IUIAutomationElement
+          CachedLabeledBy()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 49 00 01 60 00 00 )                         // ..I..`..
+    .get instance class UIAutomationClient.IUIAutomationElement UIAutomationClient.IUIAutomationElement3::get_CachedLabeledBy()
+  } // end of property IUIAutomationElement3::CachedLabeledBy
+  .property string CachedAriaRole()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 4A 00 01 60 00 00 )                         // ..J..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedAriaRole()
+  } // end of property IUIAutomationElement3::CachedAriaRole
+  .property string CachedAriaProperties()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 4B 00 01 60 00 00 )                         // ..K..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedAriaProperties()
+  } // end of property IUIAutomationElement3::CachedAriaProperties
+  .property int32 CachedIsDataValidForForm()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 4C 00 01 60 00 00 )                         // ..L..`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsDataValidForForm()
+  } // end of property IUIAutomationElement3::CachedIsDataValidForForm
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CachedControllerFor()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 4D 00 01 60 00 00 )                         // ..M..`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CachedControllerFor()
+  } // end of property IUIAutomationElement3::CachedControllerFor
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CachedDescribedBy()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 4E 00 01 60 00 00 )                         // ..N..`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CachedDescribedBy()
+  } // end of property IUIAutomationElement3::CachedDescribedBy
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CachedFlowsTo()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 4F 00 01 60 00 00 )                         // ..O..`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CachedFlowsTo()
+  } // end of property IUIAutomationElement3::CachedFlowsTo
+  .property string CachedProviderDescription()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 50 00 01 60 00 00 )                         // ..P..`..
+    .get instance string UIAutomationClient.IUIAutomationElement3::get_CachedProviderDescription()
+  } // end of property IUIAutomationElement3::CachedProviderDescription
+  .property int32 CurrentOptimizeForVisualContent()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentOptimizeForVisualContent()
+  } // end of property IUIAutomationElement3::CurrentOptimizeForVisualContent
+  .property int32 CachedOptimizeForVisualContent()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedOptimizeForVisualContent()
+  } // end of property IUIAutomationElement3::CachedOptimizeForVisualContent
+  .property valuetype UIAutomationClient.LiveSetting
+          CurrentLiveSetting()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
+    .get instance valuetype UIAutomationClient.LiveSetting UIAutomationClient.IUIAutomationElement3::get_CurrentLiveSetting()
+  } // end of property IUIAutomationElement3::CurrentLiveSetting
+  .property valuetype UIAutomationClient.LiveSetting
+          CachedLiveSetting()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 02 60 00 00 )                         // .....`..
+    .get instance valuetype UIAutomationClient.LiveSetting UIAutomationClient.IUIAutomationElement3::get_CachedLiveSetting()
+  } // end of property IUIAutomationElement3::CachedLiveSetting
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CurrentFlowsFrom()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CurrentFlowsFrom()
+  } // end of property IUIAutomationElement3::CurrentFlowsFrom
+  .property class UIAutomationClient.IUIAutomationElementArray
+          CachedFlowsFrom()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 05 00 02 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationElementArray UIAutomationClient.IUIAutomationElement3::get_CachedFlowsFrom()
+  } // end of property IUIAutomationElement3::CachedFlowsFrom
+  .property int32 CurrentIsPeripheral()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 03 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CurrentIsPeripheral()
+  } // end of property IUIAutomationElement3::CurrentIsPeripheral
+  .property int32 CachedIsPeripheral()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 03 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationElement3::get_CachedIsPeripheral()
+  } // end of property IUIAutomationElement3::CachedIsPeripheral
+} // end of class UIAutomationClient.IUIAutomationElement3
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationProxyFactory
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 38 35 42 39 34 45 43 44 2D 38 34 39 44   // ..$85B94ECD-849D
+                                                                                                  2D 34 32 42 36 2D 42 39 34 44 2D 44 36 44 42 32   // -42B6-B94D-D6DB2
+                                                                                                  33 46 44 46 35 41 34 00 00 )                      // 3FDF5A4..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance class System.Windows.Automation.Providers.IRawElementProviderSimple 
+          marshal( interface ) 
+          CreateProvider([in] native int hwnd,
+                         [in] int32 idObject,
+                         [in] int32 idChild) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactory::CreateProvider
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_ProxyFactoryId() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactory::get_ProxyFactoryId
+
+  .property string ProxyFactoryId()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationProxyFactory::get_ProxyFactoryId()
+  } // end of property IUIAutomationProxyFactory::ProxyFactoryId
+} // end of class UIAutomationClient.IUIAutomationProxyFactory
+
+.class interface public abstract auto ansi import System.Windows.Automation.Providers.IRawElementProviderSimple
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 44 36 44 44 36 38 44 31 2D 38 36 46 44   // ..$D6DD68D1-86FD
+                                                                                                  2D 34 33 33 32 2D 38 36 36 36 2D 39 41 42 45 44   // -4332-8666-9ABED
+                                                                                                  45 41 32 44 32 34 43 00 00 )                      // EA2D24C..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance valuetype UIAutomationClient.ProviderOptions 
+          get_ProviderOptions() runtime managed internalcall
+  {
+  } // end of method IRawElementProviderSimple::get_ProviderOptions
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          GetPatternProvider([in] int32 patternId) runtime managed internalcall
+  {
+  } // end of method IRawElementProviderSimple::GetPatternProvider
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          GetPropertyValue([in] int32 propertyId) runtime managed internalcall
+  {
+  } // end of method IRawElementProviderSimple::GetPropertyValue
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class System.Windows.Automation.Providers.IRawElementProviderSimple 
+          marshal( interface ) 
+          get_HostRawElementProvider() runtime managed internalcall
+  {
+  } // end of method IRawElementProviderSimple::get_HostRawElementProvider
+
+  .property valuetype UIAutomationClient.ProviderOptions
+          ProviderOptions()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
+    .get instance valuetype UIAutomationClient.ProviderOptions System.Windows.Automation.Providers.IRawElementProviderSimple::get_ProviderOptions()
+  } // end of property IRawElementProviderSimple::ProviderOptions
+  .property class System.Windows.Automation.Providers.IRawElementProviderSimple
+          HostRawElementProvider()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 01 60 00 00 )                         // .....`..
+    .get instance class System.Windows.Automation.Providers.IRawElementProviderSimple System.Windows.Automation.Providers.IRawElementProviderSimple::get_HostRawElementProvider()
+  } // end of property IRawElementProviderSimple::HostRawElementProvider
+} // end of class System.Windows.Automation.Providers.IRawElementProviderSimple
 
 .class public auto ansi sealed UIAutomationClient.ProviderOptions
        extends [mscorlib]System.Enum
@@ -7902,8 +6866,3344 @@
   .field public static literal valuetype UIAutomationClient.ProviderOptions ProviderOptions_UseClientCoordinates = int32(0x00000100)
 } // end of class UIAutomationClient.ProviderOptions
 
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationProxyFactoryEntry
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 44 35 30 45 34 37 32 45 2D 42 36 34 42   // ..$D50E472E-B64B
+                                                                                                  2D 34 39 30 43 2D 42 43 41 31 2D 44 33 30 36 39   // -490C-BCA1-D3069
+                                                                                                  36 46 39 46 32 38 39 00 00 )                      // 6F9F289..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactory 
+          marshal( interface ) 
+          get_ProxyFactory() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::get_ProxyFactory
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_ClassName() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::get_ClassName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance string 
+          marshal( bstr) 
+          get_ImageName() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::get_ImageName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_AllowSubstringMatch() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::get_AllowSubstringMatch
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_CanCheckBaseClass() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::get_CanCheckBaseClass
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_NeedsAdviseEvents() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::get_NeedsAdviseEvents
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_ClassName([in] string  marshal( lpwstr) ClassName) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::set_ClassName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_ImageName([in] string  marshal( lpwstr) ImageName) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::set_ImageName
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_AllowSubstringMatch([in] int32 AllowSubstringMatch) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::set_AllowSubstringMatch
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_CanCheckBaseClass([in] int32 CanCheckBaseClass) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::set_CanCheckBaseClass
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_NeedsAdviseEvents([in] int32 adviseEvents) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::set_NeedsAdviseEvents
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetWinEventsForAutomationEvent([in] int32 eventId,
+                                                        [in] int32 propertyId,
+                                                        [in] class [mscorlib]System.Array  marshal( safearray unsigned int) winEvents) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::SetWinEventsForAutomationEvent
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray unsigned int) 
+          GetWinEventsForAutomationEvent([in] int32 eventId,
+                                         [in] int32 propertyId) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryEntry::GetWinEventsForAutomationEvent
+
+  .property class UIAutomationClient.IUIAutomationProxyFactory
+          ProxyFactory()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationProxyFactory UIAutomationClient.IUIAutomationProxyFactoryEntry::get_ProxyFactory()
+  } // end of property IUIAutomationProxyFactoryEntry::ProxyFactory
+  .property string ClassName()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 01 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationProxyFactoryEntry::get_ClassName()
+    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_ClassName(string)
+  } // end of property IUIAutomationProxyFactoryEntry::ClassName
+  .property string ImageName()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 01 60 00 00 )                         // .....`..
+    .get instance string UIAutomationClient.IUIAutomationProxyFactoryEntry::get_ImageName()
+    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_ImageName(string)
+  } // end of property IUIAutomationProxyFactoryEntry::ImageName
+  .property int32 AllowSubstringMatch()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 03 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationProxyFactoryEntry::get_AllowSubstringMatch()
+    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_AllowSubstringMatch(int32)
+  } // end of property IUIAutomationProxyFactoryEntry::AllowSubstringMatch
+  .property int32 CanCheckBaseClass()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationProxyFactoryEntry::get_CanCheckBaseClass()
+    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_CanCheckBaseClass(int32)
+  } // end of property IUIAutomationProxyFactoryEntry::CanCheckBaseClass
+  .property int32 NeedsAdviseEvents()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 05 00 01 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomationProxyFactoryEntry::get_NeedsAdviseEvents()
+    .set instance void UIAutomationClient.IUIAutomationProxyFactoryEntry::set_NeedsAdviseEvents(int32)
+  } // end of property IUIAutomationProxyFactoryEntry::NeedsAdviseEvents
+} // end of class UIAutomationClient.IUIAutomationProxyFactoryEntry
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomationProxyFactoryMapping
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 30 39 45 33 31 45 31 38 2D 38 37 32 44   // ..$09E31E18-872D
+                                                                                                  2D 34 38 37 33 2D 39 33 44 31 2D 31 45 35 34 31   // -4873-93D1-1E541
+                                                                                                  45 43 31 33 33 46 44 00 00 )                      // EC133FD..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot specialname abstract virtual 
+          instance uint32  get_count() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::get_count
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray iunknown, "UIAutomationClient.IUIAutomationProxyFactoryEntry") 
+          GetTable() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::GetTable
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          GetEntry([in] uint32 index) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::GetEntry
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  SetTable([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                   "UIAutomationClient.IUIAutomationProxyFactoryEntry") factoryList) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::SetTable
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  InsertEntries([in] uint32 before,
+                                       [in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                        "UIAutomationClient.IUIAutomationProxyFactoryEntry") factoryList) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::InsertEntries
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  InsertEntry([in] uint32 before,
+                                     [in] class UIAutomationClient.IUIAutomationProxyFactoryEntry  marshal( interface ) factory) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::InsertEntry
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveEntry([in] uint32 index) runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::RemoveEntry
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  ClearTable() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::ClearTable
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RestoreDefaultTable() runtime managed internalcall
+  {
+  } // end of method IUIAutomationProxyFactoryMapping::RestoreDefaultTable
+
+  .property uint32 count()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 01 60 00 00 )                         // .....`..
+    .get instance uint32 UIAutomationClient.IUIAutomationProxyFactoryMapping::get_count()
+  } // end of property IUIAutomationProxyFactoryMapping::count
+} // end of class UIAutomationClient.IUIAutomationProxyFactoryMapping
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomation
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 30 43 42 45 35 37 44 2D 44 39 44 30   // ..$30CBE57D-D9D0
+                                                                                                  2D 34 35 32 41 2D 41 42 31 33 2D 37 41 43 35 41   // -452A-AB13-7AC5A
+                                                                                                  43 34 38 32 35 45 45 00 00 )                      // C4825EE..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
+                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CompareElements
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
+                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CompareRuntimeIds
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::GetRootElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandle([in] native int hwnd) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::ElementFromHandle
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::ElementFromPoint
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::GetFocusedElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::GetRootElementBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandleBuildCache([in] native int hwnd,
+                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::ElementFromHandleBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
+                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::ElementFromPointBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::GetFocusedElementBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateTreeWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ControlViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ControlViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ContentViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ContentViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_RawViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_RawViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_RawViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_RawViewCondition
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ControlViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ControlViewCondition
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ContentViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ContentViewCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCacheRequest 
+          marshal( interface ) 
+          CreateCacheRequest() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateCacheRequest
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateTrueCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateTrueCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateFalseCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateFalseCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyCondition([in] int32 propertyId,
+                                  [in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreatePropertyCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyConditionEx([in] int32 propertyId,
+                                    [in] object  marshal( struct) 'value',
+                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreatePropertyConditionEx
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateAndCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                       "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateAndConditionFromArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                            [in] int32 conditionCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateAndConditionFromNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateOrCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                      "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateOrConditionFromArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                           [in] int32 conditionCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateOrConditionFromNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateNotCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddAutomationEventHandler([in] int32 eventId,
+                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::AddAutomationEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveAutomationEventHandler([in] int32 eventId,
+                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::RemoveAutomationEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                   [in] int32& propertyArray,
+                                                                   [in] int32 propertyCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::AddPropertyChangedEventHandlerNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                        [in] valuetype UIAutomationClient.TreeScope scope,
+                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::AddPropertyChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::RemovePropertyChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                         [in] valuetype UIAutomationClient.TreeScope scope,
+                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::AddStructureChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::RemoveStructureChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::AddFocusChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::RemoveFocusChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveAllEventHandlers() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::RemoveAllEventHandlers
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          IntNativeArrayToSafeArray([in] int32& 'array',
+                                    [in] int32 arrayCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::IntNativeArrayToSafeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
+                                                    [out] native int 'array') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::IntSafeArrayToNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::RectToVariant
+
+  .method public hidebysig newslot abstract virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::VariantToRect
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
+                                                     [out] native int rectArray) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::SafeArrayToRectNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CreateProxyFactoryEntry
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
+          marshal( interface ) 
+          get_ProxyFactoryMapping() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ProxyFactoryMapping
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::GetPropertyProgrammaticName
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::GetPatternProgrammaticName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::PollForPotentialSupportedPatterns
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::PollForPotentialSupportedProperties
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+  } // end of method IUIAutomation::CheckNotSupported
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedNotSupportedValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ReservedNotSupportedValue
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedMixedAttributeValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomation::get_ReservedMixedAttributeValue
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                 [in] int32 childId) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::ElementFromIAccessible
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                           [in] int32 childId,
+                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation::ElementFromIAccessibleBuildCache
+
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ControlViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation::get_ControlViewWalker()
+  } // end of property IUIAutomation::ControlViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ContentViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation::get_ContentViewWalker()
+  } // end of property IUIAutomation::ContentViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          RawViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation::get_RawViewWalker()
+  } // end of property IUIAutomation::RawViewWalker
+  .property class UIAutomationClient.IUIAutomationCondition
+          RawViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation::get_RawViewCondition()
+  } // end of property IUIAutomation::RawViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ControlViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation::get_ControlViewCondition()
+  } // end of property IUIAutomation::ControlViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ContentViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation::get_ContentViewCondition()
+  } // end of property IUIAutomation::ContentViewCondition
+  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
+          ProxyFactoryMapping()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
+    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.IUIAutomation::get_ProxyFactoryMapping()
+  } // end of property IUIAutomation::ProxyFactoryMapping
+  .property object ReservedNotSupportedValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
+    .get instance object UIAutomationClient.IUIAutomation::get_ReservedNotSupportedValue()
+  } // end of property IUIAutomation::ReservedNotSupportedValue
+  .property object ReservedMixedAttributeValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
+    .get instance object UIAutomationClient.IUIAutomation::get_ReservedMixedAttributeValue()
+  } // end of property IUIAutomation::ReservedMixedAttributeValue
+} // end of class UIAutomationClient.IUIAutomation
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomation2
+       implements UIAutomationClient.IUIAutomation
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 34 37 32 33 41 46 46 2D 30 43 39 44   // ..$34723AFF-0C9D
+                                                                                                  2D 34 39 44 30 2D 39 38 39 36 2D 37 41 42 35 32   // -49D0-9896-7AB52
+                                                                                                  44 46 38 43 44 38 41 00 00 )                      // DF8CD8A..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
+                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CompareElements
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
+                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CompareRuntimeIds
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::GetRootElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandle([in] native int hwnd) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::ElementFromHandle
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::ElementFromPoint
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::GetFocusedElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::GetRootElementBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandleBuildCache([in] native int hwnd,
+                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::ElementFromHandleBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
+                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::ElementFromPointBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::GetFocusedElementBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateTreeWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ControlViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ControlViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ContentViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ContentViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_RawViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_RawViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_RawViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_RawViewCondition
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ControlViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ControlViewCondition
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ContentViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ContentViewCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCacheRequest 
+          marshal( interface ) 
+          CreateCacheRequest() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateCacheRequest
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateTrueCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateTrueCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateFalseCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateFalseCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyCondition([in] int32 propertyId,
+                                  [in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreatePropertyCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyConditionEx([in] int32 propertyId,
+                                    [in] object  marshal( struct) 'value',
+                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreatePropertyConditionEx
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateAndCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                       "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateAndConditionFromArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                            [in] int32 conditionCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateAndConditionFromNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateOrCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                      "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateOrConditionFromArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                           [in] int32 conditionCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateOrConditionFromNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateNotCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddAutomationEventHandler([in] int32 eventId,
+                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::AddAutomationEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveAutomationEventHandler([in] int32 eventId,
+                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::RemoveAutomationEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                   [in] int32& propertyArray,
+                                                                   [in] int32 propertyCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::AddPropertyChangedEventHandlerNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                        [in] valuetype UIAutomationClient.TreeScope scope,
+                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::AddPropertyChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::RemovePropertyChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                         [in] valuetype UIAutomationClient.TreeScope scope,
+                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::AddStructureChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::RemoveStructureChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::AddFocusChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::RemoveFocusChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveAllEventHandlers() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::RemoveAllEventHandlers
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          IntNativeArrayToSafeArray([in] int32& 'array',
+                                    [in] int32 arrayCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::IntNativeArrayToSafeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
+                                                    [out] native int 'array') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::IntSafeArrayToNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::RectToVariant
+
+  .method public hidebysig newslot abstract virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::VariantToRect
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
+                                                     [out] native int rectArray) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::SafeArrayToRectNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CreateProxyFactoryEntry
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
+          marshal( interface ) 
+          get_ProxyFactoryMapping() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ProxyFactoryMapping
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::GetPropertyProgrammaticName
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::GetPatternProgrammaticName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::PollForPotentialSupportedPatterns
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::PollForPotentialSupportedProperties
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::CheckNotSupported
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedNotSupportedValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ReservedNotSupportedValue
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedMixedAttributeValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ReservedMixedAttributeValue
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                 [in] int32 childId) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::ElementFromIAccessible
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                           [in] int32 childId,
+                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::ElementFromIAccessibleBuildCache
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_AutoSetFocus() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_AutoSetFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_AutoSetFocus([in] int32 AutoSetFocus) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::set_AutoSetFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance uint32  get_ConnectionTimeout() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_ConnectionTimeout
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_ConnectionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::set_ConnectionTimeout
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance uint32  get_TransactionTimeout() runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::get_TransactionTimeout
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_TransactionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+  } // end of method IUIAutomation2::set_TransactionTimeout
+
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ControlViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation2::get_ControlViewWalker()
+  } // end of property IUIAutomation2::ControlViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ContentViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation2::get_ContentViewWalker()
+  } // end of property IUIAutomation2::ContentViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          RawViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation2::get_RawViewWalker()
+  } // end of property IUIAutomation2::RawViewWalker
+  .property class UIAutomationClient.IUIAutomationCondition
+          RawViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation2::get_RawViewCondition()
+  } // end of property IUIAutomation2::RawViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ControlViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation2::get_ControlViewCondition()
+  } // end of property IUIAutomation2::ControlViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ContentViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation2::get_ContentViewCondition()
+  } // end of property IUIAutomation2::ContentViewCondition
+  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
+          ProxyFactoryMapping()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
+    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.IUIAutomation2::get_ProxyFactoryMapping()
+  } // end of property IUIAutomation2::ProxyFactoryMapping
+  .property object ReservedNotSupportedValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
+    .get instance object UIAutomationClient.IUIAutomation2::get_ReservedNotSupportedValue()
+  } // end of property IUIAutomation2::ReservedNotSupportedValue
+  .property object ReservedMixedAttributeValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
+    .get instance object UIAutomationClient.IUIAutomation2::get_ReservedMixedAttributeValue()
+  } // end of property IUIAutomation2::ReservedMixedAttributeValue
+  .property int32 AutoSetFocus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomation2::get_AutoSetFocus()
+    .set instance void UIAutomationClient.IUIAutomation2::set_AutoSetFocus(int32)
+  } // end of property IUIAutomation2::AutoSetFocus
+  .property uint32 ConnectionTimeout()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
+    .get instance uint32 UIAutomationClient.IUIAutomation2::get_ConnectionTimeout()
+    .set instance void UIAutomationClient.IUIAutomation2::set_ConnectionTimeout(uint32)
+  } // end of property IUIAutomation2::ConnectionTimeout
+  .property uint32 TransactionTimeout()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
+    .get instance uint32 UIAutomationClient.IUIAutomation2::get_TransactionTimeout()
+    .set instance void UIAutomationClient.IUIAutomation2::set_TransactionTimeout(uint32)
+  } // end of property IUIAutomation2::TransactionTimeout
+} // end of class UIAutomationClient.IUIAutomation2
+
+.class interface public abstract auto ansi import UIAutomationClient.IUIAutomation3
+       implements UIAutomationClient.IUIAutomation2
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 37 33 44 37 36 38 44 41 2D 39 42 35 31   // ..$73D768DA-9B51
+                                                                                                  2D 34 42 38 39 2D 39 33 36 45 2D 43 32 30 39 32   // -4B89-936E-C2092
+                                                                                                  39 30 39 37 33 45 37 00 00 )                      // 90973E7..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.InterfaceTypeAttribute::.ctor(int16) = ( 01 00 01 00 00 00 ) 
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
+                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CompareElements
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
+                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CompareRuntimeIds
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::GetRootElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandle([in] native int hwnd) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::ElementFromHandle
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::ElementFromPoint
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElement() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::GetFocusedElement
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::GetRootElementBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandleBuildCache([in] native int hwnd,
+                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::ElementFromHandleBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
+                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::ElementFromPointBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::GetFocusedElementBuildCache
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateTreeWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ControlViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ControlViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ContentViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ContentViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_RawViewWalker() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_RawViewWalker
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_RawViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_RawViewCondition
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ControlViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ControlViewCondition
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ContentViewCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ContentViewCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCacheRequest 
+          marshal( interface ) 
+          CreateCacheRequest() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateCacheRequest
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateTrueCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateTrueCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateFalseCondition() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateFalseCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyCondition([in] int32 propertyId,
+                                  [in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreatePropertyCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyConditionEx([in] int32 propertyId,
+                                    [in] object  marshal( struct) 'value',
+                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreatePropertyConditionEx
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateAndCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                       "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateAndConditionFromArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                            [in] int32 conditionCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateAndConditionFromNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateOrCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                      "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateOrConditionFromArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                           [in] int32 conditionCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateOrConditionFromNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateNotCondition
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddAutomationEventHandler([in] int32 eventId,
+                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::AddAutomationEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveAutomationEventHandler([in] int32 eventId,
+                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RemoveAutomationEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                   [in] int32& propertyArray,
+                                                                   [in] int32 propertyCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::AddPropertyChangedEventHandlerNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                        [in] valuetype UIAutomationClient.TreeScope scope,
+                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::AddPropertyChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RemovePropertyChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                         [in] valuetype UIAutomationClient.TreeScope scope,
+                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::AddStructureChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RemoveStructureChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::AddFocusChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RemoveFocusChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveAllEventHandlers() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RemoveAllEventHandlers
+
+  .method public hidebysig newslot abstract virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          IntNativeArrayToSafeArray([in] int32& 'array',
+                                    [in] int32 arrayCount) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::IntNativeArrayToSafeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
+                                                    [out] native int 'array') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::IntSafeArrayToNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance object 
+          marshal( struct) 
+          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RectToVariant
+
+  .method public hidebysig newslot abstract virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::VariantToRect
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
+                                                     [out] native int rectArray) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::SafeArrayToRectNativeArray
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CreateProxyFactoryEntry
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
+          marshal( interface ) 
+          get_ProxyFactoryMapping() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ProxyFactoryMapping
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::GetPropertyProgrammaticName
+
+  .method public hidebysig newslot abstract virtual 
+          instance string 
+          marshal( bstr) 
+          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::GetPatternProgrammaticName
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::PollForPotentialSupportedPatterns
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::PollForPotentialSupportedProperties
+
+  .method public hidebysig newslot abstract virtual 
+          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::CheckNotSupported
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedNotSupportedValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ReservedNotSupportedValue
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedMixedAttributeValue() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ReservedMixedAttributeValue
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                 [in] int32 childId) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::ElementFromIAccessible
+
+  .method public hidebysig newslot abstract virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                           [in] int32 childId,
+                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::ElementFromIAccessibleBuildCache
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance int32  get_AutoSetFocus() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_AutoSetFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_AutoSetFocus([in] int32 AutoSetFocus) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::set_AutoSetFocus
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance uint32  get_ConnectionTimeout() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_ConnectionTimeout
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_ConnectionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::set_ConnectionTimeout
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance uint32  get_TransactionTimeout() runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::get_TransactionTimeout
+
+  .method public hidebysig newslot specialname abstract virtual 
+          instance void  set_TransactionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::set_TransactionTimeout
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  AddTextEditTextChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] valuetype UIAutomationClient.TreeScope scope,
+                                                            [in] valuetype UIAutomationClient.TextEditChangeType TextEditChangeType,
+                                                            [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                            [in] class UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::AddTextEditTextChangedEventHandler
+
+  .method public hidebysig newslot abstract virtual 
+          instance void  RemoveTextEditTextChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                               [in] class UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+  } // end of method IUIAutomation3::RemoveTextEditTextChangedEventHandler
+
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ControlViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation3::get_ControlViewWalker()
+  } // end of property IUIAutomation3::ControlViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ContentViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation3::get_ContentViewWalker()
+  } // end of property IUIAutomation3::ContentViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          RawViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.IUIAutomation3::get_RawViewWalker()
+  } // end of property IUIAutomation3::RawViewWalker
+  .property class UIAutomationClient.IUIAutomationCondition
+          RawViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation3::get_RawViewCondition()
+  } // end of property IUIAutomation3::RawViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ControlViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation3::get_ControlViewCondition()
+  } // end of property IUIAutomation3::ControlViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ContentViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.IUIAutomation3::get_ContentViewCondition()
+  } // end of property IUIAutomation3::ContentViewCondition
+  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
+          ProxyFactoryMapping()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
+    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.IUIAutomation3::get_ProxyFactoryMapping()
+  } // end of property IUIAutomation3::ProxyFactoryMapping
+  .property object ReservedNotSupportedValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
+    .get instance object UIAutomationClient.IUIAutomation3::get_ReservedNotSupportedValue()
+  } // end of property IUIAutomation3::ReservedNotSupportedValue
+  .property object ReservedMixedAttributeValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
+    .get instance object UIAutomationClient.IUIAutomation3::get_ReservedMixedAttributeValue()
+  } // end of property IUIAutomation3::ReservedMixedAttributeValue
+  .property int32 AutoSetFocus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.IUIAutomation3::get_AutoSetFocus()
+    .set instance void UIAutomationClient.IUIAutomation3::set_AutoSetFocus(int32)
+  } // end of property IUIAutomation3::AutoSetFocus
+  .property uint32 ConnectionTimeout()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
+    .get instance uint32 UIAutomationClient.IUIAutomation3::get_ConnectionTimeout()
+    .set instance void UIAutomationClient.IUIAutomation3::set_ConnectionTimeout(uint32)
+  } // end of property IUIAutomation3::ConnectionTimeout
+  .property uint32 TransactionTimeout()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
+    .get instance uint32 UIAutomationClient.IUIAutomation3::get_TransactionTimeout()
+    .set instance void UIAutomationClient.IUIAutomation3::set_TransactionTimeout(uint32)
+  } // end of property IUIAutomation3::TransactionTimeout
+} // end of class UIAutomationClient.IUIAutomation3
+
+.class public auto ansi import UIAutomationClient.CUIAutomationClass
+       extends [mscorlib]System.Object
+       implements UIAutomationClient.IUIAutomation,
+                  UIAutomationClient.CUIAutomation
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComConversionLossAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 46 46 34 38 44 42 41 34 2D 36 30 45 46   // ..$FF48DBA4-60EF
+                                                                                                  2D 34 32 30 31 2D 41 41 38 37 2D 35 34 31 30 33   // -4201-AA87-54103
+                                                                                                  45 45 46 35 39 34 45 00 00 )                      // EEF594E..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 02 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ClassInterfaceAttribute::.ctor(int16) = ( 01 00 00 00 00 00 ) 
+  .method public specialname rtspecialname 
+          instance void  .ctor() runtime managed internalcall
+  {
+  } // end of method CUIAutomationClass::.ctor
+
+  .method public hidebysig newslot virtual 
+          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
+                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CompareElements
+  } // end of method CUIAutomationClass::CompareElements
+
+  .method public hidebysig newslot virtual 
+          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
+                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CompareRuntimeIds
+  } // end of method CUIAutomationClass::CompareRuntimeIds
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElement() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::GetRootElement
+  } // end of method CUIAutomationClass::GetRootElement
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandle([in] native int hwnd) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::ElementFromHandle
+  } // end of method CUIAutomationClass::ElementFromHandle
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::ElementFromPoint
+  } // end of method CUIAutomationClass::ElementFromPoint
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElement() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::GetFocusedElement
+  } // end of method CUIAutomationClass::GetFocusedElement
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::GetRootElementBuildCache
+  } // end of method CUIAutomationClass::GetRootElementBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandleBuildCache([in] native int hwnd,
+                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::ElementFromHandleBuildCache
+  } // end of method CUIAutomationClass::ElementFromHandleBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
+                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::ElementFromPointBuildCache
+  } // end of method CUIAutomationClass::ElementFromPointBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::GetFocusedElementBuildCache
+  } // end of method CUIAutomationClass::GetFocusedElementBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateTreeWalker
+  } // end of method CUIAutomationClass::CreateTreeWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ControlViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ControlViewWalker
+  } // end of method CUIAutomationClass::get_ControlViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ContentViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ContentViewWalker
+  } // end of method CUIAutomationClass::get_ContentViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_RawViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_RawViewWalker
+  } // end of method CUIAutomationClass::get_RawViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_RawViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_RawViewCondition
+  } // end of method CUIAutomationClass::get_RawViewCondition
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ControlViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ControlViewCondition
+  } // end of method CUIAutomationClass::get_ControlViewCondition
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ContentViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ContentViewCondition
+  } // end of method CUIAutomationClass::get_ContentViewCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCacheRequest 
+          marshal( interface ) 
+          CreateCacheRequest() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateCacheRequest
+  } // end of method CUIAutomationClass::CreateCacheRequest
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateTrueCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateTrueCondition
+  } // end of method CUIAutomationClass::CreateTrueCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateFalseCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateFalseCondition
+  } // end of method CUIAutomationClass::CreateFalseCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyCondition([in] int32 propertyId,
+                                  [in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreatePropertyCondition
+  } // end of method CUIAutomationClass::CreatePropertyCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyConditionEx([in] int32 propertyId,
+                                    [in] object  marshal( struct) 'value',
+                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreatePropertyConditionEx
+  } // end of method CUIAutomationClass::CreatePropertyConditionEx
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateAndCondition
+  } // end of method CUIAutomationClass::CreateAndCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                       "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateAndConditionFromArray
+  } // end of method CUIAutomationClass::CreateAndConditionFromArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                            [in] int32 conditionCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateAndConditionFromNativeArray
+  } // end of method CUIAutomationClass::CreateAndConditionFromNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateOrCondition
+  } // end of method CUIAutomationClass::CreateOrCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                      "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateOrConditionFromArray
+  } // end of method CUIAutomationClass::CreateOrConditionFromArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                           [in] int32 conditionCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateOrConditionFromNativeArray
+  } // end of method CUIAutomationClass::CreateOrConditionFromNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateNotCondition
+  } // end of method CUIAutomationClass::CreateNotCondition
+
+  .method public hidebysig newslot virtual 
+          instance void  AddAutomationEventHandler([in] int32 eventId,
+                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::AddAutomationEventHandler
+  } // end of method CUIAutomationClass::AddAutomationEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveAutomationEventHandler([in] int32 eventId,
+                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::RemoveAutomationEventHandler
+  } // end of method CUIAutomationClass::RemoveAutomationEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                   [in] int32& propertyArray,
+                                                                   [in] int32 propertyCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::AddPropertyChangedEventHandlerNativeArray
+  } // end of method CUIAutomationClass::AddPropertyChangedEventHandlerNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                        [in] valuetype UIAutomationClient.TreeScope scope,
+                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::AddPropertyChangedEventHandler
+  } // end of method CUIAutomationClass::AddPropertyChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::RemovePropertyChangedEventHandler
+  } // end of method CUIAutomationClass::RemovePropertyChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                         [in] valuetype UIAutomationClient.TreeScope scope,
+                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::AddStructureChangedEventHandler
+  } // end of method CUIAutomationClass::AddStructureChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::RemoveStructureChangedEventHandler
+  } // end of method CUIAutomationClass::RemoveStructureChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::AddFocusChangedEventHandler
+  } // end of method CUIAutomationClass::AddFocusChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::RemoveFocusChangedEventHandler
+  } // end of method CUIAutomationClass::RemoveFocusChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveAllEventHandlers() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::RemoveAllEventHandlers
+  } // end of method CUIAutomationClass::RemoveAllEventHandlers
+
+  .method public hidebysig newslot virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          IntNativeArrayToSafeArray([in] int32& 'array',
+                                    [in] int32 arrayCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::IntNativeArrayToSafeArray
+  } // end of method CUIAutomationClass::IntNativeArrayToSafeArray
+
+  .method public hidebysig newslot virtual 
+          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
+                                                    [out] native int 'array') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::IntSafeArrayToNativeArray
+  } // end of method CUIAutomationClass::IntSafeArrayToNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance object 
+          marshal( struct) 
+          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::RectToVariant
+  } // end of method CUIAutomationClass::RectToVariant
+
+  .method public hidebysig newslot virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::VariantToRect
+  } // end of method CUIAutomationClass::VariantToRect
+
+  .method public hidebysig newslot virtual 
+          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
+                                                     [out] native int rectArray) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::SafeArrayToRectNativeArray
+  } // end of method CUIAutomationClass::SafeArrayToRectNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CreateProxyFactoryEntry
+  } // end of method CUIAutomationClass::CreateProxyFactoryEntry
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
+          marshal( interface ) 
+          get_ProxyFactoryMapping() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ProxyFactoryMapping
+  } // end of method CUIAutomationClass::get_ProxyFactoryMapping
+
+  .method public hidebysig newslot virtual 
+          instance string 
+          marshal( bstr) 
+          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::GetPropertyProgrammaticName
+  } // end of method CUIAutomationClass::GetPropertyProgrammaticName
+
+  .method public hidebysig newslot virtual 
+          instance string 
+          marshal( bstr) 
+          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::GetPatternProgrammaticName
+  } // end of method CUIAutomationClass::GetPatternProgrammaticName
+
+  .method public hidebysig newslot virtual 
+          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::PollForPotentialSupportedPatterns
+  } // end of method CUIAutomationClass::PollForPotentialSupportedPatterns
+
+  .method public hidebysig newslot virtual 
+          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::PollForPotentialSupportedProperties
+  } // end of method CUIAutomationClass::PollForPotentialSupportedProperties
+
+  .method public hidebysig newslot virtual 
+          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::CheckNotSupported
+  } // end of method CUIAutomationClass::CheckNotSupported
+
+  .method public hidebysig newslot specialname virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedNotSupportedValue() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ReservedNotSupportedValue
+  } // end of method CUIAutomationClass::get_ReservedNotSupportedValue
+
+  .method public hidebysig newslot specialname virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedMixedAttributeValue() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::get_ReservedMixedAttributeValue
+  } // end of method CUIAutomationClass::get_ReservedMixedAttributeValue
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                 [in] int32 childId) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::ElementFromIAccessible
+  } // end of method CUIAutomationClass::ElementFromIAccessible
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                           [in] int32 childId,
+                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation::ElementFromIAccessibleBuildCache
+  } // end of method CUIAutomationClass::ElementFromIAccessibleBuildCache
+
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ControlViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomationClass::get_ControlViewWalker()
+  } // end of property CUIAutomationClass::ControlViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ContentViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomationClass::get_ContentViewWalker()
+  } // end of property CUIAutomationClass::ContentViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          RawViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomationClass::get_RawViewWalker()
+  } // end of property CUIAutomationClass::RawViewWalker
+  .property class UIAutomationClient.IUIAutomationCondition
+          RawViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomationClass::get_RawViewCondition()
+  } // end of property CUIAutomationClass::RawViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ControlViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomationClass::get_ControlViewCondition()
+  } // end of property CUIAutomationClass::ControlViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ContentViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomationClass::get_ContentViewCondition()
+  } // end of property CUIAutomationClass::ContentViewCondition
+  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
+          ProxyFactoryMapping()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
+    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.CUIAutomationClass::get_ProxyFactoryMapping()
+  } // end of property CUIAutomationClass::ProxyFactoryMapping
+  .property object ReservedNotSupportedValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
+    .get instance object UIAutomationClient.CUIAutomationClass::get_ReservedNotSupportedValue()
+  } // end of property CUIAutomationClass::ReservedNotSupportedValue
+  .property object ReservedMixedAttributeValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
+    .get instance object UIAutomationClient.CUIAutomationClass::get_ReservedMixedAttributeValue()
+  } // end of property CUIAutomationClass::ReservedMixedAttributeValue
+} // end of class UIAutomationClient.CUIAutomationClass
+
+.class interface public abstract auto ansi import UIAutomationClient.CUIAutomation
+       implements UIAutomationClient.IUIAutomation
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 30 43 42 45 35 37 44 2D 44 39 44 30   // ..$30CBE57D-D9D0
+                                                                                                  2D 34 35 32 41 2D 41 42 31 33 2D 37 41 43 35 41   // -452A-AB13-7AC5A
+                                                                                                  43 34 38 32 35 45 45 00 00 )                      // C4825EE..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.CoClassAttribute::.ctor(class [mscorlib]System.Type) = ( 01 00 25 55 49 41 75 74 6F 6D 61 74 69 6F 6E 43   // ..%UIAutomationC
+                                                                                                                          6C 69 65 6E 74 2E 43 55 49 41 75 74 6F 6D 61 74   // lient.CUIAutomat
+                                                                                                                          69 6F 6E 43 6C 61 73 73 00 00 )                   // ionClass..
+} // end of class UIAutomationClient.CUIAutomation
+
+.class public auto ansi import UIAutomationClient.CUIAutomation8Class
+       extends [mscorlib]System.Object
+       implements UIAutomationClient.IUIAutomation2,
+                  UIAutomationClient.CUIAutomation8,
+                  UIAutomationClient.IUIAutomation3
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 45 32 32 41 44 33 33 33 2D 42 32 35 46   // ..$E22AD333-B25F
+                                                                                                  2D 34 36 30 43 2D 38 33 44 30 2D 30 35 38 31 31   // -460C-83D0-05811
+                                                                                                  30 37 33 39 35 43 39 00 00 )                      // 07395C9..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ClassInterfaceAttribute::.ctor(int16) = ( 01 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.TypeLibTypeAttribute::.ctor(int16) = ( 01 00 02 00 00 00 ) 
+  .method public specialname rtspecialname 
+          instance void  .ctor() runtime managed internalcall
+  {
+  } // end of method CUIAutomation8Class::.ctor
+
+  .method public hidebysig newslot virtual 
+          instance int32  CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
+                                          [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CompareElements
+  } // end of method CUIAutomation8Class::CompareElements
+
+  .method public hidebysig newslot virtual 
+          instance int32  CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
+                                            [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CompareRuntimeIds
+  } // end of method CUIAutomation8Class::CompareRuntimeIds
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElement() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::GetRootElement
+  } // end of method CUIAutomation8Class::GetRootElement
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandle([in] native int hwnd) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::ElementFromHandle
+  } // end of method CUIAutomation8Class::ElementFromHandle
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::ElementFromPoint
+  } // end of method CUIAutomation8Class::ElementFromPoint
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElement() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::GetFocusedElement
+  } // end of method CUIAutomation8Class::GetFocusedElement
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::GetRootElementBuildCache
+  } // end of method CUIAutomation8Class::GetRootElementBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromHandleBuildCache([in] native int hwnd,
+                                      [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::ElementFromHandleBuildCache
+  } // end of method CUIAutomation8Class::ElementFromHandleBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
+                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::ElementFromPointBuildCache
+  } // end of method CUIAutomation8Class::ElementFromPointBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::GetFocusedElementBuildCache
+  } // end of method CUIAutomation8Class::GetFocusedElementBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateTreeWalker
+  } // end of method CUIAutomation8Class::CreateTreeWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ControlViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ControlViewWalker
+  } // end of method CUIAutomation8Class::get_ControlViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_ContentViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ContentViewWalker
+  } // end of method CUIAutomation8Class::get_ContentViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          get_RawViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_RawViewWalker
+  } // end of method CUIAutomation8Class::get_RawViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_RawViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_RawViewCondition
+  } // end of method CUIAutomation8Class::get_RawViewCondition
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ControlViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ControlViewCondition
+  } // end of method CUIAutomation8Class::get_ControlViewCondition
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          get_ContentViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ContentViewCondition
+  } // end of method CUIAutomation8Class::get_ContentViewCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCacheRequest 
+          marshal( interface ) 
+          CreateCacheRequest() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateCacheRequest
+  } // end of method CUIAutomation8Class::CreateCacheRequest
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateTrueCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateTrueCondition
+  } // end of method CUIAutomation8Class::CreateTrueCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateFalseCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateFalseCondition
+  } // end of method CUIAutomation8Class::CreateFalseCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyCondition([in] int32 propertyId,
+                                  [in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreatePropertyCondition
+  } // end of method CUIAutomation8Class::CreatePropertyCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreatePropertyConditionEx([in] int32 propertyId,
+                                    [in] object  marshal( struct) 'value',
+                                    [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreatePropertyConditionEx
+  } // end of method CUIAutomation8Class::CreatePropertyConditionEx
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                             [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateAndCondition
+  } // end of method CUIAutomation8Class::CreateAndCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                       "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateAndConditionFromArray
+  } // end of method CUIAutomation8Class::CreateAndConditionFromArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                            [in] int32 conditionCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateAndConditionFromNativeArray
+  } // end of method CUIAutomation8Class::CreateAndConditionFromNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateOrCondition
+  } // end of method CUIAutomation8Class::CreateOrCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                      "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateOrConditionFromArray
+  } // end of method CUIAutomation8Class::CreateOrConditionFromArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                           [in] int32 conditionCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateOrConditionFromNativeArray
+  } // end of method CUIAutomation8Class::CreateOrConditionFromNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateNotCondition
+  } // end of method CUIAutomation8Class::CreateNotCondition
+
+  .method public hidebysig newslot virtual 
+          instance void  AddAutomationEventHandler([in] int32 eventId,
+                                                   [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                   [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::AddAutomationEventHandler
+  } // end of method CUIAutomation8Class::AddAutomationEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveAutomationEventHandler([in] int32 eventId,
+                                                      [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                      [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::RemoveAutomationEventHandler
+  } // end of method CUIAutomation8Class::RemoveAutomationEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                   [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                   [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                   [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                   [in] int32& propertyArray,
+                                                                   [in] int32 propertyCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::AddPropertyChangedEventHandlerNativeArray
+  } // end of method CUIAutomation8Class::AddPropertyChangedEventHandlerNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance void  AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                        [in] valuetype UIAutomationClient.TreeScope scope,
+                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                        [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                        [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::AddPropertyChangedEventHandler
+  } // end of method CUIAutomation8Class::AddPropertyChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                           [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::RemovePropertyChangedEventHandler
+  } // end of method CUIAutomation8Class::RemovePropertyChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                         [in] valuetype UIAutomationClient.TreeScope scope,
+                                                         [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                         [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::AddStructureChangedEventHandler
+  } // end of method CUIAutomation8Class::AddStructureChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::RemoveStructureChangedEventHandler
+  } // end of method CUIAutomation8Class::RemoveStructureChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                     [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::AddFocusChangedEventHandler
+  } // end of method CUIAutomation8Class::AddFocusChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::RemoveFocusChangedEventHandler
+  } // end of method CUIAutomation8Class::RemoveFocusChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveAllEventHandlers() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::RemoveAllEventHandlers
+  } // end of method CUIAutomation8Class::RemoveAllEventHandlers
+
+  .method public hidebysig newslot virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          IntNativeArrayToSafeArray([in] int32& 'array',
+                                    [in] int32 arrayCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::IntNativeArrayToSafeArray
+  } // end of method CUIAutomation8Class::IntNativeArrayToSafeArray
+
+  .method public hidebysig newslot virtual 
+          instance int32  IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
+                                                    [out] native int 'array') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::IntSafeArrayToNativeArray
+  } // end of method CUIAutomation8Class::IntSafeArrayToNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance object 
+          marshal( struct) 
+          RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::RectToVariant
+  } // end of method CUIAutomation8Class::RectToVariant
+
+  .method public hidebysig newslot virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::VariantToRect
+  } // end of method CUIAutomation8Class::VariantToRect
+
+  .method public hidebysig newslot virtual 
+          instance int32  SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
+                                                     [out] native int rectArray) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::SafeArrayToRectNativeArray
+  } // end of method CUIAutomation8Class::SafeArrayToRectNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CreateProxyFactoryEntry
+  } // end of method CUIAutomation8Class::CreateProxyFactoryEntry
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
+          marshal( interface ) 
+          get_ProxyFactoryMapping() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ProxyFactoryMapping
+  } // end of method CUIAutomation8Class::get_ProxyFactoryMapping
+
+  .method public hidebysig newslot virtual 
+          instance string 
+          marshal( bstr) 
+          GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::GetPropertyProgrammaticName
+  } // end of method CUIAutomation8Class::GetPropertyProgrammaticName
+
+  .method public hidebysig newslot virtual 
+          instance string 
+          marshal( bstr) 
+          GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::GetPatternProgrammaticName
+  } // end of method CUIAutomation8Class::GetPatternProgrammaticName
+
+  .method public hidebysig newslot virtual 
+          instance void  PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
+                                                           [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::PollForPotentialSupportedPatterns
+  } // end of method CUIAutomation8Class::PollForPotentialSupportedPatterns
+
+  .method public hidebysig newslot virtual 
+          instance void  PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
+                                                             [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::PollForPotentialSupportedProperties
+  } // end of method CUIAutomation8Class::PollForPotentialSupportedProperties
+
+  .method public hidebysig newslot virtual 
+          instance int32  CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::CheckNotSupported
+  } // end of method CUIAutomation8Class::CheckNotSupported
+
+  .method public hidebysig newslot specialname virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedNotSupportedValue() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ReservedNotSupportedValue
+  } // end of method CUIAutomation8Class::get_ReservedNotSupportedValue
+
+  .method public hidebysig newslot specialname virtual 
+          instance object 
+          marshal( iunknown ) 
+          get_ReservedMixedAttributeValue() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ReservedMixedAttributeValue
+  } // end of method CUIAutomation8Class::get_ReservedMixedAttributeValue
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                 [in] int32 childId) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::ElementFromIAccessible
+  } // end of method CUIAutomation8Class::ElementFromIAccessible
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                           [in] int32 childId,
+                                           [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::ElementFromIAccessibleBuildCache
+  } // end of method CUIAutomation8Class::ElementFromIAccessibleBuildCache
+
+  .method public hidebysig newslot specialname virtual 
+          instance int32  get_AutoSetFocus() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_AutoSetFocus
+  } // end of method CUIAutomation8Class::get_AutoSetFocus
+
+  .method public hidebysig newslot specialname virtual 
+          instance void  set_AutoSetFocus([in] int32 AutoSetFocus) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::set_AutoSetFocus
+  } // end of method CUIAutomation8Class::set_AutoSetFocus
+
+  .method public hidebysig newslot specialname virtual 
+          instance uint32  get_ConnectionTimeout() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_ConnectionTimeout
+  } // end of method CUIAutomation8Class::get_ConnectionTimeout
+
+  .method public hidebysig newslot specialname virtual 
+          instance void  set_ConnectionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::set_ConnectionTimeout
+  } // end of method CUIAutomation8Class::set_ConnectionTimeout
+
+  .method public hidebysig newslot specialname virtual 
+          instance uint32  get_TransactionTimeout() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::get_TransactionTimeout
+  } // end of method CUIAutomation8Class::get_TransactionTimeout
+
+  .method public hidebysig newslot specialname virtual 
+          instance void  set_TransactionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation2::set_TransactionTimeout
+  } // end of method CUIAutomation8Class::set_TransactionTimeout
+
+  .method public hidebysig newslot virtual 
+          instance int32  IUIAutomation3_CompareElements([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el1,
+                                                         [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) el2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CompareElements
+  } // end of method CUIAutomation8Class::IUIAutomation3_CompareElements
+
+  .method public hidebysig newslot virtual 
+          instance int32  IUIAutomation3_CompareRuntimeIds([in] class [mscorlib]System.Array  marshal( safearray int) runtimeId1,
+                                                           [in] class [mscorlib]System.Array  marshal( safearray int) runtimeId2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CompareRuntimeIds
+  } // end of method CUIAutomation8Class::IUIAutomation3_CompareRuntimeIds
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_GetRootElement() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::GetRootElement
+  } // end of method CUIAutomation8Class::IUIAutomation3_GetRootElement
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_ElementFromHandle([in] native int hwnd) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::ElementFromHandle
+  } // end of method CUIAutomation8Class::IUIAutomation3_ElementFromHandle
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_ElementFromPoint([in] valuetype UIAutomationClient.tagPOINT pt) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::ElementFromPoint
+  } // end of method CUIAutomation8Class::IUIAutomation3_ElementFromPoint
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_GetFocusedElement() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::GetFocusedElement
+  } // end of method CUIAutomation8Class::IUIAutomation3_GetFocusedElement
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_GetRootElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::GetRootElementBuildCache
+  } // end of method CUIAutomation8Class::IUIAutomation3_GetRootElementBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_ElementFromHandleBuildCache([in] native int hwnd,
+                                                     [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::ElementFromHandleBuildCache
+  } // end of method CUIAutomation8Class::IUIAutomation3_ElementFromHandleBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_ElementFromPointBuildCache([in] valuetype UIAutomationClient.tagPOINT pt,
+                                                    [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::ElementFromPointBuildCache
+  } // end of method CUIAutomation8Class::IUIAutomation3_ElementFromPointBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_GetFocusedElementBuildCache([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::GetFocusedElementBuildCache
+  } // end of method CUIAutomation8Class::IUIAutomation3_GetFocusedElementBuildCache
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          IUIAutomation3_CreateTreeWalker([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) pCondition) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateTreeWalker
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateTreeWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          IUIAutomation3_get_ControlViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ControlViewWalker
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ControlViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          IUIAutomation3_get_ContentViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ContentViewWalker
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ContentViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationTreeWalker 
+          marshal( interface ) 
+          IUIAutomation3_get_RawViewWalker() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_RawViewWalker
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_RawViewWalker
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_get_RawViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_RawViewCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_RawViewCondition
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_get_ControlViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ControlViewCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ControlViewCondition
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_get_ContentViewCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ContentViewCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ContentViewCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCacheRequest 
+          marshal( interface ) 
+          IUIAutomation3_CreateCacheRequest() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateCacheRequest
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateCacheRequest
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateTrueCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateTrueCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateTrueCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateFalseCondition() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateFalseCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateFalseCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreatePropertyCondition([in] int32 propertyId,
+                                                 [in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreatePropertyCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreatePropertyCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreatePropertyConditionEx([in] int32 propertyId,
+                                                   [in] object  marshal( struct) 'value',
+                                                   [in] valuetype UIAutomationClient.PropertyConditionFlags 'flags') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreatePropertyConditionEx
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreatePropertyConditionEx
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateAndCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                                            [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateAndCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateAndCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateAndConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                                      "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateAndConditionFromArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateAndConditionFromArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateAndConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                                           [in] int32 conditionCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateAndConditionFromNativeArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateAndConditionFromNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateOrCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition1,
+                                           [in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition2) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateOrCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateOrCondition
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateOrConditionFromArray([in] class [mscorlib]System.Array  marshal( safearray iunknown,
+                                                     "UIAutomationClient.IUIAutomationCondition") conditions) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateOrConditionFromArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateOrConditionFromArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateOrConditionFromNativeArray([in] class UIAutomationClient.IUIAutomationCondition&  marshal( interface ) conditions,
+                                                          [in] int32 conditionCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateOrConditionFromNativeArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateOrConditionFromNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationCondition 
+          marshal( interface ) 
+          IUIAutomation3_CreateNotCondition([in] class UIAutomationClient.IUIAutomationCondition  marshal( interface ) condition) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateNotCondition
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateNotCondition
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_AddAutomationEventHandler([in] int32 eventId,
+                                                                  [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                  [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                  [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                  [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::AddAutomationEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_AddAutomationEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_RemoveAutomationEventHandler([in] int32 eventId,
+                                                                     [in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                     [in] class UIAutomationClient.IUIAutomationEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RemoveAutomationEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_RemoveAutomationEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_AddPropertyChangedEventHandlerNativeArray([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                                  [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                                  [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                                  [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                                  [in] int32& propertyArray,
+                                                                                  [in] int32 propertyCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::AddPropertyChangedEventHandlerNativeArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_AddPropertyChangedEventHandlerNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_AddPropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                       [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                       [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                       [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler',
+                                                                       [in] class [mscorlib]System.Array  marshal( safearray int) propertyArray) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::AddPropertyChangedEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_AddPropertyChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_RemovePropertyChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                          [in] class UIAutomationClient.IUIAutomationPropertyChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RemovePropertyChangedEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_RemovePropertyChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_AddStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                        [in] valuetype UIAutomationClient.TreeScope scope,
+                                                                        [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                        [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::AddStructureChangedEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_AddStructureChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_RemoveStructureChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                                           [in] class UIAutomationClient.IUIAutomationStructureChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RemoveStructureChangedEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_RemoveStructureChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_AddFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                                    [in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::AddFocusChangedEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_AddFocusChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_RemoveFocusChangedEventHandler([in] class UIAutomationClient.IUIAutomationFocusChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RemoveFocusChangedEventHandler
+  } // end of method CUIAutomation8Class::IUIAutomation3_RemoveFocusChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_RemoveAllEventHandlers() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RemoveAllEventHandlers
+  } // end of method CUIAutomation8Class::IUIAutomation3_RemoveAllEventHandlers
+
+  .method public hidebysig newslot virtual 
+          instance class [mscorlib]System.Array 
+          marshal( safearray int) 
+          IUIAutomation3_IntNativeArrayToSafeArray([in] int32& 'array',
+                                                   [in] int32 arrayCount) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::IntNativeArrayToSafeArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_IntNativeArrayToSafeArray
+
+  .method public hidebysig newslot virtual 
+          instance int32  IUIAutomation3_IntSafeArrayToNativeArray([in] class [mscorlib]System.Array  marshal( safearray int) intArray,
+                                                                   [out] native int 'array') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::IntSafeArrayToNativeArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_IntSafeArrayToNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance object 
+          marshal( struct) 
+          IUIAutomation3_RectToVariant([in] valuetype UIAutomationClient.tagRECT rc) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RectToVariant
+  } // end of method CUIAutomation8Class::IUIAutomation3_RectToVariant
+
+  .method public hidebysig newslot virtual 
+          instance valuetype UIAutomationClient.tagRECT 
+          IUIAutomation3_VariantToRect([in] object  marshal( struct) var) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::VariantToRect
+  } // end of method CUIAutomation8Class::IUIAutomation3_VariantToRect
+
+  .method public hidebysig newslot virtual 
+          instance int32  IUIAutomation3_SafeArrayToRectNativeArray([in] class [mscorlib]System.Array  marshal( safearray float64) rects,
+                                                                    [out] native int rectArray) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::SafeArrayToRectNativeArray
+  } // end of method CUIAutomation8Class::IUIAutomation3_SafeArrayToRectNativeArray
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryEntry 
+          marshal( interface ) 
+          IUIAutomation3_CreateProxyFactoryEntry([in] class UIAutomationClient.IUIAutomationProxyFactory  marshal( interface ) factory) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CreateProxyFactoryEntry
+  } // end of method CUIAutomation8Class::IUIAutomation3_CreateProxyFactoryEntry
+
+  .method public hidebysig newslot specialname virtual 
+          instance class UIAutomationClient.IUIAutomationProxyFactoryMapping 
+          marshal( interface ) 
+          IUIAutomation3_get_ProxyFactoryMapping() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ProxyFactoryMapping
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ProxyFactoryMapping
+
+  .method public hidebysig newslot virtual 
+          instance string 
+          marshal( bstr) 
+          IUIAutomation3_GetPropertyProgrammaticName([in] int32 'property') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::GetPropertyProgrammaticName
+  } // end of method CUIAutomation8Class::IUIAutomation3_GetPropertyProgrammaticName
+
+  .method public hidebysig newslot virtual 
+          instance string 
+          marshal( bstr) 
+          IUIAutomation3_GetPatternProgrammaticName([in] int32 pattern) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::GetPatternProgrammaticName
+  } // end of method CUIAutomation8Class::IUIAutomation3_GetPatternProgrammaticName
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_PollForPotentialSupportedPatterns([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                                          [out] class [mscorlib]System.Array&  marshal( safearray int) patternIds,
+                                                                          [out] class [mscorlib]System.Array&  marshal( safearray bstr) patternNames) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::PollForPotentialSupportedPatterns
+  } // end of method CUIAutomation8Class::IUIAutomation3_PollForPotentialSupportedPatterns
+
+  .method public hidebysig newslot virtual 
+          instance void  IUIAutomation3_PollForPotentialSupportedProperties([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) pElement,
+                                                                            [out] class [mscorlib]System.Array&  marshal( safearray int) propertyIds,
+                                                                            [out] class [mscorlib]System.Array&  marshal( safearray bstr) propertyNames) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::PollForPotentialSupportedProperties
+  } // end of method CUIAutomation8Class::IUIAutomation3_PollForPotentialSupportedProperties
+
+  .method public hidebysig newslot virtual 
+          instance int32  IUIAutomation3_CheckNotSupported([in] object  marshal( struct) 'value') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::CheckNotSupported
+  } // end of method CUIAutomation8Class::IUIAutomation3_CheckNotSupported
+
+  .method public hidebysig newslot specialname virtual 
+          instance object 
+          marshal( iunknown ) 
+          IUIAutomation3_get_ReservedNotSupportedValue() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ReservedNotSupportedValue
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ReservedNotSupportedValue
+
+  .method public hidebysig newslot specialname virtual 
+          instance object 
+          marshal( iunknown ) 
+          IUIAutomation3_get_ReservedMixedAttributeValue() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ReservedMixedAttributeValue
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ReservedMixedAttributeValue
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_ElementFromIAccessible([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                                [in] int32 childId) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::ElementFromIAccessible
+  } // end of method CUIAutomation8Class::IUIAutomation3_ElementFromIAccessible
+
+  .method public hidebysig newslot virtual 
+          instance class UIAutomationClient.IUIAutomationElement 
+          marshal( interface ) 
+          IUIAutomation3_ElementFromIAccessibleBuildCache([in] class UIAutomationClient.IAccessible  marshal( interface ) accessible,
+                                                          [in] int32 childId,
+                                                          [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::ElementFromIAccessibleBuildCache
+  } // end of method CUIAutomation8Class::IUIAutomation3_ElementFromIAccessibleBuildCache
+
+  .method public hidebysig newslot specialname virtual 
+          instance int32  IUIAutomation3_get_AutoSetFocus() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_AutoSetFocus
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_AutoSetFocus
+
+  .method public hidebysig newslot specialname virtual 
+          instance void  IUIAutomation3_set_AutoSetFocus([in] int32 AutoSetFocus) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::set_AutoSetFocus
+  } // end of method CUIAutomation8Class::IUIAutomation3_set_AutoSetFocus
+
+  .method public hidebysig newslot specialname virtual 
+          instance uint32  IUIAutomation3_get_ConnectionTimeout() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_ConnectionTimeout
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_ConnectionTimeout
+
+  .method public hidebysig newslot specialname virtual 
+          instance void  IUIAutomation3_set_ConnectionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::set_ConnectionTimeout
+  } // end of method CUIAutomation8Class::IUIAutomation3_set_ConnectionTimeout
+
+  .method public hidebysig newslot specialname virtual 
+          instance uint32  IUIAutomation3_get_TransactionTimeout() runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::get_TransactionTimeout
+  } // end of method CUIAutomation8Class::IUIAutomation3_get_TransactionTimeout
+
+  .method public hidebysig newslot specialname virtual 
+          instance void  IUIAutomation3_set_TransactionTimeout([in] uint32 timeout) runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::set_TransactionTimeout
+  } // end of method CUIAutomation8Class::IUIAutomation3_set_TransactionTimeout
+
+  .method public hidebysig newslot virtual 
+          instance void  AddTextEditTextChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                            [in] valuetype UIAutomationClient.TreeScope scope,
+                                                            [in] valuetype UIAutomationClient.TextEditChangeType TextEditChangeType,
+                                                            [in] class UIAutomationClient.IUIAutomationCacheRequest  marshal( interface ) cacheRequest,
+                                                            [in] class UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::AddTextEditTextChangedEventHandler
+  } // end of method CUIAutomation8Class::AddTextEditTextChangedEventHandler
+
+  .method public hidebysig newslot virtual 
+          instance void  RemoveTextEditTextChangedEventHandler([in] class UIAutomationClient.IUIAutomationElement  marshal( interface ) element,
+                                                               [in] class UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler  marshal( interface ) 'handler') runtime managed internalcall
+  {
+    .override UIAutomationClient.IUIAutomation3::RemoveTextEditTextChangedEventHandler
+  } // end of method CUIAutomation8Class::RemoveTextEditTextChangedEventHandler
+
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ControlViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0B 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::get_ControlViewWalker()
+  } // end of property CUIAutomation8Class::ControlViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          ContentViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0C 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::get_ContentViewWalker()
+  } // end of property CUIAutomation8Class::ContentViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          RawViewWalker()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0D 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::get_RawViewWalker()
+  } // end of property CUIAutomation8Class::RawViewWalker
+  .property class UIAutomationClient.IUIAutomationCondition
+          RawViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0E 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::get_RawViewCondition()
+  } // end of property CUIAutomation8Class::RawViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ControlViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 0F 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::get_ControlViewCondition()
+  } // end of property CUIAutomation8Class::ControlViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          ContentViewCondition()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 10 00 01 60 00 00 )                         // .....`..
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::get_ContentViewCondition()
+  } // end of property CUIAutomation8Class::ContentViewCondition
+  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
+          ProxyFactoryMapping()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 2D 00 01 60 00 00 )                         // ..-..`..
+    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.CUIAutomation8Class::get_ProxyFactoryMapping()
+  } // end of property CUIAutomation8Class::ProxyFactoryMapping
+  .property object ReservedNotSupportedValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 33 00 01 60 00 00 )                         // ..3..`..
+    .get instance object UIAutomationClient.CUIAutomation8Class::get_ReservedNotSupportedValue()
+  } // end of property CUIAutomation8Class::ReservedNotSupportedValue
+  .property object ReservedMixedAttributeValue()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 34 00 01 60 00 00 )                         // ..4..`..
+    .get instance object UIAutomationClient.CUIAutomation8Class::get_ReservedMixedAttributeValue()
+  } // end of property CUIAutomation8Class::ReservedMixedAttributeValue
+  .property int32 AutoSetFocus()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 00 00 02 60 00 00 )                         // .....`..
+    .get instance int32 UIAutomationClient.CUIAutomation8Class::get_AutoSetFocus()
+    .set instance void UIAutomationClient.CUIAutomation8Class::set_AutoSetFocus(int32)
+  } // end of property CUIAutomation8Class::AutoSetFocus
+  .property uint32 ConnectionTimeout()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 02 00 02 60 00 00 )                         // .....`..
+    .get instance uint32 UIAutomationClient.CUIAutomation8Class::get_ConnectionTimeout()
+    .set instance void UIAutomationClient.CUIAutomation8Class::set_ConnectionTimeout(uint32)
+  } // end of property CUIAutomation8Class::ConnectionTimeout
+  .property uint32 TransactionTimeout()
+  {
+    .custom instance void [mscorlib]System.Runtime.InteropServices.DispIdAttribute::.ctor(int32) = ( 01 00 04 00 02 60 00 00 )                         // .....`..
+    .set instance void UIAutomationClient.CUIAutomation8Class::set_TransactionTimeout(uint32)
+    .get instance uint32 UIAutomationClient.CUIAutomation8Class::get_TransactionTimeout()
+  } // end of property CUIAutomation8Class::TransactionTimeout
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          IUIAutomation3_ControlViewWalker()
+  {
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ControlViewWalker()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ControlViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          IUIAutomation3_ContentViewWalker()
+  {
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ContentViewWalker()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ContentViewWalker
+  .property class UIAutomationClient.IUIAutomationTreeWalker
+          IUIAutomation3_RawViewWalker()
+  {
+    .get instance class UIAutomationClient.IUIAutomationTreeWalker UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_RawViewWalker()
+  } // end of property CUIAutomation8Class::IUIAutomation3_RawViewWalker
+  .property class UIAutomationClient.IUIAutomationCondition
+          IUIAutomation3_RawViewCondition()
+  {
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_RawViewCondition()
+  } // end of property CUIAutomation8Class::IUIAutomation3_RawViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          IUIAutomation3_ControlViewCondition()
+  {
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ControlViewCondition()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ControlViewCondition
+  .property class UIAutomationClient.IUIAutomationCondition
+          IUIAutomation3_ContentViewCondition()
+  {
+    .get instance class UIAutomationClient.IUIAutomationCondition UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ContentViewCondition()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ContentViewCondition
+  .property class UIAutomationClient.IUIAutomationProxyFactoryMapping
+          IUIAutomation3_ProxyFactoryMapping()
+  {
+    .get instance class UIAutomationClient.IUIAutomationProxyFactoryMapping UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ProxyFactoryMapping()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ProxyFactoryMapping
+  .property object IUIAutomation3_ReservedNotSupportedValue()
+  {
+    .get instance object UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ReservedNotSupportedValue()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ReservedNotSupportedValue
+  .property object IUIAutomation3_ReservedMixedAttributeValue()
+  {
+    .get instance object UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ReservedMixedAttributeValue()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ReservedMixedAttributeValue
+  .property int32 IUIAutomation3_AutoSetFocus()
+  {
+    .set instance void UIAutomationClient.CUIAutomation8Class::IUIAutomation3_set_AutoSetFocus(int32)
+    .get instance int32 UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_AutoSetFocus()
+  } // end of property CUIAutomation8Class::IUIAutomation3_AutoSetFocus
+  .property uint32 IUIAutomation3_ConnectionTimeout()
+  {
+    .set instance void UIAutomationClient.CUIAutomation8Class::IUIAutomation3_set_ConnectionTimeout(uint32)
+    .get instance uint32 UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_ConnectionTimeout()
+  } // end of property CUIAutomation8Class::IUIAutomation3_ConnectionTimeout
+  .property uint32 IUIAutomation3_TransactionTimeout()
+  {
+    .get instance uint32 UIAutomationClient.CUIAutomation8Class::IUIAutomation3_get_TransactionTimeout()
+    .set instance void UIAutomationClient.CUIAutomation8Class::IUIAutomation3_set_TransactionTimeout(uint32)
+  } // end of property CUIAutomation8Class::IUIAutomation3_TransactionTimeout
+} // end of class UIAutomationClient.CUIAutomation8Class
+
+.class interface public abstract auto ansi import UIAutomationClient.CUIAutomation8
+       implements UIAutomationClient.IUIAutomation2
+{
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 33 34 37 32 33 41 46 46 2D 30 43 39 44   // ..$34723AFF-0C9D
+                                                                                                  2D 34 39 44 30 2D 39 38 39 36 2D 37 41 42 35 32   // -49D0-9896-7AB52
+                                                                                                  44 46 38 43 44 38 41 00 00 )                      // DF8CD8A..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.CoClassAttribute::.ctor(class [mscorlib]System.Type) = ( 01 00 26 55 49 41 75 74 6F 6D 61 74 69 6F 6E 43   // ..&UIAutomationC
+                                                                                                                          6C 69 65 6E 74 2E 43 55 49 41 75 74 6F 6D 61 74   // lient.CUIAutomat
+                                                                                                                          69 6F 6E 38 43 6C 61 73 73 00 00 )                // ion8Class..
+} // end of class UIAutomationClient.CUIAutomation8
+
 
 // =============================================================
 
 // *********** DISASSEMBLY COMPLETE ***********************
-// WARNING: Created Win32 resource file .\UiaComWrapper\dll\CustomInterop.UIAutomationClient.res
+// WARNING: Created Win32 resource file CustomInterop.UIAutomationClient.res

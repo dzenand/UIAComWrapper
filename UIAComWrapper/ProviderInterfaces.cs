@@ -110,7 +110,7 @@ namespace System.Windows.Automation.Providers
         double LargeChange { get; }
         double SmallChange { get; }
     }
-
+    
     [Guid("a407b27b-0f6d-4427-9292-473c7bf93258")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     [ComVisible(true)]
