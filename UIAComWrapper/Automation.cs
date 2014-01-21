@@ -63,6 +63,20 @@ namespace System.Windows.Automation
 
         }
 
+        internal static UIAutomationClient.IUIAutomation3 Factory3
+        {
+            get
+            {
+                UIAutomationClient.IUIAutomation3 factory3 = Factory as UIAutomationClient.IUIAutomation3;
+                if (factory3 == null)
+                {
+                    throw new NotImplementedException("Operation is not available without IUIAutomation3 support on OS");
+                }
+
+                return factory3;
+            }
+        }
+
         public static void AddAutomationEventHandler(AutomationEvent eventId, AutomationElement element, TreeScope scope, AutomationEventHandler eventHandler)
         {
             Utility.ValidateArgumentNonNull(element, "element");
@@ -332,5 +346,8 @@ namespace System.Windows.Automation
                 Factory2.TransactionTimeout = value;
             }
         }
+
+       
+
     }
 }

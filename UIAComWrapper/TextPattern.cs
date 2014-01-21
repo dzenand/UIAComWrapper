@@ -7,6 +7,7 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Automation.Text;
 using UIAComWrapperInternal;

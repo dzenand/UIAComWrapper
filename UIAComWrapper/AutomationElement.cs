@@ -8,6 +8,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
@@ -112,6 +113,8 @@ namespace System.Windows.Automation
         public static readonly AutomationEvent SystemAlertEvent = AutomationElementIdentifiers.SystemAlertEvent;
         public static readonly AutomationEvent LiveRegionChangedEvent = AutomationElementIdentifiers.LiveRegionChangedEvent;
         public static readonly AutomationEvent HostedFragmentRootsInvalidatedEvent = AutomationElementIdentifiers.HostedFragmentRootsInvalidatedEvent;
+
+        //New for windows 8.1
 
         
         internal AutomationElement(UIAutomationClient.IUIAutomationElement obj)
