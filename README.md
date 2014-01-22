@@ -12,4 +12,4 @@ The UI Automation classes are documented under the [UI Automation Community Prom
 
 ### License
 
-[Microsoft Public License (Ms-PL)](http://www.microsoft.com/opensource/licenses.mspx#Ms-PL)
+[Microsoft Public License (Ms-PL)](http://opensource.org/licenses/MS-PL)
