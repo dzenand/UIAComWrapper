@@ -123,6 +123,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Lib\CustomInterop.UIAutomationClient.il" />
     <None Include="Lib\Interop.UIAutomationClient.dll" />
   </ItemGroup>
   <ItemGroup>
