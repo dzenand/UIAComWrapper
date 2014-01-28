@@ -118,6 +118,9 @@ namespace System.Windows.Automation
         //New for Windows 8.1
         public static readonly AutomationEvent EditTextChangedEvent = AutomationEvent.Register(UIA_EventIds.UIA_TextEdit_TextChangedEventId, "AutomationElementIdentifiers.TextEditTextChangedEvent");
 
+        public static readonly AutomationProperty CurrentIsPeripheral = AutomationProperty.Register(UIA_PropertyIds.UIA_IsPeripheralPropertyId, "AutomationElementIdentifiers.IsPeripheralProperty");
+
+
     }
 
     public static class DockPatternIdentifiers

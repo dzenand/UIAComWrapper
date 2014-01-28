@@ -116,6 +116,8 @@ namespace System.Windows.Automation
         //Windows 8.1
         public static readonly AutomationEvent EditTextChangedEvent = AutomationElementIdentifiers.EditTextChangedEvent;
 
+        public static readonly AutomationProperty CurrentIsPeripheral = AutomationElementIdentifiers.CurrentIsPeripheral;
+
         #region Element object
 
         private readonly UIAutomationClient.IUIAutomationElement _AutomationElement;
@@ -915,6 +917,14 @@ namespace System.Windows.Automation
                 get
                 {
                     return (LiveSetting)this._el.GetPropertyValue(AutomationElement.LiveSettingProperty, _isCached);
+                }
+            }
+
+            public bool CurrentIsPeripheral
+            {
+                get
+                {
+                    return (bool) this._el.GetPropertyValue(AutomationElement.CurrentIsPeripheral, _isCached);
                 }
             }
         }
