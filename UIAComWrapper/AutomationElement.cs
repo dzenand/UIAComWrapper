@@ -113,9 +113,10 @@ namespace System.Windows.Automation
         public static readonly AutomationEvent SystemAlertEvent = AutomationElementIdentifiers.SystemAlertEvent;
         public static readonly AutomationEvent LiveRegionChangedEvent = AutomationElementIdentifiers.LiveRegionChangedEvent;
         public static readonly AutomationEvent HostedFragmentRootsInvalidatedEvent = AutomationElementIdentifiers.HostedFragmentRootsInvalidatedEvent;
-
-        //New for windows 8.1
-
+        
+        //Windows 8.1
+        public static readonly AutomationEvent EditTextChangedEvent = AutomationElementIdentifiers.EditTextChangedEvent;
+      
         
         internal AutomationElement(UIAutomationClient.IUIAutomationElement obj)
         {

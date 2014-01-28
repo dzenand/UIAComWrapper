@@ -166,6 +166,27 @@ namespace UIAComWrapperInternal
         #endregion
     }
 
+    internal class EditTextEventListener : EventListener,UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler
+    {
+        private EditTextChangedEventHandler _editTextChangedHandler;
+
+        public EditTextEventListener(AutomationEvent eventKind, AutomationElement element, EditTextChangedEventHandler handler) :
+            base(AutomationElement.EditTextChangedEvent.Id, element.GetRuntimeId(), handler)
+        {
+            Debug.Assert(handler != null);
+            _editTextChangedHandler = handler;
+        }
+
+        #region IUIAutomationTextEditTextChangedEventHandler Members
+
+        void UIAutomationClient.IUIAutomationTextEditTextChangedEventHandler.HandleTextEditTextChangedEvent(UIAutomationClient.IUIAutomationElement sender, UIAutomationClient.TextEditChangeType TextEditChangeType, Array eventStrings)
+        {
+          
+        }
+
+        #endregion
+    }
+
     internal class ClientEventList
     {
         private static readonly System.Collections.Generic.LinkedList<EventListener> _events = new LinkedList<EventListener>();

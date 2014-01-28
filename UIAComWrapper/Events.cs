@@ -12,16 +12,16 @@ namespace System.Windows.Automation
 {
     public class AutomationEventArgs : EventArgs
     {
-        
+
         private AutomationEvent _eventId;
 
-        
+
         public AutomationEventArgs(AutomationEvent eventId)
         {
             this._eventId = eventId;
         }
 
-        
+
         public AutomationEvent EventId
         {
             get
@@ -35,10 +35,10 @@ namespace System.Windows.Automation
 
     public sealed class WindowClosedEventArgs : AutomationEventArgs
     {
-        
+
         private int[] _runtimeId;
 
-        
+
         public WindowClosedEventArgs(int[] runtimeId)
             : base(WindowPatternIdentifiers.WindowClosedEvent)
         {
@@ -65,11 +65,11 @@ namespace System.Windows.Automation
 
     public sealed class AsyncContentLoadedEventArgs : AutomationEventArgs
     {
-        
+
         private AsyncContentLoadedState _asyncContentState;
         private double _percentComplete;
 
-        
+
         public AsyncContentLoadedEventArgs(AsyncContentLoadedState asyncContentState, double percentComplete)
             : base(AutomationElementIdentifiers.AsyncContentLoadedEvent)
         {
@@ -77,7 +77,7 @@ namespace System.Windows.Automation
             this._percentComplete = percentComplete;
         }
 
-        
+
         public AsyncContentLoadedState AsyncContentLoadedState
         {
             get
@@ -97,12 +97,12 @@ namespace System.Windows.Automation
 
     public sealed class AutomationPropertyChangedEventArgs : AutomationEventArgs
     {
-        
+
         private object _newValue;
         private object _oldValue;
         private AutomationProperty _property;
 
-        
+
         public AutomationPropertyChangedEventArgs(AutomationProperty property, object oldValue, object newValue)
             : base(AutomationElementIdentifiers.AutomationPropertyChangedEvent)
         {
@@ -111,7 +111,7 @@ namespace System.Windows.Automation
             this._property = property;
         }
 
-        
+
         public object NewValue
         {
             get
@@ -141,11 +141,11 @@ namespace System.Windows.Automation
 
     public class AutomationFocusChangedEventArgs : AutomationEventArgs
     {
-        
+
         private int _idChild;
         private int _idObject;
 
-        
+
         public AutomationFocusChangedEventArgs(int idObject, int idChild)
             : base(AutomationElement.AutomationFocusChangedEvent)
         {
@@ -153,7 +153,7 @@ namespace System.Windows.Automation
             this._idChild = idChild;
         }
 
-        
+
         public int ChildId
         {
             get
@@ -187,11 +187,11 @@ namespace System.Windows.Automation
 
     public sealed class StructureChangedEventArgs : AutomationEventArgs
     {
-        
+
         private int[] _runtimeID;
         private StructureChangeType _structureChangeType;
 
-        
+
         public StructureChangedEventArgs(StructureChangeType structureChangeType, int[] runtimeId)
             : base(AutomationElementIdentifiers.StructureChangedEvent)
         {
@@ -208,7 +208,7 @@ namespace System.Windows.Automation
             return (int[])this._runtimeID.Clone();
         }
 
-        
+
         public StructureChangeType StructureChangeType
         {
             get
@@ -219,4 +219,34 @@ namespace System.Windows.Automation
     }
 
     public delegate void StructureChangedEventHandler(object sender, StructureChangedEventArgs e);
+
+    public sealed class EditTextChangedEventArgs : AutomationEventArgs
+    {
+        private TextEditChangeType _editChangeType;
+        private string[] _eventStrings;
+
+        public EditTextChangedEventArgs(TextEditChangeType textEditChangeType, string[] eventStrings)
+            : base(AutomationElementIdentifiers.EditTextChangedEvent)
+        {
+            _editChangeType = textEditChangeType;
+            _eventStrings = (string[])eventStrings.Clone();
+        }
+
+        public TextEditChangeType TextEditChangeType
+        {
+            get
+            {
+                return _editChangeType;
+            }
+        }
+
+        public string[] GetEventString()
+        {
+            return (string[])this._eventStrings.Clone();
+        }
+    }
+
+    public delegate void EditTextChangedEventHandler(object sender, EditTextChangedEventArgs e);
+
+
 }

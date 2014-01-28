@@ -72,7 +72,7 @@ namespace System.Windows.Automation
                 {
                     throw new NotImplementedException("Operation is not available without IUIAutomation3 support on OS");
                 }
-
+            
                 return factory3;
             }
         }
@@ -345,6 +345,33 @@ namespace System.Windows.Automation
             {
                 Factory2.TransactionTimeout = value;
             }
+        }
+
+        ///
+        /// Windows 8.1 extensions
+        /// 
+
+        public static void AddTextEditTextChangedEventHandler(TextEditChangeType type, AutomationElement element, TreeScope scope, EditTextChangedEventHandler eventHandler)
+        {
+
+            Utility.ValidateArgumentNonNull(element, "element");
+            Utility.ValidateArgumentNonNull(eventHandler, "eventHandler");
+
+            try
+            {
+                EditTextEventListener listener = new EditTextEventListener(AutomationElement.EditTextChangedEvent, element, eventHandler);
+                Factory3.AddTextEditTextChangedEventHandler(element.NativeElement,
+                    (UIAutomationClient.TreeScope)scope,
+                    (UIAutomationClient.TextEditChangeType)type,
+                    CacheRequest.CurrentNativeCacheRequest,
+                    listener);
+                ClientEventList.Add(listener);
+            }
+            catch (System.Runtime.InteropServices.COMException e)
+            {
+                Exception newEx; if (Utility.ConvertException(e, out newEx)) { throw newEx; } else { throw; }
+            }
+            
         }
 
        

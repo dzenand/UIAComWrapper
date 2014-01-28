@@ -116,7 +116,8 @@ namespace System.Windows.Automation
         public static readonly AutomationEvent HostedFragmentRootsInvalidatedEvent = AutomationEvent.Register(UIA_EventIds.UIA_HostedFragmentRootsInvalidatedEventId, "AutomationElementIdentifiers.HostedFragmentRootsInvalidatedEvent");
 
         //New for Windows 8.1
-       
+        public static readonly AutomationEvent EditTextChangedEvent = AutomationEvent.Register(UIA_EventIds.UIA_TextEdit_TextChangedEventId, "AutomationElementIdentifiers.TextEditTextChangedEvent");
+
     }
 
     public static class DockPatternIdentifiers
@@ -703,6 +704,10 @@ namespace System.Windows.Automation
         public static readonly ControlType TreeItem = Register(UIA_ControlTypeIds.UIA_TreeItemControlTypeId, "ControlType.TreeItem");
         public static readonly ControlType Window = Register(UIA_ControlTypeIds.UIA_WindowControlTypeId, "ControlType.Window", new AutomationPattern[][] { new AutomationPattern[] { TransformPatternIdentifiers.Pattern }, new AutomationPattern[] { WindowPatternIdentifiers.Pattern } });
 
+        public static readonly ControlType SemanticZoom = Register(UIA_ControlTypeIds.UIA_SemanticZoomControlTypeId, "ControlType.SemanticZoom", new AutomationPattern[][] { new AutomationPattern[] { TogglePatternIdentifiers.Pattern } });
+        public static readonly ControlType AppBar = Register(UIA_ControlTypeIds.UIA_AppBarControlTypeId, "ControlType.AppBarControl");
+
+
 
         internal ControlType(int id, string programmaticName)
             : base(UiaCoreIds.AutomationIdType.ControlType, id, programmaticName)
@@ -1103,6 +1108,18 @@ namespace System.Windows.Automation
         LTR = 0,
         RTL = 1
     };
+
+    //New for windows 8.1
+
+    public enum TextEditChangeType
+    {
+        None = 0,
+        AutoCorrect = 1,
+        Composition = 2,
+        CompositionFinalized = 3
+    };
+
+
 
     #endregion
 
