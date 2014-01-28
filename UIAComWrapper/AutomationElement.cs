@@ -21,8 +21,7 @@ namespace System.Windows.Automation
 
     public sealed class AutomationElement
     {
-        
-        private UIAutomationClient.IUIAutomationElement _obj;
+    
         public static readonly AutomationProperty AcceleratorKeyProperty = AutomationElementIdentifiers.AcceleratorKeyProperty;
         public static readonly AutomationProperty AccessKeyProperty = AutomationElementIdentifiers.AccessKeyProperty;
         public static readonly AutomationEvent AsyncContentLoadedEvent = AutomationElementIdentifiers.AsyncContentLoadedEvent;
@@ -116,12 +115,57 @@ namespace System.Windows.Automation
         
         //Windows 8.1
         public static readonly AutomationEvent EditTextChangedEvent = AutomationElementIdentifiers.EditTextChangedEvent;
-      
-        
-        internal AutomationElement(UIAutomationClient.IUIAutomationElement obj)
+
+        #region Element object
+
+        private readonly UIAutomationClient.IUIAutomationElement _AutomationElement;
+
+        private UIAutomationClient.IUIAutomationElement2 _AutomationElement2
         {
-            Debug.Assert(obj != null);
-            this._obj = obj;
+            get
+            {
+                if (_AutomationElement != null)
+                {
+                    UIAutomationClient.IUIAutomationElement2 element =
+                        _AutomationElement as UIAutomationClient.IUIAutomationElement2;
+                    if (element == null)
+                    {
+                        throw new NotImplementedException("Operation is not available without IUIAutomationElement2 support on OS");
+                    }
+
+                    return element;
+                }
+
+                return null;
+            }
+        }
+
+        private UIAutomationClient.IUIAutomationElement3 _AutomationElement3
+        {
+            get
+            {
+                if (_AutomationElement != null)
+                {
+                    UIAutomationClient.IUIAutomationElement3 element =
+                        _AutomationElement as UIAutomationClient.IUIAutomationElement3;
+                    if (element == null)
+                    {
+                        throw new NotImplementedException("Operation is not available without IUIAutomationElement3 support on OS");
+                    }
+
+                    return element;
+                }
+
+                return null;
+            }
+        }
+
+        #endregion
+
+        internal AutomationElement(UIAutomationClient.IUIAutomationElement automationElement)
+        {
+            Debug.Assert(automationElement != null);
+            this._AutomationElement = automationElement;
         }
 
         internal static AutomationElement Wrap(UIAutomationClient.IUIAutomationElement obj)
@@ -132,7 +176,7 @@ namespace System.Windows.Automation
         public override bool Equals(object obj)
         {
             AutomationElement element = obj as AutomationElement;
-            return (((obj != null) && (element != null)) && (Automation.Factory.CompareElements(this._obj, element._obj) != 0));
+            return (((obj != null) && (element != null)) && (Automation.Factory.CompareElements(this._AutomationElement, element._AutomationElement) != 0));
         }
 
         ~AutomationElement()
@@ -146,7 +190,7 @@ namespace System.Windows.Automation
             try
             {
                 UIAutomationClient.IUIAutomationElementArray elemArray =
-                    this._obj.FindAllBuildCache(
+                    this._AutomationElement.FindAllBuildCache(
                         (UIAutomationClient.TreeScope)scope,
                         condition.NativeCondition,
                         CacheRequest.CurrentNativeCacheRequest);
@@ -164,7 +208,7 @@ namespace System.Windows.Automation
             try
             {
                 UIAutomationClient.IUIAutomationElement elem =
-                    this._obj.FindFirstBuildCache(
+                    this._AutomationElement.FindFirstBuildCache(
                         (UIAutomationClient.TreeScope)scope,
                         condition.NativeCondition,
                         CacheRequest.CurrentNativeCacheRequest);
@@ -256,7 +300,7 @@ namespace System.Windows.Automation
 
             try
             {
-                object obj = this._obj.GetCachedPropertyValueEx(property.Id, (ignoreDefaultValue) ? 1 : 0);
+                object obj = this._AutomationElement.GetCachedPropertyValueEx(property.Id, (ignoreDefaultValue) ? 1 : 0);
                 return Utility.WrapObjectAsProperty(property, obj);
             }
             catch (System.Runtime.InteropServices.COMException e)
@@ -295,7 +339,7 @@ namespace System.Windows.Automation
             Utility.ValidateArgumentNonNull(property, "property");
             try
             {
-                object obj = this._obj.GetCurrentPropertyValueEx(property.Id, (ignoreDefaultValue) ? 1 : 0);
+                object obj = this._AutomationElement.GetCurrentPropertyValueEx(property.Id, (ignoreDefaultValue) ? 1 : 0);
                 return Utility.WrapObjectAsProperty(property, obj);
             }
             catch (System.Runtime.InteropServices.COMException e)
@@ -339,11 +383,11 @@ namespace System.Windows.Automation
 
                 if (isCached)
                 {
-                    return this._obj.GetCachedPattern(pattern.Id);
+                    return this._AutomationElement.GetCachedPattern(pattern.Id);
                 }
                 else
                 {
-                    return this._obj.GetCurrentPattern(pattern.Id);
+                    return this._AutomationElement.GetCurrentPattern(pattern.Id);
                 }
             }
             catch (System.Runtime.InteropServices.COMException e)
@@ -357,7 +401,7 @@ namespace System.Windows.Automation
         {
             try
             {
-                return (int[])this._obj.GetRuntimeId();
+                return (int[])this._AutomationElement.GetRuntimeId();
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -371,7 +415,7 @@ namespace System.Windows.Automation
             Array rawPatternNames;
             try
             {
-                Automation.Factory.PollForPotentialSupportedPatterns(this._obj, out rawPatternIds, out rawPatternNames);
+                Automation.Factory.PollForPotentialSupportedPatterns(this._AutomationElement, out rawPatternIds, out rawPatternNames);
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -400,7 +444,7 @@ namespace System.Windows.Automation
             Array rawPropertyNames;
             try
             {
-                Automation.Factory.PollForPotentialSupportedProperties(this._obj, out rawPropertyIds, out rawPropertyNames);
+                Automation.Factory.PollForPotentialSupportedProperties(this._AutomationElement, out rawPropertyIds, out rawPropertyNames);
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -426,7 +470,7 @@ namespace System.Windows.Automation
         {
             try
             {
-                return AutomationElement.Wrap(this._obj.BuildUpdatedCache(request.NativeCacheRequest));
+                return AutomationElement.Wrap(this._AutomationElement.BuildUpdatedCache(request.NativeCacheRequest));
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -456,7 +500,7 @@ namespace System.Windows.Automation
         {
             try
             {
-                this._obj.SetFocus();
+                this._AutomationElement.SetFocus();
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -471,7 +515,7 @@ namespace System.Windows.Automation
             Utility.ValidateArgumentNonNull(pattern, "pattern");
             try
             {
-                object nativePattern = this._obj.GetCachedPattern(pattern.Id);
+                object nativePattern = this._AutomationElement.GetCachedPattern(pattern.Id);
                 patternObject = Utility.WrapObjectAsPattern(this, nativePattern, pattern, true /* cached */);
                 return (patternObject != null);
             }
@@ -488,7 +532,7 @@ namespace System.Windows.Automation
             UIAutomationClient.tagPOINT nativePoint = new UIAutomationClient.tagPOINT();
             try
             {
-                bool success = this._obj.GetClickablePoint(out nativePoint) != 0;
+                bool success = this._AutomationElement.GetClickablePoint(out nativePoint) != 0;
                 if (success)
                 {
                     pt.X = nativePoint.x;
@@ -509,7 +553,7 @@ namespace System.Windows.Automation
             Utility.ValidateArgumentNonNull(pattern, "pattern");
             try
             {
-                object nativePattern = this._obj.GetCurrentPattern(pattern.Id);
+                object nativePattern = this._AutomationElement.GetCurrentPattern(pattern.Id);
                 patternObject = Utility.WrapObjectAsPattern(this, nativePattern, pattern, false /* cached */);
                 return (patternObject != null);
             }
@@ -535,7 +579,7 @@ namespace System.Windows.Automation
             {
                 try
                 {
-                    return AutomationElementCollection.Wrap(this._obj.GetCachedChildren());
+                    return AutomationElementCollection.Wrap(this._AutomationElement.GetCachedChildren());
                 }
                 catch (System.Runtime.InteropServices.COMException e)
                 {
@@ -552,7 +596,7 @@ namespace System.Windows.Automation
                 try
                 {
 
-                    return AutomationElement.Wrap(this._obj.GetCachedParent());
+                    return AutomationElement.Wrap(this._AutomationElement.GetCachedParent());
                 }
                 catch (System.Runtime.InteropServices.COMException e)
                 {
@@ -574,7 +618,7 @@ namespace System.Windows.Automation
         {
             get
             {
-                return this._obj;
+                return this._AutomationElement;
             }
         }
 
@@ -612,6 +656,22 @@ namespace System.Windows.Automation
 
             }
         }
+
+        //Windows 8.1
+        public void ShowContextMenu()
+        {
+            try
+            {
+                _AutomationElement3.ShowContextMenu();
+            }
+            catch (System.Runtime.InteropServices.COMException e)
+            {
+                Exception newEx; if (Utility.ConvertException(e, out newEx)) { throw newEx; } else { throw; }
+            }
+
+        }
+
+
 
         [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
         public struct AutomationElementInformation
