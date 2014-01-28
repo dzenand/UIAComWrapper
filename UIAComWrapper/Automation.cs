@@ -374,6 +374,21 @@ namespace System.Windows.Automation
             
         }
 
+        public static void RemoveTextEditTextChangedEventHandler(AutomationElement element, EditTextChangedEventHandler eventHandler)
+        {
+            Utility.ValidateArgumentNonNull(element, "element");
+            Utility.ValidateArgumentNonNull(eventHandler, "eventHandler");
+
+            try
+            {
+                EditTextEventListener listener = (EditTextEventListener)ClientEventList.Remove(AutomationElement.EditTextChangedEvent, element, eventHandler);
+                Factory3.RemoveTextEditTextChangedEventHandler(element.NativeElement, listener);
+            }
+            catch (System.Runtime.InteropServices.COMException e)
+            {
+                Exception newEx; if (Utility.ConvertException(e, out newEx)) { throw newEx; } else { throw; }
+            }
+        }
        
 
     }
