@@ -8,13 +8,15 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Threading;
+using UIAComWrapper;
 using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public sealed class CacheRequest
+    public sealed class CacheRequest : DisposableBaseWithoutFinalizer
     {
-        
         private UIAutomationClient.IUIAutomationCacheRequest _obj;
         private object _lock;
         private int _cRef;
@@ -30,7 +32,7 @@ namespace System.Windows.Automation
             this._lock = new object();
         }
 
-        public CacheRequest() 
+        public CacheRequest()
         {
             this._obj = Automation.Factory.CreateCacheRequest();
             this._lock = new object();
@@ -38,13 +40,17 @@ namespace System.Windows.Automation
 
         public IDisposable Activate()
         {
+            CheckDisposed();
+
             this.Push();
             return new CacheRequestActivation(this);
         }
 
         public void Add(AutomationPattern pattern)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(pattern, "pattern");
+
             lock (this._lock)
             {
                 this.CheckAccess();
@@ -54,7 +60,9 @@ namespace System.Windows.Automation
 
         public void Add(AutomationProperty property)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(property, "property");
+
             lock (this._lock)
             {
                 this.CheckAccess();
@@ -72,11 +80,15 @@ namespace System.Windows.Automation
 
         public CacheRequest Clone()
         {
+            CheckDisposed();
+
             return new CacheRequest(this._obj.Clone());
         }
 
         public void Pop()
         {
+            CheckDisposed();
+
             if (((_cacheStack == null) || (_cacheStack.Count == 0)) || (_cacheStack.Peek() != this))
             {
                 throw new InvalidOperationException("Only the top cache request can be popped");
@@ -90,6 +102,8 @@ namespace System.Windows.Automation
 
         public void Push()
         {
+            CheckDisposed();
+
             if (_cacheStack == null)
             {
                 _cacheStack = new Stack();
@@ -106,10 +120,14 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return (AutomationElementMode)this._obj.AutomationElementMode;
             }
             set
             {
+                CheckDisposed();
+
                 lock (this._lock)
                 {
                     this.CheckAccess();
@@ -142,11 +160,15 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return Condition.Wrap(this._obj.TreeFilter);
             }
             set
             {
+                CheckDisposed();
                 Utility.ValidateArgumentNonNull(value, "TreeFilter");
+
                 lock (this._lock)
                 {
                     this.CheckAccess();
@@ -159,10 +181,14 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return (TreeScope)this._obj.TreeScope;
             }
             set
             {
+                CheckDisposed();
+
                 lock (this._lock)
                 {
                     this.CheckAccess();
@@ -175,8 +201,16 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return this._obj;
             }
+        }
+
+        protected override void DisposeManagedResource()
+        {
+            Marshal.FinalReleaseComObject(_obj);
+            base.DisposeManagedResource();
         }
     }
 
