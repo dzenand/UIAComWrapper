@@ -54,7 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.UIAutomationClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>Lib\Interop.UIAutomationClient.dll</HintPath>
@@ -76,6 +76,7 @@
     <Compile Include="ClientEventList.cs" />
     <Compile Include="ClientSideProviders.cs" />
     <Compile Include="Conditions.cs" />
+    <Compile Include="DisposableBaseWithoutFinalizer.cs" />
     <Compile Include="DockPattern.cs" />
     <Compile Include="DragPattern.cs" />
     <Compile Include="DropTargetPattern.cs" />
@@ -126,9 +127,6 @@
     <None Include="Lib\CustomInterop.UIAutomationClient.il" />
     <None Include="Lib\Interop.UIAutomationClient.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="TobiiSoftware.snk" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -137,7 +135,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <!--
   <PropertyGroup>
-    <PreBuildEvent>"$(FrameworkDir)\$(FrameworkVersion)\ilasm" "$(ProjectDir)\CustomInterop.UIAutomationClient.il" /dll /output="$(TargetDir)\Interop.UIAutomationClient.dll"</PreBuildEvent>
+    <PreBuildEvent>"$(FrameworkDir)\$(FrameworkVersion)\ilasm" "$(ProjectDir)\Lib\CustomInterop.UIAutomationClient.il" /dll /output="$(ProjectDir)\Lib\Interop.UIAutomationClient.dll"</PreBuildEvent>
   </PropertyGroup>
+  -->
 </Project>

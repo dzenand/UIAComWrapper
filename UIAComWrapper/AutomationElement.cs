@@ -4,11 +4,10 @@
 // All other rights reserved.
 
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
+using System.Runtime.InteropServices;
+using UIAComWrapper;
 using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
@@ -19,7 +18,7 @@ namespace System.Windows.Automation
         Full
     }
 
-    public sealed class AutomationElement
+    public sealed class AutomationElement : DisposableBaseWithoutFinalizer
     {
     
         public static readonly AutomationProperty AcceleratorKeyProperty = AutomationElementIdentifiers.AcceleratorKeyProperty;
@@ -177,16 +176,15 @@ namespace System.Windows.Automation
 
         public override bool Equals(object obj)
         {
+            CheckDisposed();
+
             AutomationElement element = obj as AutomationElement;
             return (((obj != null) && (element != null)) && (Automation.Factory.CompareElements(this._AutomationElement, element._AutomationElement) != 0));
         }
 
-        ~AutomationElement()
-        {
-        }
-
         public AutomationElementCollection FindAll(TreeScope scope, Condition condition)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(condition, "condition");
 
             try
@@ -206,7 +204,9 @@ namespace System.Windows.Automation
 
         public AutomationElement FindFirst(TreeScope scope, Condition condition)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(condition, "condition");
+
             try
             {
                 UIAutomationClient.IUIAutomationElement elem =
@@ -225,6 +225,7 @@ namespace System.Windows.Automation
         public static AutomationElement FromHandle(IntPtr hwnd)
         {
             Utility.ValidateArgument(hwnd != IntPtr.Zero, "Hwnd cannot be null");
+
             try
             {
                 UIAutomationClient.IUIAutomationElement element =
@@ -283,6 +284,8 @@ namespace System.Windows.Automation
 
         public object GetCachedPattern(AutomationPattern pattern)
         {
+            CheckDisposed();
+
             object patternObj;
             if (!this.TryGetCachedPattern(pattern, out patternObj))
             {
@@ -293,11 +296,14 @@ namespace System.Windows.Automation
 
         public object GetCachedPropertyValue(AutomationProperty property)
         {
+            CheckDisposed();
+
             return this.GetCachedPropertyValue(property, false);
         }
 
         public object GetCachedPropertyValue(AutomationProperty property, bool ignoreDefaultValue)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(property, "property");
 
             try
@@ -313,6 +319,8 @@ namespace System.Windows.Automation
 
         public Point GetClickablePoint()
         {
+            CheckDisposed();
+
             Point point;
             if (!this.TryGetClickablePoint(out point))
             {
@@ -323,6 +331,8 @@ namespace System.Windows.Automation
 
         public object GetCurrentPattern(AutomationPattern pattern)
         {
+            CheckDisposed();
+
             object patternObj;
             if (!this.TryGetCurrentPattern(pattern, out patternObj))
             {
@@ -333,12 +343,16 @@ namespace System.Windows.Automation
 
         public object GetCurrentPropertyValue(AutomationProperty property)
         {
+            CheckDisposed();
+
             return this.GetCurrentPropertyValue(property, false);
         }
 
         public object GetCurrentPropertyValue(AutomationProperty property, bool ignoreDefaultValue)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(property, "property");
+
             try
             {
                 object obj = this._AutomationElement.GetCurrentPropertyValueEx(property.Id, (ignoreDefaultValue) ? 1 : 0);
@@ -365,6 +379,8 @@ namespace System.Windows.Automation
 
         public override int GetHashCode()
         {
+            CheckDisposed();
+
             int[] runtimeId = GetRuntimeId();
             int num = 0;
             if (runtimeId == null)
@@ -382,7 +398,6 @@ namespace System.Windows.Automation
         {
             try
             {
-
                 if (isCached)
                 {
                     return this._AutomationElement.GetCachedPattern(pattern.Id);
@@ -401,6 +416,8 @@ namespace System.Windows.Automation
 
         public int[] GetRuntimeId()
         {
+            CheckDisposed();
+
             try
             {
                 return (int[])this._AutomationElement.GetRuntimeId();
@@ -413,6 +430,8 @@ namespace System.Windows.Automation
 
         public AutomationPattern[] GetSupportedPatterns()
         {
+            CheckDisposed();
+
             Array rawPatternIds;
             Array rawPatternNames;
             try
@@ -442,6 +461,8 @@ namespace System.Windows.Automation
 
         public AutomationProperty[] GetSupportedProperties()
         {
+            CheckDisposed();
+
             Array rawPropertyIds;
             Array rawPropertyNames;
             try
@@ -470,6 +491,8 @@ namespace System.Windows.Automation
 
         public AutomationElement GetUpdatedCache(CacheRequest request)
         {
+            CheckDisposed();
+
             try
             {
                 return AutomationElement.Wrap(this._AutomationElement.BuildUpdatedCache(request.NativeCacheRequest));
@@ -500,6 +523,8 @@ namespace System.Windows.Automation
 
         public void SetFocus()
         {
+            CheckDisposed();
+
             try
             {
                 this._AutomationElement.SetFocus();
@@ -513,6 +538,8 @@ namespace System.Windows.Automation
 
         public bool TryGetCachedPattern(AutomationPattern pattern, out object patternObject)
         {
+            CheckDisposed();
+
             patternObject = null;
             Utility.ValidateArgumentNonNull(pattern, "pattern");
             try
@@ -530,6 +557,8 @@ namespace System.Windows.Automation
 
         public bool TryGetClickablePoint(out Point pt)
         {
+            CheckDisposed();
+
             pt = new Point(0.0, 0.0);
             UIAutomationClient.tagPOINT nativePoint = new UIAutomationClient.tagPOINT();
             try
@@ -551,6 +580,8 @@ namespace System.Windows.Automation
 
         public bool TryGetCurrentPattern(AutomationPattern pattern, out object patternObject)
         {
+            CheckDisposed();
+
             patternObject = null;
             Utility.ValidateArgumentNonNull(pattern, "pattern");
             try
@@ -571,6 +602,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new AutomationElementInformation(this, true);
             }
         }
@@ -579,6 +612,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 try
                 {
                     return AutomationElementCollection.Wrap(this._AutomationElement.GetCachedChildren());
@@ -595,9 +630,10 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 try
                 {
-
                     return AutomationElement.Wrap(this._AutomationElement.GetCachedParent());
                 }
                 catch (System.Runtime.InteropServices.COMException e)
@@ -612,6 +648,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new AutomationElementInformation(this, false);
             }
         }
@@ -620,6 +658,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return this._AutomationElement;
             }
         }
@@ -662,6 +702,8 @@ namespace System.Windows.Automation
         //Windows 8.1
         public void ShowContextMenu()
         {
+            CheckDisposed();
+
             try
             {
                 _AutomationElement3.ShowContextMenu();
@@ -672,8 +714,12 @@ namespace System.Windows.Automation
             }
 
         }
-
-
+        
+        protected override void DisposeManagedResource()
+        {
+            Marshal.FinalReleaseComObject(_AutomationElement);
+            base.DisposeManagedResource();
+        }
 
         [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
         public struct AutomationElementInformation
