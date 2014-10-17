@@ -13,20 +13,19 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class ItemContainerPattern : BasePattern
+    public class ItemContainerPattern : BasePattern<UIAutomationClient.IUIAutomationItemContainerPattern>
     {
-        private UIAutomationClient.IUIAutomationItemContainerPattern _pattern;
         public static readonly AutomationPattern Pattern = ItemContainerPatternIdentifiers.Pattern;
 
         private ItemContainerPattern(AutomationElement el, UIAutomationClient.IUIAutomationItemContainerPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public AutomationElement FindItemByProperty(AutomationElement startAfter, AutomationProperty property, object value)
         {
+            CheckDisposed();
+
             try
             {
                 return AutomationElement.Wrap(
@@ -47,20 +46,19 @@ namespace System.Windows.Automation
         }
     }
 
-    public class VirtualizedItemPattern : BasePattern
+    public class VirtualizedItemPattern : BasePattern<UIAutomationClient.IUIAutomationVirtualizedItemPattern>
     {
-        private UIAutomationClient.IUIAutomationVirtualizedItemPattern _pattern;
         public static readonly AutomationPattern Pattern = VirtualizedItemPatternIdentifiers.Pattern;
 
         private VirtualizedItemPattern(AutomationElement el, UIAutomationClient.IUIAutomationVirtualizedItemPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public void Realize()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Realize();

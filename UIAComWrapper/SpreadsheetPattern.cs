@@ -12,17 +12,14 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class SpreadsheetPattern : BasePattern
+    public class SpreadsheetPattern : BasePattern<UIAutomationClient.IUIAutomationSpreadsheetPattern>
     {
 
-        private UIAutomationClient.IUIAutomationSpreadsheetPattern _pattern;
         public static readonly AutomationPattern Pattern = SpreadsheetPatternIdentifiers.Pattern;
 
         private SpreadsheetPattern(AutomationElement el, UIAutomationClient.IUIAutomationSpreadsheetPattern pattern, bool cached)
-            : base(el, cached)
-                                                                    {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
+            : base(el, pattern, cached)
+        {
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -32,6 +29,8 @@ namespace System.Windows.Automation
 
         public AutomationElement GetItemByName(string name)
         {
+            CheckDisposed();
+
             try
             {
                 return AutomationElement.Wrap(
@@ -44,20 +43,17 @@ namespace System.Windows.Automation
         }
     }
 
-    public class SpreadsheetItemPattern : BasePattern
+    public class SpreadsheetItemPattern : BasePattern<UIAutomationClient.IUIAutomationSpreadsheetItemPattern>
     {
 
-        private UIAutomationClient.IUIAutomationSpreadsheetItemPattern _pattern;
         public static readonly AutomationPattern Pattern = SpreadsheetItemPatternIdentifiers.Pattern;
         public static readonly AutomationProperty FormulaProperty = SpreadsheetItemPatternIdentifiers.FormulaProperty;
         public static readonly AutomationProperty AnnotationObjectsProperty = SpreadsheetItemPatternIdentifiers.AnnotationObjectsProperty;
         public static readonly AutomationProperty AnnotationTypesProperty = SpreadsheetItemPatternIdentifiers.AnnotationTypesProperty;
 
         private SpreadsheetItemPattern(AutomationElement el, UIAutomationClient.IUIAutomationSpreadsheetItemPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -69,7 +65,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new SpreadsheetItemPatternInformation(this._el, true);
             }
         }
@@ -78,6 +76,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new SpreadsheetItemPatternInformation(this._el, false);
             }
         }

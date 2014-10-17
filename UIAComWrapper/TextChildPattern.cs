@@ -13,22 +13,21 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class TextChildPattern : BasePattern
+    public class TextChildPattern : BasePattern<UIAutomationClient.IUIAutomationTextChildPattern>
     {
-        private UIAutomationClient.IUIAutomationTextChildPattern _pattern;
         public static readonly AutomationPattern Pattern = TextChildPatternIdentifiers.Pattern;
 
         private TextChildPattern(AutomationElement el, UIAutomationClient.IUIAutomationTextChildPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public AutomationElement TextContainer
         {
             get
             {
+                CheckDisposed();
+
                 try
                 {
                     return AutomationElement.Wrap(this._pattern.TextContainer);
@@ -44,6 +43,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 try
                 {
                     AutomationElement textContainer = this.TextContainer;

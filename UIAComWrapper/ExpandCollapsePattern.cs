@@ -13,19 +13,16 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class ExpandCollapsePattern : BasePattern
+    public class ExpandCollapsePattern : BasePattern<UIAutomationClient.IUIAutomationExpandCollapsePattern>
     {
         
-        private UIAutomationClient.IUIAutomationExpandCollapsePattern _pattern;
         public static readonly AutomationProperty ExpandCollapseStateProperty = ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty;
         public static readonly AutomationPattern Pattern = ExpandCollapsePatternIdentifiers.Pattern;
 
         
         private ExpandCollapsePattern(AutomationElement el, UIAutomationClient.IUIAutomationExpandCollapsePattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -35,6 +32,8 @@ namespace System.Windows.Automation
 
         public void Collapse()
         {
+            CheckDisposed();
+
                         try
             {
 this._pattern.Collapse();            }
@@ -46,6 +45,8 @@ this._pattern.Collapse();            }
 
         public void Expand()
         {
+            CheckDisposed();
+
                         try
             {
 this._pattern.Expand();            }
@@ -60,7 +61,9 @@ this._pattern.Expand();            }
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new ExpandCollapsePatternInformation(this._el, true);
             }
         }
@@ -69,6 +72,8 @@ this._pattern.Expand();            }
         {
             get
             {
+                CheckDisposed();
+
                 return new ExpandCollapsePatternInformation(this._el, false);
             }
         }

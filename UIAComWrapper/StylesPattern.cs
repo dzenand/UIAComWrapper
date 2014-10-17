@@ -12,10 +12,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class StylesPattern : BasePattern
+    public class StylesPattern : BasePattern<UIAutomationClient.IUIAutomationStylesPattern>
     {
 
-        private UIAutomationClient.IUIAutomationStylesPattern _pattern;
         public static readonly AutomationProperty StyleIdProperty = StylesPatternIdentifiers.StyleIdProperty;
         public static readonly AutomationProperty StyleNameProperty = StylesPatternIdentifiers.StyleNameProperty;
         public static readonly AutomationProperty FillColorProperty = StylesPatternIdentifiers.FillColorProperty;
@@ -27,10 +26,8 @@ namespace System.Windows.Automation
 
 
         private StylesPattern(AutomationElement el, UIAutomationClient.IUIAutomationStylesPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -43,7 +40,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new StylesPatternInformation(this._el, true);
             }
         }
@@ -52,6 +51,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new StylesPatternInformation(this._el, false);
             }
         }
@@ -123,8 +124,6 @@ namespace System.Windows.Automation
                     return (string)this._el.GetPropertyValue(StylesPattern.ExtendedPropertiesProperty, _isCached);
                 }
             }
-
-
         }
     }
 }

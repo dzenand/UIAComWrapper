@@ -13,19 +13,16 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class TogglePattern : BasePattern
+    public class TogglePattern : BasePattern<UIAutomationClient.IUIAutomationTogglePattern>
     {
         
-        private UIAutomationClient.IUIAutomationTogglePattern _pattern;
         public static readonly AutomationPattern Pattern = TogglePatternIdentifiers.Pattern;
         public static readonly AutomationProperty ToggleStateProperty = TogglePatternIdentifiers.ToggleStateProperty;
 
         
         private TogglePattern(AutomationElement el, UIAutomationClient.IUIAutomationTogglePattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -35,6 +32,8 @@ namespace System.Windows.Automation
 
         public void Toggle()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Toggle();
@@ -50,7 +49,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new TogglePatternInformation(this._el, true);
             }
         }
@@ -59,6 +60,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new TogglePatternInformation(this._el, false);
             }
         }
