@@ -12,10 +12,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class DropTargetPattern : BasePattern
+    public class DropTargetPattern : BasePattern<UIAutomationClient.IUIAutomationDropTargetPattern>
     {
 
-        private UIAutomationClient.IUIAutomationDropTargetPattern _pattern;
         public static readonly AutomationProperty DropTargetEffectProperty = DropTargetPatternIdentifiers.DropTargetEffectProperty;
         public static readonly AutomationProperty DropTargetEffectsProperty = DropTargetPatternIdentifiers.DropTargetEffectsProperty;
         public static readonly AutomationEvent DropTargetEnterEvent = DropTargetPatternIdentifiers.DragEnterEvent;
@@ -25,10 +24,8 @@ namespace System.Windows.Automation
 
 
         private DropTargetPattern(AutomationElement el, UIAutomationClient.IUIAutomationDropTargetPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -41,7 +38,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new DropTargetPatternInformation(this._el, true);
             }
         }
@@ -50,6 +49,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new DropTargetPatternInformation(this._el, false);
             }
         }

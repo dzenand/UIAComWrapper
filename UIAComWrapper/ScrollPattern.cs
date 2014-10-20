@@ -13,10 +13,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class ScrollPattern : BasePattern
+    public class ScrollPattern : BasePattern<UIAutomationClient.IUIAutomationScrollPattern>
     {
         
-        private UIAutomationClient.IUIAutomationScrollPattern _pattern;
         public static readonly AutomationPattern Pattern = ScrollPatternIdentifiers.Pattern;
         public static readonly AutomationProperty HorizontallyScrollableProperty = ScrollPatternIdentifiers.HorizontallyScrollableProperty;
         public static readonly AutomationProperty HorizontalScrollPercentProperty = ScrollPatternIdentifiers.HorizontalScrollPercentProperty;
@@ -29,10 +28,8 @@ namespace System.Windows.Automation
 
         
         private ScrollPattern(AutomationElement el, UIAutomationClient.IUIAutomationScrollPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -42,6 +39,8 @@ namespace System.Windows.Automation
 
         public void Scroll(ScrollAmount horizontalAmount, ScrollAmount verticalAmount)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Scroll((UIAutomationClient.ScrollAmount)horizontalAmount, (UIAutomationClient.ScrollAmount)verticalAmount);
@@ -54,6 +53,8 @@ namespace System.Windows.Automation
 
         public void ScrollHorizontal(ScrollAmount amount)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Scroll((UIAutomationClient.ScrollAmount)amount, UIAutomationClient.ScrollAmount.ScrollAmount_NoAmount);
@@ -66,6 +67,8 @@ namespace System.Windows.Automation
 
         public void ScrollVertical(ScrollAmount amount)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Scroll(UIAutomationClient.ScrollAmount.ScrollAmount_NoAmount, (UIAutomationClient.ScrollAmount)amount);
@@ -78,6 +81,8 @@ namespace System.Windows.Automation
 
         public void SetScrollPercent(double horizontalPercent, double verticalPercent)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetScrollPercent(horizontalPercent, verticalPercent);
@@ -93,7 +98,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new ScrollPatternInformation(this._el, true);
             }
         }
@@ -102,11 +109,12 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new ScrollPatternInformation(this._el, false);
             }
         }
 
-        
         [StructLayout(LayoutKind.Sequential)]
         public struct ScrollPatternInformation
         {
@@ -164,18 +172,14 @@ namespace System.Windows.Automation
     }
 
 
-    public class ScrollItemPattern : BasePattern
+    public class ScrollItemPattern : BasePattern<UIAutomationClient.IUIAutomationScrollItemPattern>
     {
         
-        private UIAutomationClient.IUIAutomationScrollItemPattern _pattern;
         public static readonly AutomationPattern Pattern = ScrollItemPatternIdentifiers.Pattern;
-
         
         private ScrollItemPattern(AutomationElement el, UIAutomationClient.IUIAutomationScrollItemPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -185,6 +189,8 @@ namespace System.Windows.Automation
 
         public void ScrollIntoView()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.ScrollIntoView();
@@ -193,6 +199,12 @@ namespace System.Windows.Automation
             {
                 Exception newEx; if (Utility.ConvertException(e, out newEx)) { throw newEx; } else { throw; }
             }
+        }
+
+        protected override void DisposeManagedResource()
+        {
+            Marshal.FinalReleaseComObject(_pattern);
+            base.DisposeManagedResource();
         }
     }
 }

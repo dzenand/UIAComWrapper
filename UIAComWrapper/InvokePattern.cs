@@ -11,23 +11,23 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class InvokePattern : BasePattern
+    public class InvokePattern : BasePattern<UIAutomationClient.IUIAutomationInvokePattern>
     {
         
-        private UIAutomationClient.IUIAutomationInvokePattern _pattern;
         public static readonly AutomationEvent InvokedEvent = InvokePatternIdentifiers.InvokedEvent;
         public static readonly AutomationPattern Pattern = InvokePatternIdentifiers.Pattern;
 
         
         private InvokePattern(AutomationElement el, UIAutomationClient.IUIAutomationInvokePattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
             Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public void Invoke()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Invoke();

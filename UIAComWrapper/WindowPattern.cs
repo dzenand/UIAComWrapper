@@ -13,10 +13,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class WindowPattern : BasePattern
+    public class WindowPattern : BasePattern<UIAutomationClient.IUIAutomationWindowPattern>
     {
         
-        private UIAutomationClient.IUIAutomationWindowPattern _pattern;
         public static readonly AutomationPattern Pattern = WindowPatternIdentifiers.Pattern;
         public static readonly AutomationProperty CanMaximizeProperty = WindowPatternIdentifiers.CanMaximizeProperty;
         public static readonly AutomationProperty CanMinimizeProperty = WindowPatternIdentifiers.CanMinimizeProperty;
@@ -29,10 +28,8 @@ namespace System.Windows.Automation
 
         
         private WindowPattern(AutomationElement el, UIAutomationClient.IUIAutomationWindowPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -42,6 +39,8 @@ namespace System.Windows.Automation
 
         public void Close()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Close();
@@ -54,6 +53,8 @@ namespace System.Windows.Automation
 
         public void SetWindowVisualState(WindowVisualState state)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetWindowVisualState((UIAutomationClient.WindowVisualState)state);
@@ -66,6 +67,8 @@ namespace System.Windows.Automation
 
         public bool WaitForInputIdle(int milliseconds)
         {
+            CheckDisposed();
+
             try
             {
                 return (0 != this._pattern.WaitForInputIdle(milliseconds));
@@ -81,7 +84,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new WindowPatternInformation(this._el, true);
             }
         }
@@ -90,6 +95,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new WindowPatternInformation(this._el, false);
             }
         }

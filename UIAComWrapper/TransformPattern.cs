@@ -12,10 +12,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class TransformPattern : BasePattern
+    public class TransformPattern : BasePattern<UIAutomationClient.IUIAutomationTransformPattern>
     {
         
-        private UIAutomationClient.IUIAutomationTransformPattern _pattern;
         public static readonly AutomationPattern Pattern = TransformPatternIdentifiers.Pattern;
         public static readonly AutomationProperty CanMoveProperty = TransformPatternIdentifiers.CanMoveProperty;
         public static readonly AutomationProperty CanResizeProperty = TransformPatternIdentifiers.CanResizeProperty;
@@ -23,10 +22,8 @@ namespace System.Windows.Automation
 
         
         protected TransformPattern(AutomationElement el, UIAutomationClient.IUIAutomationTransformPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -36,6 +33,8 @@ namespace System.Windows.Automation
 
         public void Move(double x, double y)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Move(x, y);
@@ -48,6 +47,8 @@ namespace System.Windows.Automation
 
         public void Resize(double width, double height)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Resize(width, height);
@@ -60,6 +61,8 @@ namespace System.Windows.Automation
 
         public void Rotate(double degrees)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Rotate(degrees);
@@ -75,7 +78,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new TransformPatternInformation(this._el, true);
             }
         }
@@ -84,6 +89,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new TransformPatternInformation(this._el, false);
             }
         }
@@ -128,7 +135,7 @@ namespace System.Windows.Automation
     public class TransformPattern2 : TransformPattern
     {
 
-        private UIAutomationClient.IUIAutomationTransformPattern2 _pattern;
+        private UIAutomationClient.IUIAutomationTransformPattern2 _pattern2;
         public static readonly AutomationProperty CanZoomProperty = TransformPattern2Identifiers.CanZoomProperty;
         public static readonly AutomationProperty ZoomLevelProperty = TransformPattern2Identifiers.ZoomLevelProperty;
         public static readonly AutomationProperty ZoomMinimumProperty = TransformPattern2Identifiers.ZoomMinimumProperty;
@@ -139,7 +146,7 @@ namespace System.Windows.Automation
             : base(el, pattern, cached)
         {
             Debug.Assert(pattern2 != null);
-            this._pattern = pattern2;
+            this._pattern2 = pattern2;
         }
 
         internal new static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -160,9 +167,11 @@ namespace System.Windows.Automation
 
         public void Zoom(double zoom)
         {
+            CheckDisposed();
+
             try
             {
-                this._pattern.Zoom(zoom);
+                this._pattern2.Zoom(zoom);
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -172,9 +181,11 @@ namespace System.Windows.Automation
 
         public void ZoomByUnit(ZoomUnit zoomUnit)
         {
+            CheckDisposed();
+
             try
             {
-                this._pattern.ZoomByUnit((UIAutomationClient.ZoomUnit)zoomUnit);
+                this._pattern2.ZoomByUnit((UIAutomationClient.ZoomUnit)zoomUnit);
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -186,7 +197,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new TransformPattern2Information(this._el, true);
             }
         }
@@ -195,11 +208,17 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new TransformPattern2Information(this._el, false);
             }
         }
 
-
+        protected override void DisposeManagedResource()
+        {
+            base.DisposeManagedResource();
+            Marshal.FinalReleaseComObject(_pattern2);
+        }
 
         [StructLayout(LayoutKind.Sequential)]
         public struct TransformPattern2Information

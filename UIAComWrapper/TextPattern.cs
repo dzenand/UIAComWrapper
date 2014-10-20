@@ -14,10 +14,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class TextPattern : BasePattern
+    public class TextPattern : BasePattern<UIAutomationClient.IUIAutomationTextPattern>
     {
         
-        private UIAutomationClient.IUIAutomationTextPattern _pattern;
         public static readonly AutomationPattern Pattern = TextPatternIdentifiers.Pattern;
         public static readonly AutomationTextAttribute AnimationStyleAttribute = TextPatternIdentifiers.AnimationStyleAttribute;
         public static readonly AutomationTextAttribute BackgroundColorAttribute = TextPatternIdentifiers.BackgroundColorAttribute;
@@ -56,10 +55,8 @@ namespace System.Windows.Automation
 
         
         protected TextPattern(AutomationElement el, UIAutomationClient.IUIAutomationTextPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -69,6 +66,8 @@ namespace System.Windows.Automation
 
         public TextPatternRange[] GetSelection()
         {
+            CheckDisposed();
+
             try
             {
                 return TextPatternRange.Wrap(this._pattern.GetSelection(), this);
@@ -81,6 +80,8 @@ namespace System.Windows.Automation
 
         public TextPatternRange[] GetVisibleRanges()
         {
+            CheckDisposed();
+
             try
             {
                 return TextPatternRange.Wrap(this._pattern.GetVisibleRanges(), this);
@@ -93,6 +94,8 @@ namespace System.Windows.Automation
 
         public TextPatternRange RangeFromChild(AutomationElement childElement)
         {
+            CheckDisposed();
+
             Utility.ValidateArgumentNonNull(childElement, "childElement");
             try
             {
@@ -106,6 +109,8 @@ namespace System.Windows.Automation
 
         public TextPatternRange RangeFromPoint(Point screenLocation)
         {
+            CheckDisposed();
+
             try
             {
                 return TextPatternRange.Wrap(this._pattern.RangeFromPoint(Utility.PointManagedToNative(screenLocation)), this);
@@ -120,6 +125,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 try
                 {
                     return TextPatternRange.Wrap(this._pattern.DocumentRange, this);
@@ -135,6 +142,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 try
                 {
                     return (SupportedTextSelection)this._pattern.SupportedTextSelection;
@@ -149,7 +158,7 @@ namespace System.Windows.Automation
 
     public class TextPattern2 : TextPattern
     {
-        private UIAutomationClient.IUIAutomationTextPattern2 _pattern;
+        private UIAutomationClient.IUIAutomationTextPattern2 _pattern2;
         public static readonly new AutomationPattern Pattern = TextPattern2Identifiers.Pattern;
         public static readonly AutomationTextAttribute AnnotationTypesAttribute = TextPattern2Identifiers.AnnotationTypesAttribute;
         public static readonly AutomationTextAttribute AnnotationObjectsAttribute = TextPattern2Identifiers.AnnotationObjectsAttribute;
@@ -161,11 +170,11 @@ namespace System.Windows.Automation
         public static readonly AutomationTextAttribute CaretPositionAttribute = TextPattern2Identifiers.CaretPositionAttribute;
         public static readonly AutomationTextAttribute CaretBidiModeAttribute = TextPattern2Identifiers.CaretBidiModeAttribute;
 
-        private TextPattern2(AutomationElement el, UIAutomationClient.IUIAutomationTextPattern2 pattern, UIAutomationClient.IUIAutomationTextPattern basePattern, bool cached)
+        private TextPattern2(AutomationElement el, UIAutomationClient.IUIAutomationTextPattern2 pattern2, UIAutomationClient.IUIAutomationTextPattern basePattern, bool cached)
             : base(el, basePattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
+            Debug.Assert(pattern2 != null);
+            this._pattern2 = pattern2;
         }
 
         internal static new object Wrap(AutomationElement el, object pattern, bool cached)
@@ -186,10 +195,12 @@ namespace System.Windows.Automation
 
         public TextPatternRange RangeFromAnnotation(AutomationElement annotation)
         {
+            CheckDisposed();
             Utility.ValidateArgumentNonNull(annotation, "annotation");
+
             try
             {
-                return TextPatternRange.Wrap(this._pattern.RangeFromAnnotation(annotation.NativeElement), this);
+                return TextPatternRange.Wrap(this._pattern2.RangeFromAnnotation(annotation.NativeElement), this);
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
@@ -199,11 +210,13 @@ namespace System.Windows.Automation
 
         public TextPatternRange GetCaretRange(out bool isActive)
         {
+            CheckDisposed();
+
             try
             {
                 int intIsActive;
                 TextPatternRange caretRange = TextPatternRange.Wrap(
-                    this._pattern.GetCaretRange(out intIsActive), this);
+                    this._pattern2.GetCaretRange(out intIsActive), this);
                 isActive = (intIsActive != 0);
                 return caretRange;
             }
@@ -211,6 +224,12 @@ namespace System.Windows.Automation
             {
                 Exception newEx; if (Utility.ConvertException(e, out newEx)) { throw newEx; } else { throw; }
             }
+        }
+
+        protected override void DisposeManagedResource()
+        {
+            base.DisposeManagedResource();
+            Marshal.FinalReleaseComObject(_pattern2);
         }
     }
 }

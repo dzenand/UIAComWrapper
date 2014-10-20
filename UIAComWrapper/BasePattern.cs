@@ -7,21 +7,32 @@
 
 using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using UIAComWrapper;
 
 namespace System.Windows.Automation
 {
-    public class BasePattern
+    public class BasePattern<T> : DisposableBaseWithoutFinalizer
+        where T : class
     {
-        
-        internal AutomationElement _el;
-        internal bool _cached;
+        protected readonly T _pattern;
+        protected readonly AutomationElement _el;
+        protected readonly bool _cached;
 
-        
-        internal BasePattern(AutomationElement el, bool cached)
+        protected BasePattern(AutomationElement el, T pattern, bool cached)
         {
             Debug.Assert(el != null);
+            Debug.Assert(pattern != null);
+
             this._el = el;
+            this._pattern = pattern;
             this._cached = cached;
+        }
+
+        protected override void DisposeManagedResource()
+        {
+            Marshal.FinalReleaseComObject(_pattern);
+            base.DisposeManagedResource();
         }
     }
 }

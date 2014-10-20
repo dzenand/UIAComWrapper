@@ -12,20 +12,19 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class ObjectModelPattern : BasePattern
+    public class ObjectModelPattern : BasePattern<UIAutomationClient.IUIAutomationObjectModelPattern>
     {
-        private UIAutomationClient.IUIAutomationObjectModelPattern _pattern;
         public static readonly AutomationPattern Pattern = ObjectModelPatternIdentifiers.Pattern;
 
         private ObjectModelPattern(AutomationElement el, UIAutomationClient.IUIAutomationObjectModelPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public object GetUnderlyingObjectModel()
         {
+            CheckDisposed();
+
             try
             {
                 return this._pattern.GetUnderlyingObjectModel();

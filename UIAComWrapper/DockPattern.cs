@@ -13,23 +13,22 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class DockPattern : BasePattern
+    public class DockPattern : BasePattern<UIAutomationClient.IUIAutomationDockPattern>
     {
         
-        private UIAutomationClient.IUIAutomationDockPattern _pattern;
         public static readonly AutomationProperty DockPositionProperty = DockPatternIdentifiers.DockPositionProperty;
         public static readonly AutomationPattern Pattern = DockPatternIdentifiers.Pattern;
 
         
         private DockPattern(AutomationElement el, UIAutomationClient.IUIAutomationDockPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public void SetDockPosition(DockPosition dockPosition)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetDockPosition((UIAutomationClient.DockPosition)dockPosition);
@@ -50,7 +49,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new DockPatternInformation(this._el, true);
             }
         }
@@ -59,6 +60,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new DockPatternInformation(this._el, false);
             }
         }

@@ -13,20 +13,17 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class MultipleViewPattern : BasePattern
+    public class MultipleViewPattern : BasePattern<UIAutomationClient.IUIAutomationMultipleViewPattern>
     {
         
-        private UIAutomationClient.IUIAutomationMultipleViewPattern _pattern;
         public static readonly AutomationPattern Pattern = MultipleViewPatternIdentifiers.Pattern;
         public static readonly AutomationProperty CurrentViewProperty = MultipleViewPatternIdentifiers.CurrentViewProperty;
         public static readonly AutomationProperty SupportedViewsProperty = MultipleViewPatternIdentifiers.SupportedViewsProperty;
 
         
         private MultipleViewPattern(AutomationElement el, UIAutomationClient.IUIAutomationMultipleViewPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -36,6 +33,8 @@ namespace System.Windows.Automation
 
         public string GetViewName(int viewId)
         {
+            CheckDisposed();
+
             try
             {
                 return this._pattern.GetViewName(viewId);
@@ -48,6 +47,8 @@ namespace System.Windows.Automation
 
         public void SetCurrentView(int viewId)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetCurrentView(viewId);
@@ -63,7 +64,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new MultipleViewPatternInformation(this._el, true);
             }
         }
@@ -72,6 +75,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new MultipleViewPatternInformation(this._el, false);
             }
         }

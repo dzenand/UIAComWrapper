@@ -13,10 +13,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class RangeValuePattern : BasePattern
+    public class RangeValuePattern : BasePattern<UIAutomationClient.IUIAutomationRangeValuePattern>
     {
         
-        private UIAutomationClient.IUIAutomationRangeValuePattern _pattern;
         public static readonly AutomationPattern Pattern = RangeValuePatternIdentifiers.Pattern;
         public static readonly AutomationProperty IsReadOnlyProperty = RangeValuePatternIdentifiers.IsReadOnlyProperty;
         public static readonly AutomationProperty LargeChangeProperty = RangeValuePatternIdentifiers.LargeChangeProperty;
@@ -27,10 +26,8 @@ namespace System.Windows.Automation
 
         
         private RangeValuePattern(AutomationElement el, UIAutomationClient.IUIAutomationRangeValuePattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -40,6 +37,8 @@ namespace System.Windows.Automation
 
         public void SetValue(double value)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetValue(value);
@@ -55,7 +54,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new RangeValuePatternInformation(this._el, true);
             }
         }
@@ -64,6 +65,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new RangeValuePatternInformation(this._el, false);
             }
         }
@@ -124,21 +127,16 @@ namespace System.Windows.Automation
         }
     }
 
-    public class ValuePattern : BasePattern
+    public class ValuePattern : BasePattern<UIAutomationClient.IUIAutomationValuePattern>
     {
         
-        private UIAutomationClient.IUIAutomationValuePattern _pattern;
         public static readonly AutomationPattern Pattern = ValuePatternIdentifiers.Pattern;
         public static readonly AutomationProperty IsReadOnlyProperty = ValuePatternIdentifiers.IsReadOnlyProperty;
         public static readonly AutomationProperty ValueProperty = ValuePatternIdentifiers.ValueProperty;
-
-
         
         private ValuePattern(AutomationElement el, UIAutomationClient.IUIAutomationValuePattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -148,6 +146,8 @@ namespace System.Windows.Automation
 
         public void SetValue(string value)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetValue(value);
@@ -163,7 +163,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new ValuePatternInformation(this._el, true);
             }
         }
@@ -172,6 +174,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new ValuePatternInformation(this._el, false);
             }
         }

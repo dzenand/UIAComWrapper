@@ -13,7 +13,7 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class LegacyIAccessiblePattern : BasePattern
+    public class LegacyIAccessiblePattern : BasePattern<UIAutomationClient.IUIAutomationLegacyIAccessiblePattern>
     {
         public static readonly AutomationProperty ChildIdProperty = LegacyIAccessiblePatternIdentifiers.ChildIdProperty;
         public static readonly AutomationProperty NameProperty = LegacyIAccessiblePatternIdentifiers.NameProperty;
@@ -27,17 +27,15 @@ namespace System.Windows.Automation
         public static readonly AutomationProperty DefaultActionProperty = LegacyIAccessiblePatternIdentifiers.DefaultActionProperty;
         public static readonly AutomationPattern Pattern = LegacyIAccessiblePatternIdentifiers.Pattern;
 
-        private UIAutomationClient.IUIAutomationLegacyIAccessiblePattern _pattern;
-
         private LegacyIAccessiblePattern(AutomationElement el, UIAutomationClient.IUIAutomationLegacyIAccessiblePattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         public void Select(int flagsSelect)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Select(flagsSelect);
@@ -50,6 +48,8 @@ namespace System.Windows.Automation
 
         public void DoDefaultAction()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.DoDefaultAction();
@@ -62,6 +62,8 @@ namespace System.Windows.Automation
 
         public void SetValue(string value)
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.SetValue(value);
@@ -74,6 +76,8 @@ namespace System.Windows.Automation
 
         public Accessibility.IAccessible GetIAccessible()
         {
+            CheckDisposed();
+
             try
             {
                 return (Accessibility.IAccessible)this._pattern.GetIAccessible();
@@ -94,7 +98,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new LegacyIAccessiblePatternInformation(this._el, true);
             }
         }
@@ -103,6 +109,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new LegacyIAccessiblePatternInformation(this._el, false);
             }
         }

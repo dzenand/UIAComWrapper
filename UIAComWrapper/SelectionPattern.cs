@@ -13,10 +13,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class SelectionPattern : BasePattern
+    public class SelectionPattern : BasePattern<UIAutomationClient.IUIAutomationSelectionPattern>
     {
         
-        private UIAutomationClient.IUIAutomationSelectionPattern _pattern;
         public static readonly AutomationPattern Pattern = SelectionPatternIdentifiers.Pattern;
         public static readonly AutomationProperty CanSelectMultipleProperty = SelectionPatternIdentifiers.CanSelectMultipleProperty;
         public static readonly AutomationEvent InvalidatedEvent = SelectionPatternIdentifiers.InvalidatedEvent;
@@ -25,10 +24,8 @@ namespace System.Windows.Automation
 
         
         private SelectionPattern(AutomationElement el, UIAutomationClient.IUIAutomationSelectionPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -41,7 +38,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new SelectionPatternInformation(this._el, true);
             }
         }
@@ -50,6 +49,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new SelectionPatternInformation(this._el, false);
             }
         }
@@ -88,10 +89,9 @@ namespace System.Windows.Automation
         }
     }
 
-    public class SelectionItemPattern : BasePattern
+    public class SelectionItemPattern : BasePattern<UIAutomationClient.IUIAutomationSelectionItemPattern>
     {
         
-        private UIAutomationClient.IUIAutomationSelectionItemPattern _pattern;
         public static readonly AutomationPattern Pattern = SelectionItemPatternIdentifiers.Pattern;
         public static readonly AutomationEvent ElementAddedToSelectionEvent = SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent;
         public static readonly AutomationEvent ElementRemovedFromSelectionEvent = SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent;
@@ -102,10 +102,8 @@ namespace System.Windows.Automation
 
         
         private SelectionItemPattern(AutomationElement el, UIAutomationClient.IUIAutomationSelectionItemPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -115,6 +113,8 @@ namespace System.Windows.Automation
 
         public void AddToSelection()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.AddToSelection();
@@ -127,6 +127,8 @@ namespace System.Windows.Automation
 
         public void RemoveFromSelection()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.RemoveFromSelection();
@@ -139,6 +141,8 @@ namespace System.Windows.Automation
 
         public void Select()
         {
+            CheckDisposed();
+
             try
             {
                 this._pattern.Select();
@@ -154,7 +158,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new SelectionItemPatternInformation(this._el, true);
             }
         }
@@ -163,6 +169,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new SelectionItemPatternInformation(this._el, false);
             }
         }

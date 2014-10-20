@@ -12,10 +12,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class AnnotationPattern : BasePattern
+    public class AnnotationPattern : BasePattern<UIAutomationClient.IUIAutomationAnnotationPattern>
     {
 
-        private UIAutomationClient.IUIAutomationAnnotationPattern _pattern;
         public static readonly AutomationProperty AnnotationTypeIdProperty = AnnotationPatternIdentifiers.AnnotationTypeIdProperty;
         public static readonly AutomationProperty AnnotationTypeNameProperty = AnnotationPatternIdentifiers.AnnotationTypeNameProperty;
         public static readonly AutomationProperty AuthorProperty = AnnotationPatternIdentifiers.AuthorProperty;
@@ -25,10 +24,8 @@ namespace System.Windows.Automation
 
 
         private AnnotationPattern(AutomationElement el, UIAutomationClient.IUIAutomationAnnotationPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
-            Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -40,7 +37,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new AnnotationPatternInformation(this._el, true);
             }
         }
@@ -49,6 +48,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new AnnotationPatternInformation(this._el, false);
             }
         }

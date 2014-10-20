@@ -12,10 +12,9 @@ using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class DragPattern : BasePattern
+    public class DragPattern : BasePattern<UIAutomationClient.IUIAutomationDragPattern>
     {
 
-        private UIAutomationClient.IUIAutomationDragPattern _pattern;
         public static readonly AutomationProperty IsGrabbedProperty = DragPatternIdentifiers.IsGrabbedProperty;
         public static readonly AutomationProperty GrabbedItemsProperty = DragPatternIdentifiers.GrabbedItemsProperty;
         public static readonly AutomationProperty DropEffectProperty = DragPatternIdentifiers.DropEffectProperty;
@@ -27,10 +26,9 @@ namespace System.Windows.Automation
 
 
         private DragPattern(AutomationElement el, UIAutomationClient.IUIAutomationDragPattern pattern, bool cached)
-            : base(el, cached)
+            : base(el, pattern, cached)
         {
             Debug.Assert(pattern != null);
-            this._pattern = pattern;
         }
 
         internal static object Wrap(AutomationElement el, object pattern, bool cached)
@@ -43,7 +41,9 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
                 Utility.ValidateCached(this._cached);
+
                 return new DragPatternInformation(this._el, true);
             }
         }
@@ -52,6 +52,8 @@ namespace System.Windows.Automation
         {
             get
             {
+                CheckDisposed();
+
                 return new DragPatternInformation(this._el, false);
             }
         }
