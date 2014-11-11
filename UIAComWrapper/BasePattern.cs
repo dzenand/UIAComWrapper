@@ -31,7 +31,7 @@ namespace System.Windows.Automation
 
         protected override void DisposeManagedResource()
         {
-            Marshal.ReleaseComObject(_pattern);
+            Marshal.FinalReleaseComObject(_pattern);
             base.DisposeManagedResource();
         }
     }

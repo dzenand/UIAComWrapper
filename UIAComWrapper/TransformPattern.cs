@@ -217,7 +217,7 @@ namespace System.Windows.Automation
         protected override void DisposeManagedResource()
         {
             base.DisposeManagedResource();
-            Marshal.ReleaseComObject(_pattern2);
+            Marshal.FinalReleaseComObject(_pattern2);
         }
 
         [StructLayout(LayoutKind.Sequential)]
