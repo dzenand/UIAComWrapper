@@ -717,7 +717,7 @@ namespace System.Windows.Automation
         
         protected override void DisposeManagedResource()
         {
-            Marshal.FinalReleaseComObject(_AutomationElement);
+            Marshal.ReleaseComObject(_AutomationElement);
             base.DisposeManagedResource();
         }
 

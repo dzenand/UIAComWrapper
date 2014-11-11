@@ -86,7 +86,7 @@ namespace System.Windows.Automation
 
         protected override void DisposeManagedResource()
         {
-            Marshal.FinalReleaseComObject(_obj);
+            Marshal.ReleaseComObject(_obj);
             base.DisposeManagedResource();
         }
     }

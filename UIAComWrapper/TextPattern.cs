@@ -229,7 +229,7 @@ namespace System.Windows.Automation
         protected override void DisposeManagedResource()
         {
             base.DisposeManagedResource();
-            Marshal.FinalReleaseComObject(_pattern2);
+            Marshal.ReleaseComObject(_pattern2);
         }
     }
 }

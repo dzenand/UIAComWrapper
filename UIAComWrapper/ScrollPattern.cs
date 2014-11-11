@@ -203,7 +203,7 @@ namespace System.Windows.Automation
 
         protected override void DisposeManagedResource()
         {
-            Marshal.FinalReleaseComObject(_pattern);
+            Marshal.ReleaseComObject(_pattern);
             base.DisposeManagedResource();
         }
     }
