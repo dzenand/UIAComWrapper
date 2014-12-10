@@ -8,11 +8,13 @@
 using System;
 using System.Diagnostics;
 using System.Collections;
+using System.Runtime.InteropServices;
+using UIAComWrapper;
 using UIAComWrapperInternal;
 
 namespace System.Windows.Automation
 {
-    public class AutomationElementCollection : ICollection, IEnumerable
+    public class AutomationElementCollection : DisposableBaseWithoutFinalizer, ICollection, IEnumerable
     {
         private UIAutomationClient.IUIAutomationElementArray _obj;
 
@@ -80,6 +82,12 @@ namespace System.Windows.Automation
             {
                 return this;
             }
+        }
+
+        protected override void DisposeManagedResource()
+        {
+            Marshal.FinalReleaseComObject(_obj);
+            base.DisposeManagedResource();
         }
     }
 
